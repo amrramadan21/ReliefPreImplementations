@@ -1,0 +1,6 @@
+@Relief_HostAddress = http://localhost:5220
+
+GET {{Relief_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
