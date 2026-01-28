@@ -1,0 +1,17 @@
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.deps.json
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.dll
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.pdb
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Shared.dll
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Shared.pdb
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.AssemblyReference.cache
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfoInputs.cache
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfo.cs
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.CoreCompileInputs.cache
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.P.10F54F67.Up2Date
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.dll
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll

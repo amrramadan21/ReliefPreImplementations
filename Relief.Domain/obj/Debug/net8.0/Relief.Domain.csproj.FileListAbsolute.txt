@@ -1,0 +1,11 @@
+F:\Projects\Relief\Relief\Relief.Domain\bin\Debug\net8.0\Relief.Domain.deps.json
+F:\Projects\Relief\Relief\Relief.Domain\bin\Debug\net8.0\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.Domain\bin\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.AssemblyInfoInputs.cache
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.AssemblyInfo.cs
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.csproj.CoreCompileInputs.cache
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\refint\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\ref\Relief.Domain.dll
