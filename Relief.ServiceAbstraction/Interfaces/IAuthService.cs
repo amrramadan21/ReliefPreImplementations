@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Relief.ServiceAbstraction
+namespace Relief.ServiceAbstraction.Interfaces
 {
     public interface IAuthService
     {

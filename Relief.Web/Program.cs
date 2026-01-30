@@ -1,4 +1,4 @@
-
+﻿using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,8 +6,9 @@ using Microsoft.IdentityModel.Tokens;
 using Relief.Domain.Entities;
 using Relief.Presentation.Controllers;
 using Relief.Presistence.Data.DbContexts;
-using Relief.ServiceAbstraction;
-using Relief.Services;
+using Relief.Presistence.Repositories;
+using Relief.ServiceAbstraction.Interfaces;
+using Relief.Services.Implementations;
 using System.Text;
 
 namespace Relief.Web
@@ -20,15 +21,61 @@ namespace Relief.Web
 
             // Add services to the container.
 
-            builder.Services.AddControllers()
-                .AddApplicationPart(typeof(AuthController).Assembly);
-            ;
+            //test 
+            builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+             {
+                 c.SwaggerDoc("v1", new OpenApiInfo
+                 {
+                     Title = "Relief API",
+                     Version = "v1",
+                     Description = "Relief Care Platform API"
+                 });
+            
+                 // 🔐 JWT Bearer definition
+                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                 {
+                     Name = "Authorization",
+                     Type = SecuritySchemeType.Http,
+                     Scheme = "Bearer",
+                     BearerFormat = "JWT",
+                     In = ParameterLocation.Header,
+                     Description = "Enter JWT token like this: Bearer {your token}"
+                 });
+            
+                 // 🔐 Apply JWT globally
+                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                 {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                 });
+             });
+
+
+
+            //builder.Services.AddControllers()
+            //    .AddApplicationPart(typeof(AuthController).Assembly);
+            //;
+            //builder.Services.AddEndpointsApiExplorer();
+            //builder.Services.AddSwaggerGen();
 
             // Main APP DB
             builder.Services.AddDbContext<ReliefIdentityDbContext>(opt =>
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // JobOffers DB
+            builder.Services.AddDbContext<ReliefAppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Identity DB
             //builder.Services.AddDbContext<ReliefIdentityDbContext>(opt =>
@@ -67,6 +114,9 @@ namespace Relief.Web
 
             builder.Services.AddAuthorization();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IOfferService, OfferService>();
+            builder.Services.AddScoped<IJobOfferRepository, JobOfferRepository>();
+
 
             var app = builder.Build();
 
@@ -88,7 +138,7 @@ namespace Relief.Web
             app.MapControllers();
 
             app.Run();
-            
+
         }
 
         static async Task SeedRolesAsync(WebApplication app)

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Relief.Domain.Entities;
-using Relief.ServiceAbstraction;
+using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Relief.Services
+namespace Relief.Services.Implementations
 {
     public class AuthService : IAuthService
     {

@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v8.0": {
       "Relief.ServiceAbstraction/1.0.0": {
         "dependencies": {
+          "Relief.Domain": "1.0.0",
           "Shared": "1.0.0"
         },
         "runtime": {
           "Relief.ServiceAbstraction.dll": {}
+        }
+      },
+      "Relief.Domain/1.0.0": {
+        "runtime": {
+          "Relief.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Shared/1.0.0": {
@@ -26,6 +35,11 @@
   },
   "libraries": {
     "Relief.ServiceAbstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Relief.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

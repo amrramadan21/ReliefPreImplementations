@@ -50,5 +50,37 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "CreateOffer",
+    "RelativePath": "api/Offers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.OffersDTOs.CreateDTO.CreateJobOfferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "GetOfferById",
+    "RelativePath": "api/Offers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

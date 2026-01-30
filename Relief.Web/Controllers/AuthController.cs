@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Relief.ServiceAbstraction;
+using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
 using System;
 using System.Collections.Generic;
