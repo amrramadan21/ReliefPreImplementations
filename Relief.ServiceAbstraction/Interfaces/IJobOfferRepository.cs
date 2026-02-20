@@ -10,5 +10,13 @@ namespace Relief.ServiceAbstraction.Interfaces
     public interface IJobOfferRepository
     {
         Task AddAsync(JobOffer offer);
+        Task<JobOffer?> GetByIdAsync(Guid id);
+        Task<List<JobOffer>> GetAllAsync();
+        Task<List<JobOffer>> GetPagedAsync(int pageNumber, int pageSize);
+        Task UpdateAsync();
+        Task DeleteAsync(JobOffer offer);
+
+
+
     }
 }

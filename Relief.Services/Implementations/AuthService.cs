@@ -77,15 +77,18 @@ namespace Relief.Services.Implementations
             var expiryMinutes = int.Parse(jwt["ExpiryMinutes"] ?? "60");
 
             var claims = new List<Claim>
-            {
-                new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new(JwtRegisteredClaimNames.Email, user.Email ?? ""),
-                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new(ClaimTypes.Name, user.UserName ?? "")
-            };
+{
+    new Claim("userId", user.Id.ToString()),
+    new Claim(ClaimTypes.Role, role ?? ""),
+    new Claim(JwtRegisteredClaimNames.Email, user.Email ?? "")
+};
 
-            if (!string.IsNullOrWhiteSpace(role))
-                claims.Add(new Claim(ClaimTypes.Role, role));
+            Console.WriteLine("TOKEN KEY USED: " + key);
+
+
+
+            //if (!string.IsNullOrWhiteSpace(role))
+            //    claims.Add(new Claim(ClaimTypes.Role, role));
 
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var creds = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);

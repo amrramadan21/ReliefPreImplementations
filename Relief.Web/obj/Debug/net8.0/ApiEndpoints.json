@@ -69,9 +69,67 @@
   },
   {
     "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "GetAllOffers",
+    "RelativePath": "api/Offers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
     "Method": "GetOfferById",
     "RelativePath": "api/Offers/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "UpdateOffer",
+    "RelativePath": "api/Offers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Shared.OffersDTOs.UpdateDTO.UpdateJobOfferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "DeleteOffer",
+    "RelativePath": "api/Offers/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

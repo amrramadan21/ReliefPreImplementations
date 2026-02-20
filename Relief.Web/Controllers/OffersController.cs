@@ -2,12 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.OffersDTOs.CreateDTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Shared.OffersDTOs.UpdateDTO;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Relief.Web.Controllers
 {
@@ -23,28 +20,85 @@ namespace Relief.Web.Controllers
         }
 
         // 🔐 CareHome only
+
         [Authorize(Roles = "CareHome")]
         [HttpPost]
-        public async Task<IActionResult> CreateOffer(CreateJobOfferDto dto)
+        public async Task<IActionResult> CreateOffer([FromBody] CreateJobOfferDto dto)
         {
-            var careHomeId = Guid.Parse(
-                User.FindFirstValue(ClaimTypes.NameIdentifier)!
-            );
+            var userId = User.FindFirstValue("userId");
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized(new { message = "UserId claim not found in token" });
+
+            if (!Guid.TryParse(userId, out var careHomeId))
+                return Unauthorized(new { message = "Invalid UserId format in token" });
 
             var offerId = await _offerService.CreateOfferAsync(careHomeId, dto);
 
-            return CreatedAtAction(
-                nameof(GetOfferById),
-                new { id = offerId },
-                new { offerId }
-            );
+            return Ok(new { offerId });
         }
+
+
 
         [HttpGet("{id}")]
-        public IActionResult GetOfferById(Guid id)
+        public async Task<IActionResult> GetOfferById(Guid id)
         {
-            return Ok();
-        }
-    }
+            var offer = await _offerService.GetOfferByIdAsync(id);
 
+            if (offer == null)
+                return NotFound(new { message = "Offer not found" });
+
+            return Ok(offer);
+        }
+
+        [HttpGet]
+        [Authorize] // أي حد مسجل يقدر يشوف
+        public async Task<IActionResult> GetAllOffers(int pageNumber = 1,int pageSize = 5)
+        {
+            
+            var offers = await _offerService.GetAllOffersAsync(pageNumber,pageSize);
+            return Ok(offers);
+        }
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "CareHome")]
+        public async Task<IActionResult> UpdateOffer(Guid id, [FromBody] UpdateJobOfferDto dto)
+        {
+            var userId = User.FindFirstValue("userId");
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var careHomeId = Guid.Parse(userId);
+
+            var result = await _offerService.UpdateOfferAsync(id, careHomeId, dto);
+
+            if (!result)
+                return NotFound(new { message = "Offer not found" });
+
+            return NoContent();
+        }
+
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "CareHome")]
+        public async Task<IActionResult> DeleteOffer(Guid id)
+        {
+            var userId = User.FindFirstValue("userId");
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var careHomeId = Guid.Parse(userId);
+
+            var result = await _offerService.DeleteOfferAsync(id, careHomeId);
+
+            if (!result)
+                return NotFound(new { message = "Offer not found" });
+
+            return NoContent(); // 204
+        }
+
+
+    }
 }

@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Relief.Presentation.Controllers
 {
@@ -15,14 +10,43 @@ namespace Relief.Presentation.Controllers
     {
         private readonly IAuthService _auth;
 
-        public AuthController(IAuthService auth) => _auth = auth;
+        public AuthController(IAuthService auth)
+        {
+            _auth = auth;
+        }
 
         [HttpPost("register")]
         public async Task<ActionResult<AuthResponseDTO>> Register([FromBody] RegisterDTO dto)
-            => Ok(await _auth.RegisterAsync(dto));
+        {
+            try
+            {
+                var result = await _auth.RegisterAsync(dto);
+                return Ok(result);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new
+                {
+                    message = ex.Message
+                });
+            }
+        }
 
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponseDTO>> Login([FromBody] LoginDTO dto)
-            => Ok(await _auth.LoginAsync(dto));
+        {
+            try
+            {
+                var result = await _auth.LoginAsync(dto);
+                return Ok(result);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Unauthorized(new
+                {
+                    message = ex.Message
+                });
+            }
+        }
     }
 }

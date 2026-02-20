@@ -1,6 +1,8 @@
 ﻿using Relief.Domain.Entities;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.OffersDTOs.CreateDTO;
+using Shared.OffersDTOs.OfferInfoDTO;
+using Shared.OffersDTOs.UpdateDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,8 +84,7 @@ namespace Relief.Services.Implementations
                         IsAvailable = true
                     };
 
-                    day.Shifts.Add(shift);
-                }
+                    day.Shifts.Add(shift);                }
 
                 offer.Days.Add(day);
             }
@@ -94,6 +95,147 @@ namespace Relief.Services.Implementations
             return offer.Id;
         }
 
+        public async Task<JobOfferDetailsDto?> GetOfferByIdAsync(Guid id)
+        {
+            var offer = await _offerRepo.GetByIdAsync(id);
+
+            if (offer == null)
+                return null;
+
+            return new JobOfferDetailsDto
+            {
+                Id = offer.Id,
+                Title = offer.Title,
+                Description = offer.Description,
+                HourlyRate = offer.HourlyRate,
+                Address = offer.Address,
+                Latitude = offer.Latitude,
+                Longitude = offer.Longitude,
+                Days = offer.Days.Select(d => new OfferDayDetailsDto
+                {
+                    DayId = d.Id,
+                    Date = d.Date,
+                    Shifts = d.Shifts.Select(s => new ShiftDetailsDto
+                    {
+                        ShiftId = s.Id,
+                        StartTime = s.StartTime,
+                        EndTime = s.EndTime,
+                        IsAvailable = s.IsAvailable
+                    }).ToList()
+                }).ToList()
+            };
+        }
+
+        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(int pageNumber,int pageSize)
+        {
+            var offers = await _offerRepo.GetPagedAsync(pageNumber,pageSize);
+
+           
+            return offers.Select(o => new JobOfferSummaryDto
+            {
+                Id = o.Id,
+                Title = o.Title,
+                Address = o.Address,
+                HourlyRate = o.HourlyRate,
+                AvailableDaysCount = o.Days.Count,
+                AvailableShiftsCount = o.Days
+                    .SelectMany(d => d.Shifts)
+                    .Count(s => s.IsAvailable)
+            }).ToList();
+        }
+
+        public async Task<bool> UpdateOfferAsync(
+      Guid offerId,
+      Guid careHomeId,
+      UpdateJobOfferDto dto)
+        {
+            var offer = await _offerRepo.GetByIdAsync(offerId);
+
+            if (offer == null)
+                return false;
+
+            if (offer.CareHomeId != careHomeId)
+                throw new UnauthorizedAccessException("You cannot update this offer.");
+
+            // Update only main fields (stable version)
+            if (!string.IsNullOrWhiteSpace(dto.Title))
+                offer.Title = dto.Title;
+
+            if (!string.IsNullOrWhiteSpace(dto.Description))
+                offer.Description = dto.Description;
+
+            if (!string.IsNullOrWhiteSpace(dto.Address))
+                offer.Address = dto.Address;
+
+            if (dto.Latitude.HasValue)
+                offer.Latitude = dto.Latitude.Value;
+
+            if (dto.Longitude.HasValue)
+                offer.Longitude = dto.Longitude.Value;
+
+            if (dto.HourlyRate.HasValue)
+                offer.HourlyRate = dto.HourlyRate.Value;
+
+
+            // 🔥 مهم: مش هنعدل Days دلوقتي عشان نثبت الـ Update الأول
+            if (dto.Days != null && dto.Days.Any())
+            {
+                foreach (var dayDto in dto.Days)
+                {
+                    // لو فيه DayId يبقى تعديل
+                    if (dayDto.DayId.HasValue)
+                    {
+                        var existingDay = offer.Days
+                            .FirstOrDefault(d => d.Id == dayDto.DayId.Value);
+
+                        if (existingDay != null)
+                        {
+                            existingDay.Date = dayDto.Date;
+                        }
+                        else
+                        {
+                            // لو DayId جاي بس مش موجود في الداتابيز
+                            // نمنع اللخبطة
+                            throw new Exception("Day not found for update.");
+                        }
+                    }
+                    else
+                    {
+                        // إضافة Day جديدة
+                        var newDay = new OfferDay
+                        {
+                            Id = Guid.NewGuid(),
+                            Date = dayDto.Date,
+                            JobOfferId = offer.Id
+                        };
+
+                        offer.Days.Add(newDay);
+                    }
+                }
+            }
+
+
+
+            await _offerRepo.UpdateAsync();
+
+            return true;
+        }
+
+
+        public async Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId)
+        {
+            var offer = await _offerRepo.GetByIdAsync(offerId);
+
+            if (offer == null)
+                return false;
+
+            if (offer.CareHomeId != careHomeId)
+                throw new UnauthorizedAccessException("You cannot delete this offer.");
+
+            await _offerRepo.DeleteAsync(offer);
+
+            return true;
+        }
 
     }
 }
