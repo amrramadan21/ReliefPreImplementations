@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Relief.Domain.Entities;
+using Relief.Domain.Enums;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
 using System;
@@ -25,33 +26,59 @@ namespace Relief.Services.Implementations
             _config = config;
         }
 
-        public async Task<AuthResponseDTO> RegisterAsync(RegisterDTO dto)
+        public async Task<AuthResponseDTO> RegisterCareHomeAsync(RegisterCareHomeDTO dto)
         {
-            if (dto.Role != "CareHome" && dto.Role != "PSW")
-                throw new InvalidOperationException("Role must be 'CareHome' or 'PSW'.");
+            var user = new CareHomeUser
+            {
+                UserName = dto.Email,
+                Email = dto.Email,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                PhoneNumber = dto.PhoneNumber,
+                BirthOfDate = dto.DateOfBirth,
+                Gender = Enum.Parse<Gender>(dto.Gender, true),
 
-            var existing = await _userManager.FindByEmailAsync(dto.Email);
-            if (existing != null)
-                throw new InvalidOperationException("Email already registered.");
 
+
+                // Map any CareHome-specific fields here
+            };
+
+            // Hardcode the role here based on the endpoint called
+            return await RegisterUserCoreAsync(user, dto.Password, "CareHome");
+        }
+
+        public async Task<AuthResponseDTO> RegisterIndividualAsync(RegisterIndividualDTO dto)
+        {
             var user = new ApplicationUser
             {
                 UserName = dto.Email,
                 Email = dto.Email,
-                FullName = dto.FullName,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
                 PhoneNumber = dto.PhoneNumber,
                 BirthOfDate = dto.DateOfBirth
+                // Map any Individual-specific fields here
             };
 
-            var create = await _userManager.CreateAsync(user, dto.Password);
-            if (!create.Succeeded)
-                throw new InvalidOperationException(string.Join("; ", create.Errors.Select(e => e.Description)));
+            // Hardcode the role here
+            return await RegisterUserCoreAsync(user, dto.Password, "Individual");
+        }
 
-            var addRole = await _userManager.AddToRoleAsync(user, dto.Role);
-            if (!addRole.Succeeded)
-                throw new InvalidOperationException(string.Join("; ", addRole.Errors.Select(e => e.Description)));
+        public async Task<AuthResponseDTO> RegisterPswAsync(RegisterPswDTO dto)
+        {
+            var user = new ApplicationUser
+            {
+                UserName = dto.Email,
+                Email = dto.Email,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                PhoneNumber = dto.PhoneNumber,
+                BirthOfDate = dto.DateOfBirth
+                // Map any PSW-specific fields here
+            };
 
-            return await BuildTokenAsync(user);
+            // Hardcode the role here
+            return await RegisterUserCoreAsync(user, dto.Password, "PSW");
         }
 
         public async Task<AuthResponseDTO> LoginAsync(LoginDTO dto)
@@ -111,6 +138,28 @@ namespace Relief.Services.Implementations
                 Role = role,
                 UserId = user.Id
             };
+        }
+
+
+        private async Task<AuthResponseDTO> RegisterUserCoreAsync(ApplicationUser user, string password, string role)
+        {
+            // 1. Check if user exists
+            var existing = await _userManager.FindByEmailAsync(user.Email??"Wrone Email");
+            if (existing != null)
+                throw new InvalidOperationException("Email already registered.");
+
+            // 2. Create the user
+            var create = await _userManager.CreateAsync(user, password);
+            if (!create.Succeeded)
+                throw new InvalidOperationException(string.Join("; ", create.Errors.Select(e => e.Description)));
+
+            // 3. Assign the hardcoded role
+            var addRole = await _userManager.AddToRoleAsync(user, role);
+            if (!addRole.Succeeded)
+                throw new InvalidOperationException(string.Join("; ", addRole.Errors.Select(e => e.Description)));
+
+            // 4. Return token
+            return await BuildTokenAsync(user);
         }
     }
 }

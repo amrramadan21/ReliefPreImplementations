@@ -1,90 +1,222 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Projects\\Relief\\Relief\\",
+  "WorkspaceRootPath": "F:\\Projects\\relief latest version\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief latest version\\relief.presentation\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|f:\\projects\\relief\\relief\\relief.serviceabstraction\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief\\relief\\relief.presistence\\data\\dbcontexts\\reliefidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\dbcontexts\\reliefidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief\\relief\\relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief latest version\\relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief latest version\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\relief.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\relief.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\identitydtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\carehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\carehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\specifications\\basespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\specifications\\basespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\registercarehomedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\registercarehomedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\registerindividualdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\registerindividualdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\registerpswdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\registerpswdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief\\relief\\relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|f:\\projects\\relief latest version\\relief.serviceabstraction\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief latest version\\relief.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\joboffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\joboffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\individualcarehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\individualcarehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\pswuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\pswuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\specifications\\jobofferwithdetailsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\specifications\\jobofferwithdetailsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\specifications\\joboffershiftspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\specifications\\joboffershiftspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\updatedto\\updateoffershiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updateoffershiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\offerinfodto\\offershiftdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\offershiftdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\offersdtos\\createdto\\createoffershiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createoffershiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief latest version\\relief.presistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief latest version\\relief.presistence\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\offershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\offershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief latest version\\relief.presistence\\specificationsevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\specificationsevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\contracts\\ispecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\contracts\\ispecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|f:\\projects\\relief latest version\\relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\contracts\\igenaricrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\contracts\\igenaricrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief latest version\\relief.services\\relief.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\relief.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\contracts\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\contracts\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief latest version\\relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief latest version\\relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief latest version\\relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief latest version\\shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief latest version\\relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief latest version\\relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.Services\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -158,258 +290,180 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Relief.Presentation",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj",
-              "RelativeDocumentMoniker": "Relief.Presentation\\Relief.Presentation.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj",
-              "RelativeToolTip": "Relief.Presentation\\Relief.Presentation.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T19:42:26.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\AuthController.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Relief.Presentation\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T19:40:25.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\AuthService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\AuthService.cs",
-              "RelativeToolTip": "Relief.Services\\AuthService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T19:31:32.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Relief.Services",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj",
-              "RelativeDocumentMoniker": "Relief.Services\\Relief.Services.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj",
-              "RelativeToolTip": "Relief.Services\\Relief.Services.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T18:56:18.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "Relief.Web\\appsettings.json",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Web\\appsettings.json",
-              "RelativeToolTip": "Relief.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-27T18:29:42.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
-              "RelativeToolTip": "Relief.Web\\Program.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAIwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T18:20:19.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Relief.Web",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj",
-              "RelativeDocumentMoniker": "Relief.Web\\Relief.Web.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj",
-              "RelativeToolTip": "Relief.Web\\Relief.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T18:59:56.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReliefIdentityDbContext.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T18:13:45.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\IAuthService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
-              "RelativeToolTip": "Relief.ServiceAbstraction\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Title": "20260226143120_Initial migration.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs",
+              "RelativeToolTip": "Relief.Presistence\\Data\\AppMigrations\\20260226143120_Initial migration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T19:29:35.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20260128062230_initial.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T06:22:30.964Z",
+              "WhenOpened": "2026-02-26T14:31:21.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ReliefAppDbContext .cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "CareHomeUser.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\CareHomeUser.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\CareHomeUser.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\CareHomeUser.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\CareHomeUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T18:17:29.747Z",
+              "WhenOpened": "2026-02-20T13:26:09.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\RegisterDTO.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:32:39.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthResponseDTO.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
-              "RelativeToolTip": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:33:04.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\LoginDTO.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\IdentityDTOs\\LoginDTO.cs",
-              "RelativeToolTip": "Shared\\IdentityDTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:32:31.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\ApplicationUser.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\ApplicationUser.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\ApplicationUser.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\ApplicationUser.cs",
               "RelativeToolTip": "Relief.Domain\\Entities\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T17:51:52.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Relief.Domain",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj",
-              "RelativeDocumentMoniker": "Relief.Domain\\Relief.Domain.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj",
-              "RelativeToolTip": "Relief.Domain\\Relief.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T13:11:12.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Shared",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj",
-              "RelativeDocumentMoniker": "Shared\\Shared.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj",
-              "RelativeToolTip": "Shared\\Shared.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T17:31:58.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RoleType.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RoleType.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RoleType.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RoleType.cs",
-              "RelativeToolTip": "Relief.Domain\\Enums\\RoleType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ReliefAppDbContext .cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:27:03.768Z",
+              "WhenOpened": "2026-01-27T18:17:29.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RequestStatus.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RequestStatus.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RequestStatus.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RequestStatus.cs",
-              "RelativeToolTip": "Relief.Domain\\Enums\\RequestStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Address.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\Address.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Address.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\Address.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\Address.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:26:49.51Z",
+              "WhenOpened": "2026-02-24T15:13:51.987Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 0,
+              "Title": "OffersController.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presentation\\Controllers\\OffersController.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\OffersController.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presentation\\Controllers\\OffersController.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\OffersController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAEwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:20:42.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseSpecifications.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\BaseSpecifications.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Specifications\\BaseSpecifications.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\BaseSpecifications.cs",
+              "RelativeToolTip": "Relief.Services\\Specifications\\BaseSpecifications.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwDEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:28:01.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\AuthService.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:09:16.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Web\\Program.cs",
+              "RelativeToolTip": "Relief.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T18:20:19.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OfferService.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Implementations\\OfferService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\OfferService.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Implementations\\OfferService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\OfferService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwMMAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T01:13:02.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterCareHomeDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterCareHomeDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\RegisterCareHomeDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterCareHomeDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterCareHomeDTO.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:54:20.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterIndividualDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterIndividualDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\RegisterIndividualDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterIndividualDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterIndividualDTO.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA/wBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T17:32:39.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterPswDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterPswDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\RegisterPswDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\RegisterPswDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterPswDTO.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:54:04.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Gender.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\Gender.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\Gender.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\Gender.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\Gender.cs",
               "RelativeToolTip": "Relief.Domain\\Enums\\Gender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -418,16 +472,519 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T03:09:52.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:07:39.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddressDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\AddressDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\AddressDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\AddressDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\AddressDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:58:24.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20260226024355_rechange of database design.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs",
+              "RelativeToolTip": "Relief.Presistence\\Data\\AppMigrations\\20260226024355_rechange of database design.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:43:56.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "Relief.Presistence",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj",
+              "Title": "CreateJobOfferDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T19:31:41.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthResponseDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T17:33:04.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\LoginDTO.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\IdentityDTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T17:32:31.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "JobOffer.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JobOffer.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobOffer.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JobOffer.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JobOffer.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T01:13:46.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IndividualCareHomeUser.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\IndividualCareHomeUser.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\IndividualCareHomeUser.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\IndividualCareHomeUser.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\IndividualCareHomeUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:34:06.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "JobOfferShiftSpecification.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\JobOfferShiftSpecification.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Specifications\\JobOfferShiftSpecification.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\JobOfferShiftSpecification.cs",
+              "RelativeToolTip": "Relief.Services\\Specifications\\JobOfferShiftSpecification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T00:48:44.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UpdateOfferShiftDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferShiftDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferShiftDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferShiftDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferShiftDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T23:49:39.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateJobOfferDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T23:49:30.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "JobOfferWithDetailsSpecification.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\JobOfferWithDetailsSpecification.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Specifications\\JobOfferWithDetailsSpecification.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Specifications\\JobOfferWithDetailsSpecification.cs",
+              "RelativeToolTip": "Relief.Services\\Specifications\\JobOfferWithDetailsSpecification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T15:22:09.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PswUser.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\PswUser.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\PswUser.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\PswUser.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\PswUser.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T13:26:02.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OfferShiftDetailsDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T01:38:04.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "JobOfferSummaryDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T01:38:00.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "JobOfferDetailsDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T18:27:36.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CreateOfferShiftDto.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferShiftDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateOfferShiftDto.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferShiftDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateOfferShiftDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T19:31:39.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Repositories\\GenericRepository.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Relief.Presistence\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:01:52.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Relief.Presistence\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T22:38:54.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "OfferShift.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\OfferShift.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\OfferShift.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\OfferShift.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\OfferShift.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T01:14:05.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "JobRequestItem.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JobRequestItem.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobRequestItem.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JobRequestItem.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JobRequestItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:19:55.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RoleType.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\RoleType.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RoleType.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\RoleType.cs",
+              "RelativeToolTip": "Relief.Domain\\Enums\\RoleType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T13:27:03.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SpecificationsEvaluator.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\SpecificationsEvaluator.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\SpecificationsEvaluator.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\SpecificationsEvaluator.cs",
+              "RelativeToolTip": "Relief.Presistence\\SpecificationsEvaluator.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:47:12.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ISpecifications.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\ISpecifications.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Contracts\\ISpecifications.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\ISpecifications.cs",
+              "RelativeToolTip": "Relief.Domain\\Contracts\\ISpecifications.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:26:26.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IOfferService.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:18:42.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Contracts\\IUnitOfWork.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\IUnitOfWork.cs",
+              "RelativeToolTip": "Relief.Domain\\Contracts\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:26:27.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IGenaricRepository.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\IGenaricRepository.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Contracts\\IGenaricRepository.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Contracts\\IGenaricRepository.cs",
+              "RelativeToolTip": "Relief.Domain\\Contracts\\IGenaricRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:14:59.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Relief.Services.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Services\\Relief.Services.csproj",
+              "RelativeDocumentMoniker": "Relief.Services\\Relief.Services.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Services\\Relief.Services.csproj",
+              "RelativeToolTip": "Relief.Services\\Relief.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T18:56:18.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "JopRequest.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JopRequest.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JopRequest.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Entities\\JopRequest.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JopRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T01:14:19.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Relief.Web\\appsettings.json",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Web\\appsettings.json",
+              "RelativeToolTip": "Relief.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-27T18:29:42.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Relief.Web.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Web\\Relief.Web.csproj",
+              "RelativeDocumentMoniker": "Relief.Web\\Relief.Web.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Web\\Relief.Web.csproj",
+              "RelativeToolTip": "Relief.Web\\Relief.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T18:59:56.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\Relief\\Relief\\Relief.Services\\AuthService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\AuthService.cs",
+              "RelativeToolTip": "..\\Relief\\Relief\\Relief.Services\\AuthService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T19:31:32.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T19:40:25.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Relief.Presentation.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presentation\\Relief.Presentation.csproj",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Relief.Presentation.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presentation\\Relief.Presentation.csproj",
+              "RelativeToolTip": "Relief.Presentation\\Relief.Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T19:42:26.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
+              "RelativeDocumentMoniker": "..\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
+              "RelativeToolTip": "..\\Relief\\Relief\\Relief.ServiceAbstraction\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T19:29:35.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20260128062230_initial.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
+              "RelativeDocumentMoniker": "..\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
+              "RelativeToolTip": "..\\Relief\\Relief\\Relief.Presistence\\Data\\Migrations\\20260128062230_initial.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T06:22:30.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Relief.Domain.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Relief.Domain.csproj",
+              "RelativeDocumentMoniker": "Relief.Domain\\Relief.Domain.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Relief.Domain.csproj",
+              "RelativeToolTip": "Relief.Domain\\Relief.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T13:11:12.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Shared.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Shared\\Shared.csproj",
+              "RelativeDocumentMoniker": "Shared\\Shared.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Shared\\Shared.csproj",
+              "RelativeToolTip": "Shared\\Shared.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T17:31:58.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "RequestStatus.cs",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\RequestStatus.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RequestStatus.cs",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Domain\\Enums\\RequestStatus.cs",
+              "RelativeToolTip": "Relief.Domain\\Enums\\RequestStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T13:26:49.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Relief.Presistence.csproj",
+              "DocumentMoniker": "F:\\Projects\\relief latest version\\Relief.Presistence\\Relief.Presistence.csproj",
               "RelativeDocumentMoniker": "Relief.Presistence\\Relief.Presistence.csproj",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj",
+              "ToolTip": "F:\\Projects\\relief latest version\\Relief.Presistence\\Relief.Presistence.csproj",
               "RelativeToolTip": "Relief.Presistence\\Relief.Presistence.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T13:13:19.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T13:13:19.014Z"
             }
           ]
         }

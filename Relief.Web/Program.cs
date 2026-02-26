@@ -11,6 +11,7 @@ using Relief.Services.Implementations;
 using System.Security.Claims;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
+using Relief.Domain.Contracts;
 
 
 namespace Relief.Web
@@ -70,9 +71,7 @@ namespace Relief.Web
             // -----------------------------
             // Databases
             // -----------------------------
-            builder.Services.AddDbContext<ReliefIdentityDbContext>(opt =>
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            
             builder.Services.AddDbContext<ReliefAppDbContext>(opt =>
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -84,7 +83,7 @@ namespace Relief.Web
                 {
                     options.User.RequireUniqueEmail = true;
                 })
-                .AddEntityFrameworkStores<ReliefIdentityDbContext>()
+                .AddEntityFrameworkStores<ReliefAppDbContext>()
                 .AddDefaultTokenProviders();
 
             // -----------------------------
@@ -142,7 +141,7 @@ namespace Relief.Web
             // -----------------------------
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IOfferService, OfferService>();
-            builder.Services.AddScoped<IJobOfferRepository, JobOfferRepository>();
+            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
             var app = builder.Build();
 

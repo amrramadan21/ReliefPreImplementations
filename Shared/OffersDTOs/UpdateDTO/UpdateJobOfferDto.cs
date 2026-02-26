@@ -17,6 +17,6 @@ namespace Shared.OffersDTOs.UpdateDTO
 
         public decimal? HourlyRate { get; set; }
 
-        public List<UpdateOfferDayDto>? Days { get; set; }
+        public List<UpdateOfferShiftDto>? Days { get; set; }
     }
 }

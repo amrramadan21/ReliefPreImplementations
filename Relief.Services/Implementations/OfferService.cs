@@ -1,5 +1,7 @@
-﻿using Relief.Domain.Entities;
+﻿using Relief.Domain.Contracts;
+using Relief.Domain.Entities;
 using Relief.ServiceAbstraction.Interfaces;
+using Relief.Services.Specifications;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
 using Shared.OffersDTOs.UpdateDTO;
@@ -13,16 +15,16 @@ namespace Relief.Services.Implementations
 {
     public class OfferService : IOfferService
     {
-        private readonly IJobOfferRepository _offerRepo;
-        public OfferService(IJobOfferRepository offerRepo) 
+        private readonly IUnitOfWork _unitOfWork;
+        public OfferService(IUnitOfWork unitOfWork)
         {
-            _offerRepo = offerRepo;
+            _unitOfWork = unitOfWork;
         }
         public async Task<Guid> CreateOfferAsync(Guid careHomeId, CreateJobOfferDto dto)
         {
             //  Basic Offer Validation
-            if (dto.Days == null || !dto.Days.Any())
-                throw new Exception("Offer must contain at least one day.");
+            if (dto.Shifts == null || !dto.Shifts.Any())
+                throw new Exception("Offer must contain at least one shift.");
 
             //  Create Offer
             var offer = new JobOffer
@@ -37,67 +39,65 @@ namespace Relief.Services.Implementations
                 CareHomeId = careHomeId
             };
 
+
+            var shiftRepo = _unitOfWork.GetRepository<OfferShift, Guid>();
             //  Days & Shifts Validation + Mapping
-            foreach (var dayDto in dto.Days)
+            foreach (var shiftDto in dto.Shifts)
             {
-                if (dayDto.Shifts == null || !dayDto.Shifts.Any())
-                    throw new Exception($"Day {dayDto.Date:yyyy-MM-dd} must contain at least one shift.");
+                if (shiftDto.StartTime == null || shiftDto.EndTime == null)
+                    throw new Exception($"Day {shiftDto.Date:yyyy-MM-dd} must contain at least one shift.");
 
                 // Validate shifts times
-                foreach (var shiftDto in dayDto.Shifts)
-                {
-                    if (shiftDto.StartTime >= shiftDto.EndTime)
-                        throw new Exception(
-                            $"Invalid shift time on {dayDto.Date:yyyy-MM-dd}: StartTime must be before EndTime."
-                        );
-                }
+                if (shiftDto.StartTime >= shiftDto.EndTime)
+                    throw new Exception(
+                        $"Invalid shift time on {shiftDto.Date:yyyy-MM-dd}: StartTime must be before EndTime."
+                    );
 
                 // Validate overlapping shifts
-                var orderedShifts = dayDto.Shifts
-                    .OrderBy(s => s.StartTime)
-                    .ToList();
+                var shiftSpecification = new JobOfferShiftSpecification(careHomeId, shiftDto.Date);
+                var existingShiftsForDate = await shiftRepo.GetAllAsync(shiftSpecification);
 
-                for (int i = 0; i < orderedShifts.Count - 1; i++)
+                // 2. Check if the new shift overlaps with any existing shift
+                foreach (var existingShift in existingShiftsForDate) // IMPORTANT !! recheck in another time
                 {
-                    if (orderedShifts[i].EndTime > orderedShifts[i + 1].StartTime)
-                        throw new Exception(
-                            $"Overlapping shifts detected on {dayDto.Date:yyyy-MM-dd}."
-                        );
+                    // The Overlap Formula
+                    bool isOverlapping = shiftDto.StartTime < existingShift.EndTime &&
+                                         shiftDto.EndTime > existingShift.StartTime;
+
+                    if (isOverlapping)
+                    {
+                        throw new Exception($"Overlap detected! The shift from {shiftDto.StartTime} to {shiftDto.EndTime} on {shiftDto.Date:yyyy-MM-dd} interrupts an existing shift ({existingShift.StartTime} to {existingShift.EndTime}).");
+                    }
                 }
 
+
                 // Create Day
-                var day = new OfferDay
+                var shift = new OfferShift
                 {
                     Id = Guid.NewGuid(),
-                    Date = dayDto.Date,
-                    JobOfferId = offer.Id
+                    Date = shiftDto.Date,
+                    JobOfferId = offer.Id,
+                    StartTime = shiftDto.StartTime,
+                    EndTime = shiftDto.EndTime
                 };
 
-                // Create Shifts
-                foreach (var shiftDto in dayDto.Shifts)
-                {
-                    var shift = new Shift
-                    {
-                        Id = Guid.NewGuid(),
-                        StartTime = shiftDto.StartTime,
-                        EndTime = shiftDto.EndTime,
-                        IsAvailable = true
-                    };
-
-                    day.Shifts.Add(shift);                }
-
-                offer.Days.Add(day);
+                offer.Shifts.Add(shift);
             }
 
             //  Save
-            await _offerRepo.AddAsync(offer);
+            var repository = _unitOfWork.GetRepository<JobOffer, Guid>();
+            await repository.AddAsync(offer);
 
+            await _unitOfWork.SaveChangesAsync();
             return offer.Id;
         }
 
         public async Task<JobOfferDetailsDto?> GetOfferByIdAsync(Guid id)
         {
-            var offer = await _offerRepo.GetByIdAsync(id);
+            var _offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            var spec = new JobOfferWithDetailsSpecification(id);
+            var offer = await _offerRepo.GetByIdAsync(spec);
 
             if (offer == null)
                 return null;
@@ -111,45 +111,42 @@ namespace Relief.Services.Implementations
                 Address = offer.Address,
                 Latitude = offer.Latitude,
                 Longitude = offer.Longitude,
-                Days = offer.Days.Select(d => new OfferDayDetailsDto
+                Shifts = offer.Shifts.Select(s => new OfferShiftDetailsDto
                 {
-                    DayId = d.Id,
-                    Date = d.Date,
-                    Shifts = d.Shifts.Select(s => new ShiftDetailsDto
-                    {
-                        ShiftId = s.Id,
-                        StartTime = s.StartTime,
-                        EndTime = s.EndTime,
-                        IsAvailable = s.IsAvailable
-                    }).ToList()
+                    ShiftId = s.Id,
+                    Date = s.Date,
+                    StartTime = s.StartTime,
+                    EndTime = s.EndTime,
+                    IsAvailable = s.IsAvailable
                 }).ToList()
             };
         }
 
-        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(int pageNumber,int pageSize)
+        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync()
         {
-            var offers = await _offerRepo.GetPagedAsync(pageNumber,pageSize);
+            var _offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+            var offers = await _offerRepo.GetAllAsync();
 
-           
+
             return offers.Select(o => new JobOfferSummaryDto
             {
                 Id = o.Id,
                 Title = o.Title,
                 Address = o.Address,
                 HourlyRate = o.HourlyRate,
-                AvailableDaysCount = o.Days.Count,
-                AvailableShiftsCount = o.Days
-                    .SelectMany(d => d.Shifts)
-                    .Count(s => s.IsAvailable)
+                AvailableDaysCount = o.Shifts.Count
             }).ToList();
         }
 
-        public async Task<bool> UpdateOfferAsync(
-      Guid offerId,
-      Guid careHomeId,
-      UpdateJobOfferDto dto)
+        public async Task<bool> UpdateOfferAsync(Guid offerId, Guid careHomeId, UpdateJobOfferDto dto)
         {
-            var offer = await _offerRepo.GetByIdAsync(offerId);
+            var _offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+            var spec = new JobOfferWithDetailsSpecification(offerId);
+            var offer = await _offerRepo.GetByIdAsync(spec);
+            Console.WriteLine("=================================");
+            Console.WriteLine(offer.Id);
+            Console.WriteLine(offer.Shifts.Count);
+            Console.WriteLine("=================================");
 
             if (offer == null)
                 return false;
@@ -183,14 +180,20 @@ namespace Relief.Services.Implementations
                 foreach (var dayDto in dto.Days)
                 {
                     // لو فيه DayId يبقى تعديل
-                    if (dayDto.DayId.HasValue)
+                    if (dayDto.ShiftId.HasValue)
                     {
-                        var existingDay = offer.Days
-                            .FirstOrDefault(d => d.Id == dayDto.DayId.Value);
+                        var existingShift = offer.Shifts
+                            .FirstOrDefault(d => d.Id == dayDto.ShiftId.Value);
 
-                        if (existingDay != null)
+                        // doesn't handle dubliation yet
+                        if (existingShift != null)
                         {
-                            existingDay.Date = dayDto.Date;
+                            if(dayDto.Date != null)
+                                existingShift.Date = dayDto.Date;
+                            if(dayDto.StartTime != null)
+                                existingShift.StartTime = dayDto.StartTime;
+                            if(dayDto.EndTime != null)
+                                existingShift.EndTime = dayDto.EndTime;
                         }
                         else
                         {
@@ -199,24 +202,13 @@ namespace Relief.Services.Implementations
                             throw new Exception("Day not found for update.");
                         }
                     }
-                    else
-                    {
-                        // إضافة Day جديدة
-                        var newDay = new OfferDay
-                        {
-                            Id = Guid.NewGuid(),
-                            Date = dayDto.Date,
-                            JobOfferId = offer.Id
-                        };
-
-                        offer.Days.Add(newDay);
-                    }
                 }
             }
 
+            var repository = _unitOfWork.GetRepository<JobOffer, Guid>();
+            //repository.Update(offer);
 
-
-            await _offerRepo.UpdateAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }
@@ -224,6 +216,7 @@ namespace Relief.Services.Implementations
 
         public async Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId)
         {
+            var _offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
             var offer = await _offerRepo.GetByIdAsync(offerId);
 
             if (offer == null)
@@ -232,7 +225,9 @@ namespace Relief.Services.Implementations
             if (offer.CareHomeId != careHomeId)
                 throw new UnauthorizedAccessException("You cannot delete this offer.");
 
-            await _offerRepo.DeleteAsync(offer);
+            var repository = _unitOfWork.GetRepository<JobOffer, Guid>();
+            repository.Delete(offer);
+            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }

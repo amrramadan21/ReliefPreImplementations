@@ -453,7 +453,8 @@
           },
           "date": {
             "type": "string",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "shifts": {
             "type": "array",
@@ -475,11 +476,13 @@
           },
           "startTime": {
             "type": "string",
-            "format": "time"
+            "format": "time",
+            "nullable": true
           },
           "endTime": {
             "type": "string",
-            "format": "time"
+            "format": "time",
+            "nullable": true
           }
         },
         "additionalProperties": false

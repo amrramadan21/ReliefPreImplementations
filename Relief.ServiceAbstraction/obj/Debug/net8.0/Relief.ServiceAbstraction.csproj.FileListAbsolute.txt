@@ -31,3 +31,21 @@ C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.ServiceAbstraction\obj\Debug\net8.0
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.ServiceAbstraction\obj\Debug\net8.0\refint\Relief.ServiceAbstraction.dll
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.pdb
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.ServiceAbstraction\obj\Debug\net8.0\ref\Relief.ServiceAbstraction.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.deps.json
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Shared.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\relief latest version\Relief.ServiceAbstraction\bin\Debug\net8.0\Shared.pdb
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.csproj.AssemblyReference.cache
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.AssemblyInfoInputs.cache
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.AssemblyInfo.cs
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.csproj.CoreCompileInputs.cache
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.sourcelink.json
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.S.44FC02F7.Up2Date
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\refint\Relief.ServiceAbstraction.dll
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.pdb
+F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\ref\Relief.ServiceAbstraction.dll

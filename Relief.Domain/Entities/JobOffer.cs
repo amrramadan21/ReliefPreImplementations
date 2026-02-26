@@ -24,8 +24,7 @@ namespace Relief.Domain.Entities
         public double Longitude { get; set; }
 
         public Guid CareHomeId { get; set; }
-
-        public ICollection<OfferDay> Days { get; set; } = new List<OfferDay>();
+        public ICollection<OfferShift> Shifts { get; set; } = new List<OfferShift>();
 
 
 

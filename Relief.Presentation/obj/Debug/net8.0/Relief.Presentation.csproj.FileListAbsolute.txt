@@ -35,3 +35,23 @@ C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.Presentation\obj\Debug\net8.0\Relie
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
 C:\Users\LOQ\Desktop\Amr\Web\Projects\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.deps.json
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.dll
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.pdb
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.dll
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Shared.dll
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\relief latest version\Relief.Presentation\bin\Debug\net8.0\Shared.pdb
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.AssemblyReference.cache
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfoInputs.cache
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfo.cs
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.CoreCompileInputs.cache
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.sourcelink.json
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.P.10F54F67.Up2Date
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.dll
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
+F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll

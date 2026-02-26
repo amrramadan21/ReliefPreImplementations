@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Relief.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Relief.Presistence.Data.DbContexts
 {
-    public class ReliefAppDbContext : DbContext
+    public class ReliefAppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
         public ReliefAppDbContext(DbContextOptions<ReliefAppDbContext> options)
             : base(options)
@@ -16,8 +18,14 @@ namespace Relief.Presistence.Data.DbContexts
         }
 
         public DbSet<JobOffer> JobOffers => Set<JobOffer>();
-        public DbSet<OfferDay> OfferDays => Set<OfferDay>();
-        public DbSet<Shift> Shifts => Set<Shift>();
+        public DbSet<OfferShift> OfferDays => Set<OfferShift>();
+        public DbSet<CareHomeUser> CareHomeUsers => Set<CareHomeUser>();
+        public DbSet<IndividualCareHomeUser> IndividualUsers => Set<IndividualCareHomeUser>();
+        public DbSet<PswUser> PswUsers => Set<PswUser>();
+
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,16 +37,15 @@ namespace Relief.Presistence.Data.DbContexts
 
             // JobOffer -> Days
             modelBuilder.Entity<JobOffer>()
-                .HasMany(o => o.Days)
+                .HasMany(o => o.Shifts)
                 .WithOne(d => d.JobOffer)
                 .HasForeignKey(d => d.JobOfferId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // OfferDay -> Shifts
-            modelBuilder.Entity<OfferDay>()
-                .HasMany(d => d.Shifts)
-                .WithOne(s => s.OfferDay)
-                .HasForeignKey(s => s.OfferDayId)
+            modelBuilder.Entity<ApplicationUser>()
+                .HasOne(U => U.Address)
+                .WithOne(A => A.User)
+                .HasForeignKey<ApplicationUser>(U => U.AddressId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
 
