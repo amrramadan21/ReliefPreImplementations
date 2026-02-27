@@ -1,178 +1,224 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\",
+  "WorkspaceRootPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presistence\\repositories\\jobofferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\repositories\\jobofferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.web\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\updatedto\\updateshiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updateshiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.serviceabstraction\\interfaces\\ijobofferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\ijobofferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\updatedto\\updateofferdaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updateofferdaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\offerinfodto\\shiftdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\shiftdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\offerinfodto\\offerdaydetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\offerdaydetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\createdto\\createshiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createshiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\createdto\\createofferdaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createofferdaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.serviceabstraction\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.serviceabstraction\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\joboffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.presentation\\controllers\\applycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\applycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.services\\implementations\\applyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\applyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.serviceabstraction\\interfaces\\iapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\applydtos\\applytoofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applydtos\\applytoofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\offershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\offershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\joboffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\joboffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\offerday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\offerday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presistence\\data\\dbcontexts\\reliefidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\dbcontexts\\reliefidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\jobrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\joprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\dbcontexts\\reliefappdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.services\\implementations\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.serviceabstraction\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\users\\pswuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\users\\pswuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\entities\\users\\filemetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\users\\filemetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.presentation\\controllers\\completeprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\completeprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.serviceabstraction\\interfaces\\ipswservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\ipswservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.services\\implementations\\pswservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\pswservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\identitydtos\\completepswprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\completepswprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\updatedto\\updatejobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\joboffersummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\relief.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\relief.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\identitydtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\identitydtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\identitydtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\relief.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projectsrelief\\reliefpreimplementations\\relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\relief.presistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|c:\\users\\loq\\desktop\\amr\\web\\projects\\relief.presistence\\data\\identitymigrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\data\\identitymigrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\OffersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\OfferDay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\Shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -182,7 +228,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -246,270 +292,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OfferService.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Services\\Implementations\\OfferService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\OfferService.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Services\\Implementations\\OfferService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\OfferService.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAswNcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T09:13:55.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateShiftDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:53:47.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OffersController.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
-              "RelativeDocumentMoniker": "Relief.Web\\Controllers\\OffersController.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
-              "RelativeToolTip": "Relief.Web\\Controllers\\OffersController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T20:18:03.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "JobOfferRepository.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Repositories\\JobOfferRepository.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
-              "RelativeToolTip": "Relief.Presistence\\Repositories\\JobOfferRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Title": "20260227063655_AddAssignedPswToShift.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs",
+              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260227063655_AddAssignedPswToShift.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T17:10:56.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IJobOfferRepository.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
-              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
-              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T09:07:59.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IOfferService.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
-              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
-              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T09:05:18.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UpdateOfferDayDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:53:16.418Z",
+              "WhenOpened": "2026-02-27T06:36:55.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UpdateJobOfferDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBYAAAAAAAAAAAAAAA==",
+              "Title": "ApplyToOfferDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
+              "RelativeDocumentMoniker": "Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
+              "RelativeToolTip": "Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:52:36.681Z",
+              "WhenOpened": "2026-02-27T06:10:23.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Services\\Implementations\\AuthService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\AuthService.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Services\\Implementations\\AuthService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\AuthService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Title": "OfferShift.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\OfferShift.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\OfferShift.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\OfferShift.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\OfferShift.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T06:51:34.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "JobOfferSummaryDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:59:12.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "JobOfferDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:59:56.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ShiftDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T09:01:06.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OfferDayDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T09:00:40.126Z",
+              "WhenOpened": "2026-02-27T05:58:31.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Program.cs",
-              "RelativeToolTip": "Relief.Web\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA1wB8AAAAQAAAAAAAAAA==",
+              "Title": "20260227055206_firstCreate.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs",
+              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260227055206_firstCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T06:51:34.145Z",
+              "WhenOpened": "2026-02-27T05:52:06.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "Relief.Web\\appsettings.json",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\appsettings.json",
-              "RelativeToolTip": "Relief.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-30T06:51:34.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "JobOffer.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JobOffer.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobOffer.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JobOffer.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\JobOffer.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T07:16:56.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Relief.Web\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Relief.Web\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T02:18:44.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateOfferDayDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:47:13.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CreateJobOfferDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:42:12.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreateShiftDto.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
-              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
-              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T08:47:37.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 3,
               "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -518,131 +357,535 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Program.cs",
+              "RelativeToolTip": "Relief.Web\\Program.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAnwJYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T06:51:34.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplyController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Controllers\\ApplyController.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ApplyController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Controllers\\ApplyController.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\ApplyController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA8wBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T06:12:04.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\AuthService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAUwMoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T06:51:34.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IApplyService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IApplyService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IApplyService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IApplyService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IApplyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T06:10:52.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplyService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\ApplyService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\ApplyService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\ApplyService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\ApplyService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwEgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T06:11:22.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JobOffer.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JobOffer.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobOffer.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JobOffer.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JobOffer.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T07:16:56.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JopRequest.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JopRequest.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JopRequest.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JopRequest.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JopRequest.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T07:31:42.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JobRequestItem.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JobRequestItem.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobRequestItem.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\JobRequestItem.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\JobRequestItem.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T07:34:03.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RequestStatus.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\RequestStatus.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RequestStatus.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\RequestStatus.cs",
+              "RelativeToolTip": "Relief.Domain\\Enums\\RequestStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T06:51:34.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\FileService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\FileService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\FileService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\FileService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwDgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:08:08.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IFileService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IFileService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IFileService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:03:14.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PswUser.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\Users\\PswUser.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\PswUser.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\Users\\PswUser.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\Users\\PswUser.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAxwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:08:41.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileMetadata.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\Users\\FileMetadata.cs",
+              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\FileMetadata.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Entities\\Users\\FileMetadata.cs",
+              "RelativeToolTip": "Relief.Domain\\Entities\\Users\\FileMetadata.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:10:35.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CompleteProfile.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Controllers\\CompleteProfile.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\CompleteProfile.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Controllers\\CompleteProfile.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\CompleteProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:05:38.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReliefAppDbContext .cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAADwv6UAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T06:51:34.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20260227052419_MakePswFieldsNullable.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs",
+              "RelativeToolTip": "Relief.Presistence\\Data\\AppMigrations\\20260227052419_MakePswFieldsNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:24:19.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CompletePswProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\CompletePswProfileDto.cs",
+              "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\CompletePswProfileDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\CompletePswProfileDto.cs",
+              "RelativeToolTip": "Shared\\IdentityDTOs\\CompletePswProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:38:05.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IPswService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IPswService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IPswService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IPswService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IPswService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:39:55.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 22,
+              "Title": "PswService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\PswService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\PswService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\PswService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\PswService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:40:35.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OfferService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\OfferService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\OfferService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Implementations\\OfferService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\OfferService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwNcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T09:13:55.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IOfferService.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\IOfferService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T09:05:18.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "JobOfferRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Repositories\\JobOfferRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T17:10:56.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IJobOfferRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.ServiceAbstraction\\Interfaces\\IJobOfferRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T09:07:59.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "OffersController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Web\\Controllers\\OffersController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T20:18:03.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UpdateShiftDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateShiftDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:53:47.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UpdateOfferDayDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\UpdateDTO\\UpdateOfferDayDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:53:16.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UpdateJobOfferDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:52:36.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "JobOfferSummaryDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:59:12.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "JobOfferDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:59:56.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ShiftDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\ShiftDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T09:01:06.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "OfferDayDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferDayDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T09:00:40.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Relief.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\appsettings.json",
+              "RelativeToolTip": "Relief.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-30T06:51:34.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Web\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T02:18:44.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CreateOfferDayDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateOfferDayDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:47:13.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateJobOfferDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:42:12.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "CreateShiftDto.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Shared\\OffersDTOs\\CreateDTO\\CreateShiftDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:47:37.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "20260130173747_InitJobOffers.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
-              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Migrations\\20260130173747_InitJobOffers.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T17:37:47.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "20260130174022_InitIdentity.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Data\\Migrations\\20260130174022_InitIdentity.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T17:40:22.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "20260130172629_InitJobOffers.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
-              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Migrations\\20260130172629_InitJobOffers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T17:26:29.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 54,
               "Title": "ReliefIdentityDbContext.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefIdentityDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T06:51:34.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ReliefAppDbContext .cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\DbContexts\\ReliefAppDbContext .cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T06:51:34.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 55,
               "Title": "OfferDay.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\OfferDay.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\OfferDay.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Domain\\Entities\\OfferDay.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\OfferDay.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\OfferDay.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Domain\\Entities\\OfferDay.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T07:24:24.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 56,
               "Title": "Shift.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\Shift.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Shift.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Domain\\Entities\\Shift.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\Shift.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\Shift.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Domain\\Entities\\Shift.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T07:26:01.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "JobRequestItem.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JobRequestItem.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JobRequestItem.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JobRequestItem.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\JobRequestItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T07:34:03.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "JopRequest.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JopRequest.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\JopRequest.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\JopRequest.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\JopRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T07:31:42.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "RequestStatus.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\RequestStatus.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RequestStatus.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\RequestStatus.cs",
-              "RelativeToolTip": "Relief.Domain\\Enums\\RequestStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T06:51:34.192Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Relief.Web.csproj",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Relief.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
               "RelativeDocumentMoniker": "Relief.Web\\Relief.Web.csproj",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Web\\Relief.Web.csproj",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
               "RelativeToolTip": "Relief.Web\\Relief.Web.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -650,23 +893,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 57,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Relief.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Domain\\Entities\\ApplicationUser.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Entities\\ApplicationUser.cs",
-              "RelativeToolTip": "Relief.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Domain\\Entities\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T06:51:34.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Relief.Presentation.csproj",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presentation\\Relief.Presentation.csproj",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
               "RelativeDocumentMoniker": "Relief.Presentation\\Relief.Presentation.csproj",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presentation\\Relief.Presentation.csproj",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
               "RelativeToolTip": "Relief.Presentation\\Relief.Presentation.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -674,23 +917,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 58,
               "Title": "20260128062230_initial.cs",
               "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
+              "RelativeDocumentMoniker": "..\\..\\Projects\\Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
               "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
-              "RelativeToolTip": "Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
+              "RelativeToolTip": "..\\..\\Projects\\Relief.Presistence\\Data\\IdentityMigrations\\20260128062230_initial.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T06:51:34.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\RegisterDTO.cs",
               "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterDTO.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -698,11 +941,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "AuthResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
               "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\AuthResponseDTO.cs",
               "RelativeToolTip": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -710,11 +953,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "Shared\\IdentityDTOs\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\IdentityDTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\IdentityDTOs\\LoginDTO.cs",
               "RelativeToolTip": "Shared\\IdentityDTOs\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -722,11 +965,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Relief.Domain.csproj",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Relief.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
               "RelativeDocumentMoniker": "Relief.Domain\\Relief.Domain.csproj",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Relief.Domain.csproj",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
               "RelativeToolTip": "Relief.Domain\\Relief.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -734,11 +977,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "Shared.csproj",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\Shared.csproj",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj",
               "RelativeDocumentMoniker": "Shared\\Shared.csproj",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Shared\\Shared.csproj",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj",
               "RelativeToolTip": "Shared\\Shared.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -746,11 +989,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "RoleType.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\RoleType.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\RoleType.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RoleType.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\RoleType.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\RoleType.cs",
               "RelativeToolTip": "Relief.Domain\\Enums\\RoleType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -758,11 +1001,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Gender.cs",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\Gender.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\Gender.cs",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Domain\\Enums\\Gender.cs",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Enums\\Gender.cs",
               "RelativeToolTip": "Relief.Domain\\Enums\\Gender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -770,11 +1013,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Relief.Presistence.csproj",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Relief.Presistence.csproj",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
               "RelativeDocumentMoniker": "Relief.Presistence\\Relief.Presistence.csproj",
-              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\Projects\\Relief.Presistence\\Relief.Presistence.csproj",
+              "ToolTip": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
               "RelativeToolTip": "Relief.Presistence\\Relief.Presistence.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

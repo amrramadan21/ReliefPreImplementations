@@ -9,21 +9,36 @@ namespace Relief.Domain.Entities.Users
 {
     public class PswUser
     {
-        public Guid Id { get; set; }
-        public string PrrofIdentity { get; set; } = null!;
-        public bool WorkStatus { get; set; }
+        public Guid ApplicationUserId { get; set; } // PK + FK
 
-        public string PswCertificate { get; set; } = null!;
-
-        public string CV { get; set; } = null!;
-
-        public string ImmunizationRecord { get; set; } = null!;
-
-        public string CriminalRecord { get; set; } = null!;
-
-        public string? CPRCard { get; set; }
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
+        public string? ProofIdentityType { get; set; }
+        public bool WorkStatus { get; set; }
 
+        // File References
+        public Guid? ProofIdentityFileId { get; set; }
+        public FileMetadata? ProofIdentityFile { get; set; }
+
+        public Guid? InsuranceFileId { get; set; }
+        public FileMetadata? InsuranceFile { get; set; }
+
+        public Guid? PswCertificateFileId { get; set; }
+        public FileMetadata? PswCertificateFile { get; set; }
+
+        public Guid? CVFileId { get; set; }
+        public FileMetadata? CVFile { get; set; }
+
+        public Guid? ImmunizationRecordFileId { get; set; }
+        public FileMetadata? ImmunizationRecordFile { get; set; }
+
+        public Guid? CriminalRecordFileId { get; set; }
+        public FileMetadata? CriminalRecordFile { get; set; }
+
+        public Guid? FirstAidOrCPRFileId { get; set; }
+        public FileMetadata? FirstAidOrCPRFile { get; set; }
+
+        public bool IsProfileCompleted { get; set; } = false;
+        public bool IsVerified { get; set; } = false;
     }
 }

@@ -69,3 +69,27 @@ F:\Projects\relief latest version\Relief.Presistence\obj\Debug\net8.0\refint\Rel
 F:\Projects\relief latest version\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.pdb
 F:\Projects\relief latest version\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.genruntimeconfig.cache
 F:\Projects\relief latest version\Relief.Presistence\obj\Debug\net8.0\ref\Relief.Presistence.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Presistence.deps.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Presistence.runtimeconfig.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Presistence.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Presistence.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Services.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Shared.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Services.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\bin\Debug\net8.0\Shared.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.csproj.AssemblyReference.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.AssemblyInfoInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.AssemblyInfo.cs
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.sourcelink.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.P.5B1003EC.Up2Date
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\refint\Relief.Presistence.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.genruntimeconfig.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\ref\Relief.Presistence.dll

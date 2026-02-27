@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Relief.Presentation.Controllers.ApplyController",
+    "Method": "Apply",
+    "RelativePath": "api/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplyDTOs.ApplyToOfferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Relief.Presentation.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
@@ -102,6 +118,57 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.CompleteProfileController",
+    "Method": "CompleteProfile",
+    "RelativePath": "api/CompleteProfile/complete-profile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProofIdentityType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WorkStatus",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProofIdentityFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "PswCertificateFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CVFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImmunizationRecordFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CriminalRecordFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstAidOrCPRFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Relief.Web.Controllers.OffersController",

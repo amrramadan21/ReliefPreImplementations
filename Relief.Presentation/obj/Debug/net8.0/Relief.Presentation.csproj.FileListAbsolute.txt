@@ -55,3 +55,23 @@ F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Pr
 F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
 F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
 F:\Projects\relief latest version\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.deps.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.Presentation.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Shared.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\bin\Debug\net8.0\Shared.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.AssemblyReference.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfoInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.AssemblyInfo.cs
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.sourcelink.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.P.10F54F67.Up2Date
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll

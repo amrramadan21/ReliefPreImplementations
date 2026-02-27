@@ -33,3 +33,15 @@ F:\Projects\relief latest version\Relief.Domain\obj\Debug\net8.0\Relief.Domain.d
 F:\Projects\relief latest version\Relief.Domain\obj\Debug\net8.0\refint\Relief.Domain.dll
 F:\Projects\relief latest version\Relief.Domain\obj\Debug\net8.0\Relief.Domain.pdb
 F:\Projects\relief latest version\Relief.Domain\obj\Debug\net8.0\ref\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\bin\Debug\net8.0\Relief.Domain.deps.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.AssemblyInfoInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.AssemblyInfo.cs
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.sourcelink.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\refint\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\ref\Relief.Domain.dll

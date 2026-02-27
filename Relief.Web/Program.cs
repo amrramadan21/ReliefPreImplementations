@@ -141,6 +141,9 @@ namespace Relief.Web
             // -----------------------------
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IOfferService, OfferService>();
+            builder.Services.AddScoped<IPswService, PswService>();
+            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IApplyService, ApplyService>();
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
             var app = builder.Build();

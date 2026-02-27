@@ -57,3 +57,23 @@ F:\Projects\relief latest version\Relief.Services\obj\Debug\net8.0\Relief.Servic
 F:\Projects\relief latest version\Relief.Services\obj\Debug\net8.0\refint\Relief.Services.dll
 F:\Projects\relief latest version\Relief.Services\obj\Debug\net8.0\Relief.Services.pdb
 F:\Projects\relief latest version\Relief.Services\obj\Debug\net8.0\ref\Relief.Services.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.Services.deps.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.Services.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.Services.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Shared.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\bin\Debug\net8.0\Shared.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.csproj.AssemblyReference.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.AssemblyInfoInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.AssemblyInfo.cs
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.sourcelink.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.S.225B8B2E.Up2Date
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\refint\Relief.Services.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\ref\Relief.Services.dll

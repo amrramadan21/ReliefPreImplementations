@@ -19,5 +19,6 @@ namespace Relief.Domain.Entities
         public TimeOnly? StartTime { get; set; }
         public TimeOnly? EndTime { get; set; }
         public bool IsAvailable { get; set; } = true;
+        public Guid? AssignedPswId { get; set; }
     }
 }

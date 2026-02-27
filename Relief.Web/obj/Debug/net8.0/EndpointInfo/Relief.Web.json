@@ -6,6 +6,37 @@
     "version": "v1"
   },
   "paths": {
+    "/api/apply": {
+      "post": {
+        "tags": [
+          "Apply"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToOfferDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToOfferDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToOfferDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/auth/register/carehome": {
       "post": {
         "tags": [
@@ -198,6 +229,94 @@
         }
       }
     },
+    "/api/CompleteProfile/complete-profile": {
+      "post": {
+        "tags": [
+          "CompleteProfile"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "CriminalRecordFile",
+                  "CVFile",
+                  "ImmunizationRecordFile",
+                  "ProofIdentityFile",
+                  "ProofIdentityType",
+                  "PswCertificateFile",
+                  "WorkStatus"
+                ],
+                "type": "object",
+                "properties": {
+                  "ProofIdentityType": {
+                    "type": "string"
+                  },
+                  "WorkStatus": {
+                    "type": "boolean"
+                  },
+                  "ProofIdentityFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "PswCertificateFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "CVFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "ImmunizationRecordFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "CriminalRecordFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FirstAidOrCPRFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "ProofIdentityType": {
+                  "style": "form"
+                },
+                "WorkStatus": {
+                  "style": "form"
+                },
+                "ProofIdentityFile": {
+                  "style": "form"
+                },
+                "PswCertificateFile": {
+                  "style": "form"
+                },
+                "CVFile": {
+                  "style": "form"
+                },
+                "ImmunizationRecordFile": {
+                  "style": "form"
+                },
+                "CriminalRecordFile": {
+                  "style": "form"
+                },
+                "FirstAidOrCPRFile": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Offers": {
       "post": {
         "tags": [
@@ -380,6 +499,24 @@
           "country": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplyToOfferDto": {
+        "type": "object",
+        "properties": {
+          "offerId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "shiftIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

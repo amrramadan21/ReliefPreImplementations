@@ -49,3 +49,21 @@ F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Rel
 F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\refint\Relief.ServiceAbstraction.dll
 F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.pdb
 F:\Projects\relief latest version\Relief.ServiceAbstraction\obj\Debug\net8.0\ref\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.deps.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.ServiceAbstraction.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Shared.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\bin\Debug\net8.0\Shared.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.csproj.AssemblyReference.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.AssemblyInfoInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.AssemblyInfo.cs
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.sourcelink.json
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.S.44FC02F7.Up2Date
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\refint\Relief.ServiceAbstraction.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\ref\Relief.ServiceAbstraction.dll
