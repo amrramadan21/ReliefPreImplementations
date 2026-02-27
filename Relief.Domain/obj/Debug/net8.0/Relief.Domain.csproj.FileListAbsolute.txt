@@ -45,3 +45,4 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Doma
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\refint\Relief.Domain.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\Relief.Domain.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Domain\obj\Debug\net8.0\ref\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.Domain\obj\Debug\net8.0\Relief.Domain.sourcelink.json

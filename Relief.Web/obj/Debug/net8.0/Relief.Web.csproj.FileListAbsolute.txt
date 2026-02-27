@@ -659,3 +659,4 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Web\
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Web\obj\Debug\net8.0\Relief.Web.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Web\obj\Debug\net8.0\Relief.Web.genruntimeconfig.cache
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Web\obj\Debug\net8.0\ref\Relief.Web.dll
+F:\Projects\Relief\Relief\Relief.Web\obj\Debug\net8.0\Relief.Web.sourcelink.json

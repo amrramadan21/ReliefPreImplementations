@@ -26,7 +26,6 @@ namespace Relief.Services.Implementations
             var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
             var shiftRepo = _unitOfWork.GetRepository<OfferShift, Guid>();
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
-            var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
 
             var psw = await pswRepo.GetByIdAsync(pswId);
 
@@ -40,7 +39,6 @@ namespace Relief.Services.Implementations
             {
                 Id = Guid.NewGuid(),
                 PswId = pswId,
-                JobOfferId = dto.OfferId,
                 Status = RequestStatus.Pending,
                 CreatedAt = DateTime.UtcNow,
                 Items = new List<JobRequestItem>()

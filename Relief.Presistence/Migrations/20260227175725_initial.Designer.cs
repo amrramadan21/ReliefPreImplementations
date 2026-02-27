@@ -12,8 +12,8 @@ using Relief.Presistence.Data.DbContexts;
 namespace Relief.Presistence.Migrations
 {
     [DbContext(typeof(ReliefAppDbContext))]
-    [Migration("20260227063655_AddAssignedPswToShift")]
-    partial class AddAssignedPswToShift
+    [Migration("20260227175725_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

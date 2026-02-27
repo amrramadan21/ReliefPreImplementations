@@ -13,6 +13,8 @@ namespace Relief.Domain.Entities.Users
 
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
+        public ICollection<JopRequest> JopRequests { get; set; } = new List<JopRequest>();
+
         public string? ProofIdentityType { get; set; }
         public bool WorkStatus { get; set; }
 

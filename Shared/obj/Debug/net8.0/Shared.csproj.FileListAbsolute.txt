@@ -46,3 +46,5 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\Shared.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\ref\Shared.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\Shared.csproj.AssemblyReference.cache
+F:\Projects\Relief\Relief\Shared\obj\Debug\net8.0\Shared.csproj.AssemblyReference.cache
+F:\Projects\Relief\Relief\Shared\obj\Debug\net8.0\Shared.sourcelink.json

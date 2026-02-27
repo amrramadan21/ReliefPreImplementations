@@ -77,3 +77,4 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Serv
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\refint\Relief.Services.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\Relief.Services.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Services\obj\Debug\net8.0\ref\Relief.Services.dll
+F:\Projects\Relief\Relief\Relief.Services\obj\Debug\net8.0\Relief.Services.sourcelink.json

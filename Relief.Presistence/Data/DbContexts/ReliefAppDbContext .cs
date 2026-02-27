@@ -28,7 +28,6 @@ namespace Relief.Presistence.Data.DbContexts
         public DbSet<FileMetadata> Files => Set<FileMetadata>();
 
         public DbSet<JopRequest> JopRequests => Set<JopRequest>();
-        public DbSet<JobRequestItem> JobRequestItems => Set<JobRequestItem>();
 
         public DbSet<Address> Addresses => Set<Address>();
 
@@ -119,6 +118,8 @@ namespace Relief.Presistence.Data.DbContexts
                 .HasForeignKey(s => s.JobOfferId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+
+
             // =========================================================
             // PswUser → Files (ALL OPTIONAL + Restrict)
             // =========================================================
@@ -159,22 +160,23 @@ namespace Relief.Presistence.Data.DbContexts
                 .OnDelete(DeleteBehavior.Restrict);
 
             // =========================================================
-            // JopRequest → Items
+            // JopRequest → psw
             // =========================================================
             modelBuilder.Entity<JopRequest>()
-                .HasMany(r => r.Items)
-                .WithOne(i => i.JopRequest)
-                .HasForeignKey(i => i.JopRequestId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(j => j.PswUser)
+                .WithMany(p => p.JopRequests)
+                .HasForeignKey(j => j.PswId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // =========================================================
-            // JobRequestItem → OfferShift
+            // JopRequest → shift
             // =========================================================
-            modelBuilder.Entity<JobRequestItem>()
-                .HasOne(i => i.OfferShift)
-                .WithMany()
-                .HasForeignKey(i => i.ShiftId)
+            modelBuilder.Entity<JopRequest>()
+                .HasMany(j => j.OfferShift)
+                .WithOne(s => s.JopRequest)
+                .HasForeignKey(s => s.JobRequestId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

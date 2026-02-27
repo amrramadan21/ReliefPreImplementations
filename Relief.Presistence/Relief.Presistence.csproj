@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\AppMigrations\**" />
+    <EmbeddedResource Remove="Data\AppMigrations\**" />
+    <None Remove="Data\AppMigrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Relief.Services\Relief.Services.csproj" />
   </ItemGroup>
 
@@ -21,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\AppMigrations\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

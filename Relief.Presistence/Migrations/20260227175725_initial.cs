@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Relief.Presistence.Migrations
 {
     /// <inheritdoc />
-    public partial class firstCreate : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -363,7 +363,8 @@ namespace Relief.Presistence.Migrations
                     JobOfferId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     StartTime = table.Column<TimeOnly>(type: "time", nullable: true),
                     EndTime = table.Column<TimeOnly>(type: "time", nullable: true),
-                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: false),
+                    AssignedPswId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -75,3 +75,6 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Pres
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\refint\Relief.Presentation.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presentation\obj\Debug\net8.0\ref\Relief.Presentation.dll
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.Presentation\bin\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\Relief\Relief\Relief.Presentation\obj\Debug\net8.0\Relief.Presentation.sourcelink.json
