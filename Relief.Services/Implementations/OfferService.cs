@@ -175,9 +175,9 @@ namespace Relief.Services.Implementations
 
 
             // 🔥 مهم: مش هنعدل Days دلوقتي عشان نثبت الـ Update الأول
-            if (dto.Days != null && dto.Days.Any())
+            if (dto.Shifts != null && dto.Shifts.Any())
             {
-                foreach (var dayDto in dto.Days)
+                foreach (var dayDto in dto.Shifts)
                 {
                     // لو فيه DayId يبقى تعديل
                     if (dayDto.ShiftId.HasValue)

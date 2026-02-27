@@ -16,11 +16,11 @@ namespace Relief.Presentation.Controllers
         }
 
         [HttpPost("register/carehome")]
-        public async Task<ActionResult<AuthResponseDTO>> RegisterCareHome([FromBody] RegisterCareHomeDTO dto)
+        public async Task<ActionResult<AuthResponseDTO>> RegisterCareHome([FromBody] RegisterDTO dto)
         {
             try
             {
-                var result = await _auth.RegisterCareHomeAsync(dto);
+                var result = await _auth.RegisterUserAsync(dto,"CareHome");
                 return Ok(result);
             }
             catch (InvalidOperationException ex)
@@ -30,11 +30,11 @@ namespace Relief.Presentation.Controllers
         }
 
         [HttpPost("register/individual")]
-        public async Task<ActionResult<AuthResponseDTO>> RegisterIndividual([FromBody] RegisterIndividualDTO dto)
+        public async Task<ActionResult<AuthResponseDTO>> RegisterIndividual([FromBody] RegisterDTO dto)
         {
             try
             {
-                var result = await _auth.RegisterIndividualAsync(dto);
+                var result = await _auth.RegisterUserAsync(dto,"Individual");
                 return Ok(result);
             }
             catch (InvalidOperationException ex)
@@ -44,11 +44,11 @@ namespace Relief.Presentation.Controllers
         }
 
         [HttpPost("register/psw")]
-        public async Task<ActionResult<AuthResponseDTO>> RegisterPsw([FromBody] RegisterPswDTO dto)
+        public async Task<ActionResult<AuthResponseDTO>> RegisterPsw([FromBody] RegisterDTO dto)
         {
             try
             {
-                var result = await _auth.RegisterPswAsync(dto);
+                var result = await _auth.RegisterUserAsync(dto,"PSW");
                 return Ok(result);
             }
             catch (InvalidOperationException ex)

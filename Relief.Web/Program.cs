@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Relief.Domain.Entities;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
 using Relief.ServiceAbstraction.Interfaces;
@@ -12,6 +11,7 @@ using System.Security.Claims;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Relief.Domain.Contracts;
+using Relief.Domain.Entities.Users;
 
 
 namespace Relief.Web

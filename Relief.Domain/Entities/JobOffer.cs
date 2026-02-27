@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Relief.Domain.Entities.Users;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,11 @@ namespace Relief.Domain.Entities
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        public Guid CareHomeId { get; set; }
+        public Guid? CareHomeId { get; set; }
+        public CareHomeUser? CareHomeUser { get; set; }
+
+        public Guid? IndividualId { get; set; }
+        public IndividualCareHomeUser? IndividualCareHomeUser { get; set; }
         public ICollection<OfferShift> Shifts { get; set; } = new List<OfferShift>();
 
 

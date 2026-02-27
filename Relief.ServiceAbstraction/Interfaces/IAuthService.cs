@@ -9,9 +9,7 @@ namespace Relief.ServiceAbstraction.Interfaces
 {
     public interface IAuthService
     {
-        Task<AuthResponseDTO> RegisterCareHomeAsync(RegisterCareHomeDTO dto);
-        Task<AuthResponseDTO> RegisterIndividualAsync(RegisterIndividualDTO dto);
-        Task<AuthResponseDTO> RegisterPswAsync(RegisterPswDTO dto);
+        Task<AuthResponseDTO> RegisterUserAsync(RegisterDTO dto, string role);
         Task<AuthResponseDTO> LoginAsync(LoginDTO dto);
     }
 }

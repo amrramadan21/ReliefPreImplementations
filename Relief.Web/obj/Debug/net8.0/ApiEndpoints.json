@@ -27,8 +27,60 @@
   },
   {
     "ContainingType": "Relief.Presentation.Controllers.AuthController",
-    "Method": "Register",
-    "RelativePath": "api/auth/register",
+    "Method": "RegisterCareHome",
+    "RelativePath": "api/auth/register/carehome",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.IdentityDTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Shared.IdentityDTOs.AuthResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AuthController",
+    "Method": "RegisterIndividual",
+    "RelativePath": "api/auth/register/individual",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.IdentityDTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Shared.IdentityDTOs.AuthResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AuthController",
+    "Method": "RegisterPsw",
+    "RelativePath": "api/auth/register/psw",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

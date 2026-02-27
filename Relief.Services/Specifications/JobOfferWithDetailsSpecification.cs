@@ -11,7 +11,7 @@ namespace Relief.Services.Specifications
     {
         public JobOfferWithDetailsSpecification(Guid id) : base(j => j.Id == id)
         {
-            AddInclude("Days.Shifts");
+            AddInclude("Shifts");
         }
     }
 }

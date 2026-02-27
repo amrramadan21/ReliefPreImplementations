@@ -6,7 +6,103 @@
     "version": "v1"
   },
   "paths": {
-    "/api/auth/register": {
+    "/api/auth/register/carehome": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register/individual": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register/psw": {
       "post": {
         "tags": [
           "Auth"
@@ -250,6 +346,44 @@
   },
   "components": {
     "schemas": {
+      "AddressDTO": {
+        "required": [
+          "apartmentNumber",
+          "city",
+          "country",
+          "postalCode",
+          "state",
+          "street"
+        ],
+        "type": "object",
+        "properties": {
+          "apartmentNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "street": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "city": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "state": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postalCode": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "country": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "AuthResponseDTO": {
         "type": "object",
         "properties": {
@@ -303,43 +437,32 @@
             "type": "number",
             "format": "double"
           },
-          "days": {
+          "shifts": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CreateOfferDayDto"
+              "$ref": "#/components/schemas/CreateOfferShiftDto"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "CreateOfferDayDto": {
+      "CreateOfferShiftDto": {
         "type": "object",
         "properties": {
           "date": {
             "type": "string",
             "format": "date"
           },
-          "shifts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CreateShiftDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateShiftDto": {
-        "type": "object",
-        "properties": {
           "startTime": {
             "type": "string",
-            "format": "time"
+            "format": "time",
+            "nullable": true
           },
           "endTime": {
             "type": "string",
-            "format": "time"
+            "format": "time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -365,16 +488,22 @@
       },
       "RegisterDTO": {
         "required": [
+          "address",
           "dateOfBirth",
           "email",
-          "fullName",
+          "firstName",
+          "gender",
+          "lastName",
           "password",
-          "phoneNumber",
-          "role"
+          "phoneNumber"
         ],
         "type": "object",
         "properties": {
-          "fullName": {
+          "firstName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastName": {
             "minLength": 1,
             "type": "string"
           },
@@ -396,9 +525,12 @@
             "type": "string",
             "format": "date-time"
           },
-          "role": {
+          "gender": {
             "minLength": 1,
             "type": "string"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressDTO"
           }
         },
         "additionalProperties": false
@@ -433,20 +565,20 @@
             "format": "double",
             "nullable": true
           },
-          "days": {
+          "shifts": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpdateOfferDayDto"
+              "$ref": "#/components/schemas/UpdateOfferShiftDto"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "UpdateOfferDayDto": {
+      "UpdateOfferShiftDto": {
         "type": "object",
         "properties": {
-          "dayId": {
+          "shiftId": {
             "type": "string",
             "format": "uuid",
             "nullable": true
@@ -454,24 +586,6 @@
           "date": {
             "type": "string",
             "format": "date",
-            "nullable": true
-          },
-          "shifts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateShiftDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateShiftDto": {
-        "type": "object",
-        "properties": {
-          "shiftId": {
-            "type": "string",
-            "format": "uuid",
             "nullable": true
           },
           "startTime": {

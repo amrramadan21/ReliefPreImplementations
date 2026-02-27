@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Relief.Domain.Entities
+namespace Relief.Domain.Entities.Users
 {
     public class ApplicationUser : IdentityUser<Guid>
     {
@@ -19,5 +19,9 @@ namespace Relief.Domain.Entities
         public Guid AddressId { get; set; }
         public Address? Address { get; set; }
         public DateTime BirthOfDate { get; set; } = default!;
+        public CareHomeUser CareHomeUser { get; set; } = null!;
+        public IndividualCareHomeUser IndividualCareHomeUser { get; set; } = null!;
+        public PswUser PswUser { get; set; } = null!;
+        
     }
 }

@@ -187,7 +187,78 @@ namespace Relief.Presistence.Data.AppMigrations
                     b.ToTable("Address");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("CareHomeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("HourlyRate")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<Guid?>("IndividualId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CareHomeId");
+
+                    b.HasIndex("IndividualId");
+
+                    b.ToTable("JobOffers");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateOnly?>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<TimeOnly?>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("JobOfferId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<TimeOnly?>("StartTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JobOfferId");
+
+                    b.ToTable("OfferDays");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -205,11 +276,6 @@ namespace Relief.Presistence.Data.AppMigrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(34)
-                        .HasColumnType("nvarchar(34)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -279,79 +345,12 @@ namespace Relief.Presistence.Data.AppMigrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasDiscriminator().HasValue("ApplicationUser");
-
-                    b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Users.CareHomeUser", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CareHomeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("HourlyRate")
-                        .HasPrecision(10, 2)
-                        .HasColumnType("decimal(10,2)");
-
-                    b.Property<double>("Latitude")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Longitude")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("JobOffers");
-                });
-
-            modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateOnly?>("Date")
-                        .HasColumnType("date");
-
-                    b.Property<TimeOnly?>("EndTime")
-                        .HasColumnType("time");
-
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("JobOfferId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<TimeOnly?>("StartTime")
-                        .HasColumnType("time");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("JobOfferId");
-
-                    b.ToTable("OfferDays");
-                });
-
-            modelBuilder.Entity("Relief.Domain.Entities.CareHomeUser", b =>
-                {
-                    b.HasBaseType("Relief.Domain.Entities.ApplicationUser");
 
                     b.Property<string>("BusinessLicense")
                         .IsRequired()
@@ -365,19 +364,25 @@ namespace Relief.Presistence.Data.AppMigrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("CareHomeUser");
+                    b.HasKey("Id");
+
+                    b.ToTable("CareHomeUsers");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.IndividualCareHomeUser", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Users.IndividualCareHomeUser", b =>
                 {
-                    b.HasBaseType("Relief.Domain.Entities.ApplicationUser");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasDiscriminator().HasValue("IndividualCareHomeUser");
+                    b.HasKey("Id");
+
+                    b.ToTable("IndividualUsers");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.PswUser", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Users.PswUser", b =>
                 {
-                    b.HasBaseType("Relief.Domain.Entities.ApplicationUser");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CPRCard")
                         .HasColumnType("nvarchar(max)");
@@ -405,7 +410,9 @@ namespace Relief.Presistence.Data.AppMigrations
                     b.Property<bool>("WorkStatus")
                         .HasColumnType("bit");
 
-                    b.HasDiscriminator().HasValue("PswUser");
+                    b.HasKey("Id");
+
+                    b.ToTable("PswUsers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -419,7 +426,7 @@ namespace Relief.Presistence.Data.AppMigrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.ApplicationUser", null)
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -428,7 +435,7 @@ namespace Relief.Presistence.Data.AppMigrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.ApplicationUser", null)
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -443,7 +450,7 @@ namespace Relief.Presistence.Data.AppMigrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Relief.Domain.Entities.ApplicationUser", null)
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -452,22 +459,28 @@ namespace Relief.Presistence.Data.AppMigrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.ApplicationUser", null)
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.Address", "Address")
-                        .WithOne("User")
-                        .HasForeignKey("Relief.Domain.Entities.ApplicationUser", "AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Relief.Domain.Entities.Users.CareHomeUser", "CareHomeUser")
+                        .WithMany("JobOffers")
+                        .HasForeignKey("CareHomeId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
-                    b.Navigation("Address");
+                    b.HasOne("Relief.Domain.Entities.Users.IndividualCareHomeUser", "IndividualCareHomeUser")
+                        .WithMany("JobOffers")
+                        .HasForeignKey("IndividualId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CareHomeUser");
+
+                    b.Navigation("IndividualCareHomeUser");
                 });
 
             modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
@@ -481,6 +494,50 @@ namespace Relief.Presistence.Data.AppMigrations
                     b.Navigation("JobOffer");
                 });
 
+            modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Address", "Address")
+                        .WithOne("User")
+                        .HasForeignKey("Relief.Domain.Entities.Users.ApplicationUser", "AddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.CareHomeUser", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", "ApplicationUser")
+                        .WithOne("CareHomeUser")
+                        .HasForeignKey("Relief.Domain.Entities.Users.CareHomeUser", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.IndividualCareHomeUser", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", "ApplicationUser")
+                        .WithOne("IndividualCareHomeUser")
+                        .HasForeignKey("Relief.Domain.Entities.Users.IndividualCareHomeUser", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.PswUser", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Users.ApplicationUser", "ApplicationUser")
+                        .WithOne("PswUser")
+                        .HasForeignKey("Relief.Domain.Entities.Users.PswUser", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
             modelBuilder.Entity("Relief.Domain.Entities.Address", b =>
                 {
                     b.Navigation("User")
@@ -490,6 +547,28 @@ namespace Relief.Presistence.Data.AppMigrations
             modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
                 {
                     b.Navigation("Shifts");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
+                {
+                    b.Navigation("CareHomeUser")
+                        .IsRequired();
+
+                    b.Navigation("IndividualCareHomeUser")
+                        .IsRequired();
+
+                    b.Navigation("PswUser")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.CareHomeUser", b =>
+                {
+                    b.Navigation("JobOffers");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.IndividualCareHomeUser", b =>
+                {
+                    b.Navigation("JobOffers");
                 });
 #pragma warning restore 612, 618
         }
