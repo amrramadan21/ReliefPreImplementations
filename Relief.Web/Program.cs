@@ -8,8 +8,14 @@ using Relief.Domain.Entities.Users;
 using Relief.Presentation.Middleware;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
-using Relief.ServiceAbstraction.Interfaces;
-using Relief.Services.Implementations;
+using Relief.ServiceAbstraction.Interfaces.Applications;
+using Relief.ServiceAbstraction.Interfaces.Files;
+using Relief.ServiceAbstraction.Interfaces.Offers;
+using Relief.ServiceAbstraction.Interfaces.Users;
+using Relief.Services.Implementations.Applications;
+using Relief.Services.Implementations.Files;
+using Relief.Services.Implementations.Offers;
+using Relief.Services.Implementations.Users;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -145,6 +151,7 @@ namespace Relief.Web
             builder.Services.AddScoped<IPswService, PswService>();
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IApplyService, ApplyService>();
+            builder.Services.AddScoped<IApplicationManagementService, ApplicationManagementService>();
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
             var app = builder.Build();

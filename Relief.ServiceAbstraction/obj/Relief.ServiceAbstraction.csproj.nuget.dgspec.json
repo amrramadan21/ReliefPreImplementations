@@ -171,7 +171,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Shared.ApplicationDTO
+{
+    public class PswApplicationBriefDto
+    {
+        public Guid PswId { get; set; }
+        public string FullName { get; set; } = "";
+        public int Age { get; set; }
+        public bool IsVerified { get; set; }
+        public bool WorkStatus { get; set; }
+        public string? ProofIdentityType { get; set; }
+        public Guid? CVFileId { get; set; }
+    }
+}

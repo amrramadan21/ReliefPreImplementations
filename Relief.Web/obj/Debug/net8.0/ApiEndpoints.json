@@ -120,6 +120,54 @@
     ]
   },
   {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "GetApplications",
+    "RelativePath": "api/carehome/applications/{offerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "offerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "AcceptShift",
+    "RelativePath": "api/carehome/applications/accept",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplicationDTO.AcceptShiftDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "RejectShift",
+    "RelativePath": "api/carehome/applications/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplicationDTO.RejectShiftDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Relief.Presentation.Controllers.CompleteProfileController",
     "Method": "CompleteProfile",
     "RelativePath": "api/CompleteProfile/complete-profile",
@@ -255,6 +303,32 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
+    "Method": "GetMyApplications",
+    "RelativePath": "api/psw/applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
+    "Method": "CancelApplication",
+    "RelativePath": "api/psw/applications/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplicationDTO.CancelApplicationDto",
         "IsRequired": true
       }
     ],

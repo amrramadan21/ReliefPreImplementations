@@ -6,6 +6,91 @@
     "version": "v1"
   },
   "paths": {
+    "/api/carehome/applications/{offerId}": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "parameters": [
+          {
+            "name": "offerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/carehome/applications/accept": {
+      "post": {
+        "tags": [
+          "Applications"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptShiftDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptShiftDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptShiftDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/carehome/applications/reject": {
+      "post": {
+        "tags": [
+          "Applications"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectShiftDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectShiftDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectShiftDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/apply": {
       "post": {
         "tags": [
@@ -461,10 +546,67 @@
           }
         }
       }
+    },
+    "/api/psw/applications": {
+      "get": {
+        "tags": [
+          "PswApplications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/psw/applications/cancel": {
+      "post": {
+        "tags": [
+          "PswApplications"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelApplicationDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelApplicationDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelApplicationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AcceptShiftDto": {
+        "type": "object",
+        "properties": {
+          "shiftId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "jobRequestItemId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
       "AddressDTO": {
         "required": [
           "apartmentNumber",
@@ -541,6 +683,16 @@
             "nullable": true
           },
           "userId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CancelApplicationDto": {
+        "type": "object",
+        "properties": {
+          "jobRequestItemId": {
             "type": "string",
             "format": "uuid"
           }
@@ -668,6 +820,16 @@
           },
           "address": {
             "$ref": "#/components/schemas/AddressDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejectShiftDto": {
+        "type": "object",
+        "properties": {
+          "jobRequestItemId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false

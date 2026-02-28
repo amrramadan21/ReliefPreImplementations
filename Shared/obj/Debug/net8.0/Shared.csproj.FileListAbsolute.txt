@@ -46,3 +46,6 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\Shared.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\ref\Shared.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\Shared.csproj.AssemblyReference.cache
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\bin\Debug\net8.0\Relief.Domain.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\bin\Debug\net8.0\Relief.Domain.pdb
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Shared\obj\Debug\net8.0\Shared.csproj.Up2Date

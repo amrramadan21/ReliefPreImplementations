@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Relief.ServiceAbstraction.Interfaces;
+using Relief.ServiceAbstraction.Interfaces.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.UpdateDTO;
 using System.IdentityModel.Tokens.Jwt;

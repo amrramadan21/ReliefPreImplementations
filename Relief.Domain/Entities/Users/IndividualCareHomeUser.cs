@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Relief.Domain.Entities.Offers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

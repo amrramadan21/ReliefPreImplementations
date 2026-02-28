@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Relief.ServiceAbstraction.Interfaces;
 using Shared.ApplyDTOs;
 using System;
 using System.Collections.Generic;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using Relief.ServiceAbstraction.Interfaces.Applications;
 
 namespace Relief.Presentation.Controllers
 {

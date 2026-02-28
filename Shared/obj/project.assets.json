@@ -44,6 +44,19 @@
             "related": ".xml"
           }
         }
+      },
+      "Relief.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Relief.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Relief.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -114,11 +127,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Relief.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Relief.Domain/Relief.Domain.csproj",
+      "msbuildProject": "../Relief.Domain/Relief.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.AspNetCore.Http.Features >= 5.0.17"
+      "Microsoft.AspNetCore.Http.Features >= 5.0.17",
+      "Relief.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -152,7 +171,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+              "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

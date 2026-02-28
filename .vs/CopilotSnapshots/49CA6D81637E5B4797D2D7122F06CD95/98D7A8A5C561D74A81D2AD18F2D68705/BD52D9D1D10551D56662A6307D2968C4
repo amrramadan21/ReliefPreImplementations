@@ -1,0 +1,36 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Relief.ServiceAbstraction.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Security.Claims;
+
+namespace Relief.Presentation.Controllers
+{
+    [Authorize(Roles = "PSW")]
+    [ApiController]
+    [Route("api/psw/applications")]
+    public class PswApplicationsController : ControllerBase
+    {
+        private readonly IApplicationManagementService _service;
+
+        public PswApplicationsController(
+            IApplicationManagementService service)
+        {
+            _service = service;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetMyApplications()
+        {
+            var pswId = Guid.Parse(User.FindFirstValue("userId")!);
+
+            var result = await _service.GetPswApplicationsAsync(pswId);
+
+            return Ok(result);
+        }
+    }
+}

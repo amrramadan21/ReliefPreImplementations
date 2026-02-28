@@ -62,7 +62,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Relief.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Shared.dll": {}

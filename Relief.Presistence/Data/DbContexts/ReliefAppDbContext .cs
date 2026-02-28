@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Relief.Domain.Entities;
+using Relief.Domain.Entities.Offers;
 using Relief.Domain.Entities.Users;
 
 namespace Relief.Presistence.Data.DbContexts

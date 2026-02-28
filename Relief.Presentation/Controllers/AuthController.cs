@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Relief.ServiceAbstraction.Interfaces;
+using Relief.ServiceAbstraction.Interfaces.Users;
 using Shared.IdentityDTOs;
 
 namespace Relief.Presentation.Controllers

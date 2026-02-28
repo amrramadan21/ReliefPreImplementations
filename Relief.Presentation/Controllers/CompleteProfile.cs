@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Relief.ServiceAbstraction.Interfaces;
+using Relief.ServiceAbstraction.Interfaces.Users;
 using Shared.IdentityDTOs;
 using System;
 using System.Security.Claims;

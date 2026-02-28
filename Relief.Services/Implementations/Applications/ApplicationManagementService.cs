@@ -1,0 +1,234 @@
+﻿using Relief.Domain.Contracts;
+using Relief.Domain.Entities;
+using Relief.Domain.Entities.Offers;
+using Relief.Domain.Enums;
+using Relief.Domain.Exceptions;
+using Relief.ServiceAbstraction.Interfaces;
+using Relief.ServiceAbstraction.Interfaces.Applications;
+using Relief.Services.Implementations.Applications.Specifications;
+using Shared.ApplicationDTO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Transactions;
+
+namespace Relief.Services.Implementations.Applications
+{
+    public class ApplicationManagementService : IApplicationManagementService
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ApplicationManagementService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        // =====================================================
+        // GET APPLICATIONS FOR OFFER (CareHome View)
+        // =====================================================
+        public async Task<List<OfferApplicationDto>>
+            GetApplicationsForOfferAsync(Guid offerId, Guid careHomeId)
+        {
+            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+            var offer = await offerRepo.GetByIdAsync(offerId);
+
+            if (offer == null)
+                throw new NotFoundException("Offer not found.");
+
+            if (offer.CareHomeId != careHomeId)
+                throw new ForbiddenException("You cannot view applications for this offer.");
+
+            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+            var spec = new OfferApplicationsSpecification(offerId);
+
+            var requests = await requestRepo.GetAllAsync(spec);
+
+            return requests.Select(r =>
+            {
+                var user = r.PswUser.ApplicationUser;
+                var age = DateTime.UtcNow.Year - user.BirthOfDate.Year;
+
+                return new OfferApplicationDto
+                {
+                    JobRequestId = r.Id,
+                    AppliedAt = r.CreatedAt,
+                    Psw = new PswApplicationBriefDto
+                    {
+                        PswId = r.PswId,
+                        FullName = $"{user.FirstName} {user.LastName}",
+                        Age = age,
+                        IsVerified = r.PswUser.IsVerified,
+                        WorkStatus = r.PswUser.WorkStatus,
+                        ProofIdentityType = r.PswUser.ProofIdentityType,
+                        CVFileId = r.PswUser.CVFileId
+                    },
+                    Shifts = r.Items.Select(i => new ShiftApplicationDto
+                    {
+                        JobRequestItemId = i.Id,
+                        ShiftId = i.ShiftId,
+                        Date = i.OfferShift.Date,
+                        StartTime = i.OfferShift.StartTime,
+                        EndTime = i.OfferShift.EndTime,
+                        Status = i.Status
+                    }).ToList()
+                };
+            }).ToList();
+        }
+
+        // =====================================================
+        // ACCEPT SHIFT (Atomic Operation)
+        // =====================================================
+        public async Task AcceptShiftAsync(
+            Guid shiftId,
+            Guid jobRequestItemId,
+            Guid careHomeId)
+        {
+            using (var transaction = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
+
+                var itemSpec =
+                    new JobRequestItemWithDetailsSpecification(jobRequestItemId);
+
+                var item = await itemRepo.GetByIdAsync(itemSpec);
+
+                if (item == null)
+                    throw new NotFoundException("Application item not found.");
+
+                if (item.ShiftId != shiftId)
+                    throw new BadRequestException("Shift mismatch.");
+
+                var shift = item.OfferShift;
+
+                if (shift == null)
+                    throw new NotFoundException("Shift not found.");
+
+                if (!shift.IsAvailable)
+                    throw new ConflictException("Shift already assigned.");
+
+                var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+                var offer = await offerRepo.GetByIdAsync(shift.JobOfferId);
+
+                if (offer == null || offer.CareHomeId != careHomeId)
+                    throw new ForbiddenException("You cannot manage this shift.");
+
+                if (item.Status != RequestStatus.Pending)
+                    throw new ConflictException("Application already processed.");
+
+                // Assign shift
+                shift.AssignedPswId = item.JopRequest.PswId;
+                shift.IsAvailable = false;
+
+                item.Status = RequestStatus.AcceptedByCareHome;
+
+                // Reject other pending applications for same shift
+                var shiftItemsSpec = new ShiftApplicationsSpecification(shiftId);
+                var allItems = await itemRepo.GetAllAsync(shiftItemsSpec);
+
+                foreach (var other in allItems)
+                {
+                    if (other.Id != jobRequestItemId &&
+                        other.Status == RequestStatus.Pending)
+                    {
+                        other.Status = RequestStatus.Rejected;
+                    }
+                }
+
+                await _unitOfWork.SaveChangesAsync();
+                transaction.Complete();
+            }
+        }
+
+        // =====================================================
+        // REJECT SHIFT
+        // =====================================================
+        public async Task RejectShiftAsync(
+            Guid jobRequestItemId,
+            Guid careHomeId)
+        {
+            var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
+
+            var itemSpec =
+                new JobRequestItemWithDetailsSpecification(jobRequestItemId);
+
+            var item = await itemRepo.GetByIdAsync(itemSpec);
+
+            if (item == null)
+                throw new NotFoundException("Application item not found.");
+
+            var shift = item.OfferShift;
+
+            if (shift == null)
+                throw new NotFoundException("Shift not found.");
+
+            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+            var offer = await offerRepo.GetByIdAsync(shift.JobOfferId);
+
+            if (offer == null || offer.CareHomeId != careHomeId)
+                throw new ForbiddenException("You cannot reject this application.");
+
+            if (item.Status != RequestStatus.Pending)
+                throw new ConflictException("Application already processed.");
+
+            item.Status = RequestStatus.Rejected;
+
+            await _unitOfWork.SaveChangesAsync();
+        }
+
+        // =====================================================
+        // Cancel Applications
+        // =====================================================
+
+        public async Task CancelApplicationAsync(
+    Guid jobRequestItemId,
+    Guid pswId)
+        {
+            var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
+
+            var spec = new JobRequestItemWithOwnerSpecification(jobRequestItemId);
+            var item = await itemRepo.GetByIdAsync(spec);
+
+            if (item == null)
+                throw new NotFoundException("Application item not found.");
+
+            if (item.JopRequest.PswId != pswId)
+                throw new ForbiddenException("You cannot cancel this application.");
+
+            if (item.Status == RequestStatus.AcceptedByCareHome)
+                throw new ConflictException("Accepted application cannot be cancelled.");
+
+            if (item.Status == RequestStatus.Rejected)
+                throw new ConflictException("Application already rejected.");
+
+            item.Status = RequestStatus.Rejected;
+
+            await _unitOfWork.SaveChangesAsync();
+        }
+
+        // =====================================================
+        // Psw ViewSiftApplicationsAsync (PSW View)
+        // =====================================================
+
+        public async Task<List<PswApplicationViewDto>>
+    GetPswApplicationsAsync(Guid pswId)
+        {
+            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+
+            var spec = new PswApplicationsSpecification(pswId);
+            var requests = await requestRepo.GetAllAsync(spec);
+
+            return requests.SelectMany(r => r.Items.Select(i => new PswApplicationViewDto
+            {
+                JobRequestId = r.Id,
+                ShiftId = i.ShiftId,
+                OfferTitle = i.OfferShift.JobOffer.Title,
+                Date = i.OfferShift.Date,
+                StartTime = i.OfferShift.StartTime,
+                EndTime = i.OfferShift.EndTime,
+                Status = i.Status
+            })).ToList();
+        }
+    }
+}
