@@ -9,14 +9,13 @@ namespace Relief.Domain.Entities.Users
 {
     public class PswUser
     {
-        public Guid ApplicationUserId { get; set; } // PK + FK
+        public Guid ApplicationUserId { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
         public string? ProofIdentityType { get; set; }
         public bool WorkStatus { get; set; }
 
-        // File References
         public Guid? ProofIdentityFileId { get; set; }
         public FileMetadata? ProofIdentityFile { get; set; }
 
@@ -40,5 +39,7 @@ namespace Relief.Domain.Entities.Users
 
         public bool IsProfileCompleted { get; set; } = false;
         public bool IsVerified { get; set; } = false;
+
+        public ICollection<JopRequest> JobRequests { get; set; } = new List<JopRequest>();
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Relief.Presistence.Migrations
 {
     /// <inheritdoc />
-    public partial class firstCreate : Migration
+    public partial class InitialClean : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -57,21 +57,6 @@ namespace Relief.Presistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Files", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "JopRequests",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PswId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    JobOfferId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_JopRequests", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -355,6 +340,27 @@ namespace Relief.Presistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "JopRequests",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PswId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    JobOfferId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_JopRequests", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_JopRequests_PswUsers_PswId",
+                        column: x => x.PswId,
+                        principalTable: "PswUsers",
+                        principalColumn: "ApplicationUserId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OfferShifts",
                 columns: table => new
                 {
@@ -363,7 +369,8 @@ namespace Relief.Presistence.Migrations
                     JobOfferId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     StartTime = table.Column<TimeOnly>(type: "time", nullable: true),
                     EndTime = table.Column<TimeOnly>(type: "time", nullable: true),
-                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: false),
+                    AssignedPswId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -468,6 +475,11 @@ namespace Relief.Presistence.Migrations
                 column: "ShiftId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_JopRequests_PswId",
+                table: "JopRequests",
+                column: "PswId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OfferShifts_JobOfferId",
                 table: "OfferShifts",
                 column: "JobOfferId");
@@ -530,9 +542,6 @@ namespace Relief.Presistence.Migrations
                 name: "JobRequestItems");
 
             migrationBuilder.DropTable(
-                name: "PswUsers");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
@@ -542,10 +551,13 @@ namespace Relief.Presistence.Migrations
                 name: "OfferShifts");
 
             migrationBuilder.DropTable(
-                name: "Files");
+                name: "PswUsers");
 
             migrationBuilder.DropTable(
                 name: "JobOffers");
+
+            migrationBuilder.DropTable(
+                name: "Files");
 
             migrationBuilder.DropTable(
                 name: "CareHomeUsers");

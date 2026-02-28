@@ -274,6 +274,8 @@ namespace Relief.Presistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PswId");
+
                     b.ToTable("JopRequests");
                 });
 
@@ -606,6 +608,17 @@ namespace Relief.Presistence.Migrations
                     b.Navigation("OfferShift");
                 });
 
+            modelBuilder.Entity("Relief.Domain.Entities.JopRequest", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Users.PswUser", "PswUser")
+                        .WithMany("JobRequests")
+                        .HasForeignKey("PswId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("PswUser");
+                });
+
             modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
                 {
                     b.HasOne("Relief.Domain.Entities.JobOffer", "JobOffer")
@@ -745,6 +758,11 @@ namespace Relief.Presistence.Migrations
             modelBuilder.Entity("Relief.Domain.Entities.Users.IndividualCareHomeUser", b =>
                 {
                     b.Navigation("JobOffers");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.PswUser", b =>
+                {
+                    b.Navigation("JobRequests");
                 });
 #pragma warning restore 612, 618
         }

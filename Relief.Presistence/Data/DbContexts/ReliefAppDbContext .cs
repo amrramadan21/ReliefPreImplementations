@@ -86,6 +86,15 @@ namespace Relief.Presistence.Data.DbContexts
                 .OnDelete(DeleteBehavior.Cascade);
 
             // =========================================================
+            // PswUser → JopRequests
+            // =========================================================
+            modelBuilder.Entity<JopRequest>()
+                .HasOne(r => r.PswUser)
+                .WithMany(p => p.JobRequests)
+                .HasForeignKey(r => r.PswId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // =========================================================
             // JobOffer precision
             // =========================================================
             modelBuilder.Entity<JobOffer>()

@@ -5,6 +5,7 @@ using Relief.Domain.Contracts;
 using Relief.Domain.Entities;
 using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
 using System;
@@ -24,23 +25,26 @@ namespace Relief.Services.Implementations
         private readonly IConfiguration _config;
         private readonly IUnitOfWork _unitOfWork;
 
-        public AuthService(UserManager<ApplicationUser> userManager, IConfiguration config, IUnitOfWork unitOfWork)
+        public AuthService(
+            UserManager<ApplicationUser> userManager,
+            IConfiguration config,
+            IUnitOfWork unitOfWork)
         {
             _userManager = userManager;
             _config = config;
             _unitOfWork = unitOfWork;
         }
 
-
-
+        // =========================================================
+        // Register
+        // =========================================================
         public async Task<AuthResponseDTO> RegisterUserAsync(RegisterDTO dto, string role)
         {
             if (!Enum.TryParse<Gender>(dto.Gender, true, out var parsedGender))
-            {
-                // Handle invalid input appropriately for your app architecture. 
-                // You might throw a custom exception, return a bad request, etc.
-                throw new ArgumentException($"'{dto.Gender}' is not a valid gender.");
-            }
+                throw new BadRequestException($"'{dto.Gender}' is not a valid gender.");
+
+            if (dto.Address == null)
+                throw new BadRequestException("Address is required.");
 
             var user = new ApplicationUser
             {
@@ -50,9 +54,7 @@ namespace Relief.Services.Implementations
                 LastName = dto.LastName,
                 PhoneNumber = dto.PhoneNumber,
                 BirthOfDate = dto.DateOfBirth,
-                Gender = parsedGender, // Added Gender mapping
-
-                // Map the Address relationship
+                Gender = parsedGender,
                 Address = new Address
                 {
                     ApartmentNumber = dto.Address.ApartmentNumber,
@@ -64,45 +66,49 @@ namespace Relief.Services.Implementations
                 }
             };
 
-            // Hardcode the role here
             return await RegisterUserCoreAsync(user, dto.Password, role);
         }
 
+        // =========================================================
+        // Login
+        // =========================================================
         public async Task<AuthResponseDTO> LoginAsync(LoginDTO dto)
         {
-            var user = await _userManager.FindByEmailAsync(dto.Email)
-                       ?? throw new InvalidOperationException("Invalid credentials.");
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (user == null)
+                throw new UnauthorizedException("Invalid email or password.");
 
             var ok = await _userManager.CheckPasswordAsync(user, dto.Password);
-            if (!ok) throw new InvalidOperationException("Invalid credentials.");
+
+            if (!ok)
+                throw new UnauthorizedException("Invalid email or password.");
 
             return await BuildTokenAsync(user);
         }
 
+        // =========================================================
+        // Token Builder
+        // =========================================================
         private async Task<AuthResponseDTO> BuildTokenAsync(ApplicationUser user)
         {
             var roles = await _userManager.GetRolesAsync(user);
             var role = roles.FirstOrDefault() ?? "";
 
             var jwt = _config.GetSection("Jwt");
-            var key = jwt["Key"]!;
-            var issuer = jwt["Issuer"]!;
-            var audience = jwt["Audience"]!;
+
+            var key = jwt["Key"] ?? throw new Exception("JWT Key not configured.");
+            var issuer = jwt["Issuer"] ?? throw new Exception("JWT Issuer not configured.");
+            var audience = jwt["Audience"] ?? throw new Exception("JWT Audience not configured.");
+
             var expiryMinutes = int.Parse(jwt["ExpiryMinutes"] ?? "60");
 
             var claims = new List<Claim>
-{
-    new Claim("userId", user.Id.ToString()),
-    new Claim(ClaimTypes.Role, role ?? ""),
-    new Claim(JwtRegisteredClaimNames.Email, user.Email ?? "")
-};
-
-            Console.WriteLine("TOKEN KEY USED: " + key);
-
-
-
-            //if (!string.IsNullOrWhiteSpace(role))
-            //    claims.Add(new Claim(ClaimTypes.Role, role));
+        {
+            new Claim("userId", user.Id.ToString()),
+            new Claim(ClaimTypes.Role, role),
+            new Claim(JwtRegisteredClaimNames.Email, user.Email ?? "")
+        };
 
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var creds = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
@@ -127,75 +133,68 @@ namespace Relief.Services.Implementations
             };
         }
 
-
-        private async Task<AuthResponseDTO> RegisterUserCoreAsync(ApplicationUser user, string password, string role)
+        // =========================================================
+        // Core Register Logic
+        // =========================================================
+        private async Task<AuthResponseDTO> RegisterUserCoreAsync(
+            ApplicationUser user,
+            string password,
+            string role)
         {
-            // 1. Check if user exists
-            var existing = await _userManager.FindByEmailAsync(user.Email ?? "Wrone Email");
-            if (existing != null)
-                throw new InvalidOperationException("Email already registered.");
+            var existing = await _userManager.FindByEmailAsync(user.Email ?? "");
 
-            // Start a transaction that flows across async calls. 
-            // This ensures both UserManager and UnitOfWork succeed or fail together.
+            if (existing != null)
+                throw new ConflictException("Email is already registered.");
+
             using (var transaction = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-
-                // 2. Create the user
                 var create = await _userManager.CreateAsync(user, password);
+
                 if (!create.Succeeded)
-                    throw new InvalidOperationException(string.Join("; ", create.Errors.Select(e => e.Description)));
+                    throw new BadRequestException(string.Join("; ", create.Errors.Select(e => e.Description)));
 
-                // 3. Assign the hardcoded role
                 var addRole = await _userManager.AddToRoleAsync(user, role);
-                if (!addRole.Succeeded)
-                    throw new InvalidOperationException(string.Join("; ", addRole.Errors.Select(e => e.Description)));
 
-                // 4. Create the linked Role-Specific Profile (The Fix!)
+                if (!addRole.Succeeded)
+                    throw new BadRequestException(string.Join("; ", addRole.Errors.Select(e => e.Description)));
+
                 switch (role)
                 {
                     case "CareHome":
                         var careHomeRepo = _unitOfWork.GetRepository<CareHomeUser, Guid>();
-                        var careHomeUser = new CareHomeUser
+                        await careHomeRepo.AddAsync(new CareHomeUser
                         {
-                            Id = user.Id, // <-- SHARED PRIMARY KEY: Link them here!
-
-                            // Note: Since these are non-nullable in your class, you either need 
-                            // to add them to your RegisterDTO, or set temporary default values here.
+                            Id = user.Id,
                             BusinessLicense = "Pending",
-                            LegalName = $"Pending",
+                            LegalName = "Pending",
                             VaccinationPolicy = "Pending"
-                        };
-                        await careHomeRepo.AddAsync(careHomeUser);
+                        });
                         break;
 
                     case "PSW":
                         var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
-                        var pswUser = new PswUser
+                        await pswRepo.AddAsync(new PswUser
                         {
                             ApplicationUserId = user.Id
-                            // Map any specific PSW fields here if you have them
-                        };
-                        await pswRepo.AddAsync(pswUser);
+                        });
                         break;
 
                     case "Individual":
                         var indRepo = _unitOfWork.GetRepository<IndividualCareHomeUser, Guid>();
-                        var individualUser = new IndividualCareHomeUser
+                        await indRepo.AddAsync(new IndividualCareHomeUser
                         {
-                            Id = user.Id // <-- SHARED PRIMARY KEY
-                                         // Map any specific Individual fields here if you have them
-                        };
-                        await indRepo.AddAsync(individualUser);
+                            Id = user.Id
+                        });
                         break;
 
                     default:
-                        throw new InvalidOperationException($"Role '{role}' does not have a linked profile table configured.");
+                        throw new BadRequestException($"Role '{role}' is not supported.");
                 }
+
                 await _unitOfWork.SaveChangesAsync();
                 transaction.Complete();
             }
-            
-            // 4. Return token
+
             return await BuildTokenAsync(user);
         }
     }

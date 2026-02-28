@@ -3,15 +3,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Relief.Domain.Contracts;
+using Relief.Domain.Entities.Users;
+using Relief.Presentation.Middleware;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
 using Relief.ServiceAbstraction.Interfaces;
 using Relief.Services.Implementations;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.IdentityModel.Tokens.Jwt;
-using Relief.Domain.Contracts;
-using Relief.Domain.Entities.Users;
 
 
 namespace Relief.Web
@@ -160,6 +161,8 @@ namespace Relief.Web
             }
 
             app.UseHttpsRedirection();
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseAuthentication();  // لازم قبل Authorization
             app.UseAuthorization();

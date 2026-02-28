@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Relief.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ca5dce35a7b9043773f07f557413846a6b15dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0e6d6dbd8c1252d47d279ae3197ed04cb1bf150")]
 [assembly: System.Reflection.AssemblyProductAttribute("Relief.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Relief.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

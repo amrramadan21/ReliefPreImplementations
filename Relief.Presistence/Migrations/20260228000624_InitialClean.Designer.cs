@@ -12,8 +12,8 @@ using Relief.Presistence.Data.DbContexts;
 namespace Relief.Presistence.Migrations
 {
     [DbContext(typeof(ReliefAppDbContext))]
-    [Migration("20260227063655_AddAssignedPswToShift")]
-    partial class AddAssignedPswToShift
+    [Migration("20260228000624_InitialClean")]
+    partial class InitialClean
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -276,6 +276,8 @@ namespace Relief.Presistence.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PswId");
 
                     b.ToTable("JopRequests");
                 });
@@ -609,6 +611,17 @@ namespace Relief.Presistence.Migrations
                     b.Navigation("OfferShift");
                 });
 
+            modelBuilder.Entity("Relief.Domain.Entities.JopRequest", b =>
+                {
+                    b.HasOne("Relief.Domain.Entities.Users.PswUser", "PswUser")
+                        .WithMany("JobRequests")
+                        .HasForeignKey("PswId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("PswUser");
+                });
+
             modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
                 {
                     b.HasOne("Relief.Domain.Entities.JobOffer", "JobOffer")
@@ -748,6 +761,11 @@ namespace Relief.Presistence.Migrations
             modelBuilder.Entity("Relief.Domain.Entities.Users.IndividualCareHomeUser", b =>
                 {
                     b.Navigation("JobOffers");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.PswUser", b =>
+                {
+                    b.Navigation("JobRequests");
                 });
 #pragma warning restore 612, 618
         }

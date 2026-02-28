@@ -2,6 +2,7 @@
 using Relief.Domain.Entities;
 using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.ApplyDTOs;
 using System;
@@ -12,6 +13,8 @@ using System.Threading.Tasks;
 
 namespace Relief.Services.Implementations
 {
+  
+
     public class ApplyService : IApplyService
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -26,16 +29,36 @@ namespace Relief.Services.Implementations
             var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
             var shiftRepo = _unitOfWork.GetRepository<OfferShift, Guid>();
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
-            var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
 
+            // =========================
+            // Validate PSW
+            // =========================
             var psw = await pswRepo.GetByIdAsync(pswId);
 
             if (psw == null)
-                throw new Exception("PSW not found");
+                throw new NotFoundException("PSW not found.");
 
-            if (!psw.IsProfileCompleted || !psw.IsVerified)
-                throw new Exception("Profile not verified");
+            if (!psw.IsProfileCompleted)
+                throw new ForbiddenException("Please complete your profile before applying.");
 
+            if (!psw.IsVerified)
+                throw new ForbiddenException("Your profile is not verified yet.");
+
+            if (dto.ShiftIds == null || !dto.ShiftIds.Any())
+                throw new BadRequestException("At least one shift must be selected.");
+
+            // =========================
+            // Prevent Duplicate Apply
+            // =========================
+            var existingRequests = (await requestRepo.GetAllAsync())
+                .Where(r => r.PswId == pswId && r.JobOfferId == dto.OfferId && r.Status == RequestStatus.Pending);
+
+            if (existingRequests.Any())
+                throw new ConflictException("You have already applied for this offer.");
+
+            // =========================
+            // Create Request
+            // =========================
             var request = new JopRequest
             {
                 Id = Guid.NewGuid(),
@@ -51,10 +74,13 @@ namespace Relief.Services.Implementations
                 var shift = await shiftRepo.GetByIdAsync(shiftId);
 
                 if (shift == null)
-                    throw new Exception("Shift not found");
+                    throw new NotFoundException($"Shift with id {shiftId} not found.");
+
+                if (shift.JobOfferId != dto.OfferId)
+                    throw new BadRequestException("Selected shift does not belong to this offer.");
 
                 if (!shift.IsAvailable)
-                    throw new Exception("Shift already booked");
+                    throw new ConflictException("One of the selected shifts is already booked.");
 
                 var item = new JobRequestItem
                 {

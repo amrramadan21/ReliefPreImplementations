@@ -1,8 +1,10 @@
 ﻿using Relief.Domain.Contracts;
 using Relief.Domain.Entities;
 using Relief.Domain.Entities.Users;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces;
 using Shared.IdentityDTOs;
+using System.Transactions;
 
 namespace Relief.Services.Implementations
 {
@@ -23,73 +25,84 @@ namespace Relief.Services.Implementations
             Guid userId,
             CompletePswProfileDto dto)
         {
-            var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
+            if (dto == null)
+                throw new BadRequestException("Profile data is required.");
 
+            var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
             var psw = await pswRepo.GetByIdAsync(userId);
 
             if (psw == null)
-                throw new Exception("PSW not found");
+                throw new NotFoundException("PSW not found.");
 
-            // ===============================
-            // Upload Files
-            // ===============================
+            if (psw.IsProfileCompleted)
+                throw new ConflictException("Profile is already completed.");
 
-            var proofFile = await _fileService.UploadFileAsync(
-                dto.ProofIdentityFile,
-                userId,
-                "psw/proof");
+            if (string.IsNullOrWhiteSpace(dto.ProofIdentityType))
+                throw new BadRequestException("Proof identity type is required.");
 
-            var certFile = await _fileService.UploadFileAsync(
-                dto.PswCertificateFile,
-                userId,
-                "psw/certificate");
-
-            var cvFile = await _fileService.UploadFileAsync(
-                dto.CVFile,
-                userId,
-                "psw/cv");
-
-            var immFile = await _fileService.UploadFileAsync(
-                dto.ImmunizationRecordFile,
-                userId,
-                "psw/immunization");
-
-            var criminalFile = await _fileService.UploadFileAsync(
-                dto.CriminalRecordFile,
-                userId,
-                "psw/criminal");
-
-            FileMetadata? cprFile = null;
-
-            if (dto.FirstAidOrCPRFile != null)
+            using (var transaction = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                cprFile = await _fileService.UploadFileAsync(
-                    dto.FirstAidOrCPRFile,
+                // ===============================
+                // Upload Required Files
+                // ===============================
+
+                var proofFile = await _fileService.UploadFileAsync(
+                    dto.ProofIdentityFile,
                     userId,
-                    "psw/cpr");
+                    "psw/proof");
+
+                var certFile = await _fileService.UploadFileAsync(
+                    dto.PswCertificateFile,
+                    userId,
+                    "psw/certificate");
+
+                var cvFile = await _fileService.UploadFileAsync(
+                    dto.CVFile,
+                    userId,
+                    "psw/cv");
+
+                var immFile = await _fileService.UploadFileAsync(
+                    dto.ImmunizationRecordFile,
+                    userId,
+                    "psw/immunization");
+
+                var criminalFile = await _fileService.UploadFileAsync(
+                    dto.CriminalRecordFile,
+                    userId,
+                    "psw/criminal");
+
+                FileMetadata? cprFile = null;
+
+                if (dto.FirstAidOrCPRFile != null)
+                {
+                    cprFile = await _fileService.UploadFileAsync(
+                        dto.FirstAidOrCPRFile,
+                        userId,
+                        "psw/cpr");
+                }
+
+                // ===============================
+                // Update PSW
+                // ===============================
+
+                psw.ProofIdentityType = dto.ProofIdentityType;
+                psw.WorkStatus = dto.WorkStatus;
+
+                psw.ProofIdentityFileId = proofFile.Id;
+                psw.PswCertificateFileId = certFile.Id;
+                psw.CVFileId = cvFile.Id;
+                psw.ImmunizationRecordFileId = immFile.Id;
+                psw.CriminalRecordFileId = criminalFile.Id;
+                psw.FirstAidOrCPRFileId = cprFile?.Id;
+
+                psw.IsProfileCompleted = true;
+                psw.IsVerified = true; // ممكن نخليها Admin Verification بعدين
+
+                pswRepo.Update(psw);
+
+                await _unitOfWork.SaveChangesAsync();
+                transaction.Complete();
             }
-
-            // ===============================
-            // Update PSW
-            // ===============================
-
-            psw.ProofIdentityType = dto.ProofIdentityType;
-            psw.WorkStatus = dto.WorkStatus;
-
-            psw.ProofIdentityFileId = proofFile.Id;
-            psw.PswCertificateFileId = certFile.Id;
-            psw.CVFileId = cvFile.Id;
-            psw.ImmunizationRecordFileId = immFile.Id;
-            psw.CriminalRecordFileId = criminalFile.Id;
-            psw.FirstAidOrCPRFileId = cprFile?.Id;
-
-            // Auto verification
-            psw.IsProfileCompleted = true;
-            psw.IsVerified = true;
-
-            pswRepo.Update(psw);
-
-            await _unitOfWork.SaveChangesAsync();
         }
     }
 }

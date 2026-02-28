@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\AppMigrations\**" />
+    <EmbeddedResource Remove="Data\AppMigrations\**" />
+    <None Remove="Data\AppMigrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Relief.Services\Relief.Services.csproj" />
   </ItemGroup>
 
@@ -18,10 +24,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\AppMigrations\" />
   </ItemGroup>
 
 </Project>
