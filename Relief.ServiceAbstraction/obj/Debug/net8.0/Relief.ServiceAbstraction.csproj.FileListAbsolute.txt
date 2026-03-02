@@ -67,3 +67,6 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Serv
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\refint\Relief.ServiceAbstraction.dll
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.ServiceAbstraction\obj\Debug\net8.0\ref\Relief.ServiceAbstraction.dll
+F:\Projects\Relief\Relief\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.dll
+F:\Projects\Relief\Relief\Relief.ServiceAbstraction\bin\Debug\net8.0\Relief.Domain.pdb
+F:\Projects\Relief\Relief\Relief.ServiceAbstraction\obj\Debug\net8.0\Relief.ServiceAbstraction.sourcelink.json

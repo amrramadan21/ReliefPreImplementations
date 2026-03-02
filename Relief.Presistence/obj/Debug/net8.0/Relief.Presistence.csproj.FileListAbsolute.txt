@@ -93,3 +93,4 @@ C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Pres
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.pdb
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.genruntimeconfig.cache
 C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Presistence\obj\Debug\net8.0\ref\Relief.Presistence.dll
+F:\Projects\Relief\Relief\Relief.Presistence\obj\Debug\net8.0\Relief.Presistence.sourcelink.json

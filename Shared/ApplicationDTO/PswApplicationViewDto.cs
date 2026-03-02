@@ -10,6 +10,7 @@ namespace Shared.ApplicationDTO
     public class PswApplicationViewDto
     {
         public Guid JobRequestId { get; set; }
+        public Guid JobRequestItemId { get; set; }
         public Guid ShiftId { get; set; }
         public string OfferTitle { get; set; } = "";
         public DateOnly? Date { get; set; }

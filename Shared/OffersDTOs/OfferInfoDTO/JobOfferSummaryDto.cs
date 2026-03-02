@@ -15,7 +15,5 @@ namespace Shared.OffersDTOs.OfferInfoDTO
 
         public decimal HourlyRate { get; set; }
 
-        public int AvailableDaysCount { get; set; }
-        public int AvailableShiftsCount { get; set; }
     }
 }

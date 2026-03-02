@@ -202,7 +202,7 @@ namespace Relief.Services.Implementations.Applications
             if (item.Status == RequestStatus.Rejected)
                 throw new ConflictException("Application already rejected.");
 
-            item.Status = RequestStatus.Rejected;
+            item.Status = RequestStatus.Canceled;
 
             await _unitOfWork.SaveChangesAsync();
         }
@@ -222,6 +222,7 @@ namespace Relief.Services.Implementations.Applications
             return requests.SelectMany(r => r.Items.Select(i => new PswApplicationViewDto
             {
                 JobRequestId = r.Id,
+                JobRequestItemId = i.Id,
                 ShiftId = i.ShiftId,
                 OfferTitle = i.OfferShift.JobOffer.Title,
                 Date = i.OfferShift.Date,

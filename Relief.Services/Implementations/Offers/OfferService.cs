@@ -52,10 +52,14 @@ namespace Relief.Services.Implementations.Offers
                 if (shiftDto.StartTime == null || shiftDto.EndTime == null)
                     throw new BadRequestException($"Shift on {shiftDto.Date:yyyy-MM-dd} must have start and end time.");
 
-                if (shiftDto.StartTime >= shiftDto.EndTime)
-                    throw new BadRequestException(
-                        $"Invalid shift time on {shiftDto.Date:yyyy-MM-dd}."
-                    );
+                // Determine if it's an overnight shift
+                bool isOvernightShift = shiftDto.EndTime <= shiftDto.StartTime;
+
+                var shiftStart = shiftDto.Date.ToDateTime(shiftDto.StartTime.Value);
+                var shiftEnd = isOvernightShift
+                    ? shiftDto.Date.AddDays(1).ToDateTime(shiftDto.EndTime.Value)  // next day
+                    : shiftDto.Date.ToDateTime(shiftDto.EndTime.Value);
+                
 
                 var shiftSpecification =
                     new JobOfferShiftSpecification(careHomeId, shiftDto.Date);
@@ -65,6 +69,12 @@ namespace Relief.Services.Implementations.Offers
 
                 foreach (var existingShift in existingShiftsForDate)
                 {
+                    var existingStart = existingShift.Date.Value.ToDateTime(existingShift.StartTime.Value);
+                    bool existingIsOvernight = existingShift.EndTime <= existingShift.StartTime;
+                    var existingEnd = existingIsOvernight
+                        ? existingShift.Date.Value.AddDays(1).ToDateTime(existingShift.EndTime.Value)
+                        : existingShift.Date.Value.ToDateTime(existingShift.EndTime.Value);
+
                     bool isOverlapping =
                         shiftDto.StartTime < existingShift.EndTime &&
                         shiftDto.EndTime > existingShift.StartTime;
@@ -140,8 +150,7 @@ namespace Relief.Services.Implementations.Offers
                 Id = o.Id,
                 Title = o.Title,
                 Address = o.Address,
-                HourlyRate = o.HourlyRate,
-                AvailableDaysCount = o.Shifts.Count
+                HourlyRate = o.HourlyRate
             }).ToList();
         }
 

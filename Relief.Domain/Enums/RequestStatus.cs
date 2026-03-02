@@ -6,6 +6,8 @@ namespace Relief.Domain.Enums
         Pending=1,
         QualifiedByAdmin=2,
         AcceptedByCareHome=3,
-        Rejected=4    
+        Rejected=4 ,
+        Canceled = 5
+        
     }
 }
