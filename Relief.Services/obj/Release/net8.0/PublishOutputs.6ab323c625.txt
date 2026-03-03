@@ -1,0 +1,14 @@
+F:\Projects\Relief\Relief\publish\Relief.Services.dll
+F:\Projects\Relief\Relief\publish\Relief.Services.deps.json
+F:\Projects\Relief\Relief\publish\Relief.Services.pdb
+F:\Projects\Relief\Relief\publish\Microsoft.IdentityModel.Abstractions.dll
+F:\Projects\Relief\Relief\publish\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Projects\Relief\Relief\publish\Microsoft.IdentityModel.Logging.dll
+F:\Projects\Relief\Relief\publish\Microsoft.IdentityModel.Tokens.dll
+F:\Projects\Relief\Relief\publish\System.IdentityModel.Tokens.Jwt.dll
+F:\Projects\Relief\Relief\publish\Relief.Domain.dll
+F:\Projects\Relief\Relief\publish\Relief.ServiceAbstraction.dll
+F:\Projects\Relief\Relief\publish\Shared.dll
+F:\Projects\Relief\Relief\publish\Relief.Domain.pdb
+F:\Projects\Relief\Relief\publish\Relief.ServiceAbstraction.pdb
+F:\Projects\Relief\Relief\publish\Shared.pdb

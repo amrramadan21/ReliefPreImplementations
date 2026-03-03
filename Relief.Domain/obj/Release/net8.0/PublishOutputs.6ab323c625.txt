@@ -1,0 +1,3 @@
+F:\Projects\Relief\Relief\publish\Relief.Domain.dll
+F:\Projects\Relief\Relief\publish\Relief.Domain.deps.json
+F:\Projects\Relief\Relief\publish\Relief.Domain.pdb

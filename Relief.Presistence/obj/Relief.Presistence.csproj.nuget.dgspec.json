@@ -288,7 +288,7 @@
           "dependencies": {
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[8.15.0, )"
+              "version": "[8.16.0, )"
             }
           },
           "imports": [

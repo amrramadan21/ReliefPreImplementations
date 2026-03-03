@@ -1,0 +1,7 @@
+F:\Projects\Relief\Relief\publish\Relief.ServiceAbstraction.dll
+F:\Projects\Relief\Relief\publish\Relief.ServiceAbstraction.deps.json
+F:\Projects\Relief\Relief\publish\Relief.ServiceAbstraction.pdb
+F:\Projects\Relief\Relief\publish\Relief.Domain.dll
+F:\Projects\Relief\Relief\publish\Shared.dll
+F:\Projects\Relief\Relief\publish\Relief.Domain.pdb
+F:\Projects\Relief\Relief\publish\Shared.pdb

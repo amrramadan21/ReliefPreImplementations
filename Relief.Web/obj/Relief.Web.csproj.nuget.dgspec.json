@@ -366,7 +366,7 @@
           "dependencies": {
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[8.15.0, )"
+              "version": "[8.16.0, )"
             }
           },
           "imports": [
@@ -455,6 +455,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.23, )"
+            },
+            "Microsoft.IdentityModel.Protocols": {
+              "target": "Package",
+              "version": "[8.16.0, )"
+            },
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.16.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.16.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

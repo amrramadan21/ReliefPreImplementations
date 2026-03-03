@@ -96,12 +96,23 @@ namespace Relief.Web
             // -----------------------------
             // JWT Configuration
             // -----------------------------
+            //var jwt = builder.Configuration.GetSection("Jwt");
+            //var key = jwt["Key"];
+            //var issuer = jwt["Issuer"];
+            //var audience = jwt["Audience"];
+
+            //Console.WriteLine("VALIDATION KEY USED: " + key);
+            // -----------------------------
+            // JWT Configuration
+            // -----------------------------
             var jwt = builder.Configuration.GetSection("Jwt");
-            var key = jwt["Key"];
+            var key = jwt["Key"] ?? throw new InvalidOperationException("CRITICAL ERROR: JWT Key is null or missing from appsettings!");
             var issuer = jwt["Issuer"];
             var audience = jwt["Audience"];
 
+            Console.WriteLine("========== STARTUP CHECK ==========");
             Console.WriteLine("VALIDATION KEY USED: " + key);
+            Console.WriteLine("===================================");
 
             builder.Services
                 .AddAuthentication(options =>
@@ -161,15 +172,18 @@ namespace Relief.Web
             // -----------------------------
             // Middleware
             // -----------------------------
-            if (app.Environment.IsDevelopment())
-            {
+           // if (app.Environment.IsDevelopment())
+           //{
                 app.UseSwagger();
                 app.UseSwaggerUI();
+            //}
+            app.UseMiddleware<ExceptionMiddleware>();
+
+            if (!app.Environment.IsProduction())
+            {
+                app.UseHttpsRedirection();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseAuthentication();  // لازم قبل Authorization
             app.UseAuthorization();
@@ -184,20 +198,32 @@ namespace Relief.Web
         // -----------------------------
         static async Task SeedRolesAsync(WebApplication app)
         {
-            using var scope = app.Services.CreateScope();
-            var roleManager = scope.ServiceProvider
-                .GetRequiredService<RoleManager<IdentityRole<Guid>>>();
-
-            foreach (var role in new[] { "CareHome", "PSW" })
+            try
             {
-                if (!await roleManager.RoleExistsAsync(role))
+                using var scope = app.Services.CreateScope();
+                var dbContext = scope.ServiceProvider.GetRequiredService<ReliefAppDbContext>();
+                await dbContext.Database.MigrateAsync();
+
+                var roleManager = scope.ServiceProvider
+                    .GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+
+                foreach (var role in new[] { "CareHome", "PSW" })
                 {
-                    await roleManager.CreateAsync(new IdentityRole<Guid>
+                    if (!await roleManager.RoleExistsAsync(role))
                     {
-                        Name = role,
-                        NormalizedName = role.ToUpper()
-                    });
+                        await roleManager.CreateAsync(new IdentityRole<Guid>
+                        {
+                            Name = role,
+                            NormalizedName = role.ToUpper()
+                        });
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"⚠️ SEED FAILED: {ex.Message}");
+                Console.WriteLine($"⚠️ INNER: {ex.InnerException?.Message}");
+                // App will still start — you'll see the error in logs
             }
         }
     }

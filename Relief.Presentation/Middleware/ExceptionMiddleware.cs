@@ -54,15 +54,21 @@ namespace Relief.Presentation.Middleware
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
+                // ⬇️ TEMPORARY: Show the real error so you can debug on AWS
+                var isDev = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+
                 var response = new
                 {
                     success = false,
-                    message = "Internal Server Error",
-                    statusCode = 500
+                    message = isDev ? ex.Message : "Internal Server Error",
+                    statusCode = 500,
+                    // ADD THESE TEMPORARILY — REMOVE BEFORE PRODUCTION
+                    debugMessage = ex.Message,
+                    debugStackTrace = ex.StackTrace,
+                    debugInner = ex.InnerException?.Message
                 };
 
                 var json = JsonSerializer.Serialize(response);
-
                 await context.Response.WriteAsync(json);
             }
         }
