@@ -107,15 +107,16 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // GET OFFER BY ID
         // =========================================================
-        public async Task<JobOfferDetailsDto> GetOfferByIdAsync(Guid id)
+        public async Task<JobOfferDetailsDto> GetOfferByIdAsync(Guid id, Guid careHomeId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
             var spec = new JobOfferWithDetailsSpecification(id);
 
             var offer = await offerRepo.GetByIdAsync(spec);
 
-            if (offer == null)
+            if (offer == null || offer.CareHomeId != careHomeId)
                 throw new NotFoundException("Offer not found.");
+
 
             return new JobOfferDetailsDto
             {
@@ -140,10 +141,12 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // GET ALL OFFERS
         // =========================================================
-        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync()
+        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? careHomeId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
             var offers = await offerRepo.GetAllAsync();
+            if (careHomeId.HasValue)
+                offers = offers.Where(o => o.CareHomeId == careHomeId.Value).ToList();
 
             return offers.Select(o => new JobOfferSummaryDto
             {
@@ -153,6 +156,8 @@ namespace Relief.Services.Implementations.Offers
                 HourlyRate = o.HourlyRate
             }).ToList();
         }
+
+        
 
         // =========================================================
         // UPDATE OFFER

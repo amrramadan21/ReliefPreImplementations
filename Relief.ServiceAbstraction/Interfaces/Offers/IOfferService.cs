@@ -13,8 +13,8 @@ namespace Relief.ServiceAbstraction.Interfaces.Offers
     public interface IOfferService
     {
         Task<Guid> CreateOfferAsync(Guid careHomeId, CreateJobOfferDto dto);
-        Task<JobOfferDetailsDto?> GetOfferByIdAsync(Guid id);
-        Task<List<JobOfferSummaryDto>> GetAllOffersAsync();
+        Task<JobOfferDetailsDto?> GetOfferByIdAsync(Guid id, Guid careHomeId);
+        Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? careHomeId);
         Task<bool> UpdateOfferAsync(Guid offerId, Guid careHomeId, UpdateJobOfferDto dto);
         Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId);
 

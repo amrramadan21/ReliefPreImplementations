@@ -438,6 +438,14 @@
         ],
         "parameters": [
           {
+            "name": "careHomeId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
             "name": "pageNumber",
             "in": "query",
             "schema": {

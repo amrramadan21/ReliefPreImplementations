@@ -123,6 +123,23 @@ namespace Relief.Services.Implementations.Users
                 signingCredentials: creds
             );
 
+            // Write the token to a string once so we can use it in either DTO
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+            // Check the role and return the specific DTO for PSW
+            if (role.Equals("PSW", StringComparison.OrdinalIgnoreCase))
+            {
+                return new PswAuthResponseDTO
+                {
+                    Token = tokenString,
+                    ExpiresAtUtc = expires,
+                    Email = user.Email ?? "",
+                    Role = role,
+                    UserId = user.Id,
+                    WorkStatus = false,
+                };
+            }
+
             return new AuthResponseDTO
             {
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
@@ -175,7 +192,8 @@ namespace Relief.Services.Implementations.Users
                         var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
                         await pswRepo.AddAsync(new PswUser
                         {
-                            ApplicationUserId = user.Id
+                            ApplicationUserId = user.Id,
+                            WorkStatus = false
                         });
                         break;
 

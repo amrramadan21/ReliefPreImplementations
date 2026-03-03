@@ -26,7 +26,7 @@ namespace Relief.Services.Implementations.Applications
         }
 
         // =====================================================
-        // GET APPLICATIONS FOR OFFER (CareHome View)
+        // GET APPLICATIONS FOR OFFER (CareHome and individual View)
         // =====================================================
         public async Task<List<OfferApplicationDto>>
             GetApplicationsForOfferAsync(Guid offerId, Guid careHomeId)
@@ -37,7 +37,7 @@ namespace Relief.Services.Implementations.Applications
             if (offer == null)
                 throw new NotFoundException("Offer not found.");
 
-            if (offer.CareHomeId != careHomeId)
+            if (offer.CareHomeId != careHomeId && offer.IndividualId != careHomeId)
                 throw new ForbiddenException("You cannot view applications for this offer.");
 
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
@@ -78,7 +78,7 @@ namespace Relief.Services.Implementations.Applications
         }
 
         // =====================================================
-        // ACCEPT SHIFT (Atomic Operation)
+        // ACCEPT SHIFT by carehome and individual (Atomic Operation)
         // =====================================================
         public async Task AcceptShiftAsync(
             Guid shiftId,
@@ -111,7 +111,7 @@ namespace Relief.Services.Implementations.Applications
                 var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
                 var offer = await offerRepo.GetByIdAsync(shift.JobOfferId);
 
-                if (offer == null || offer.CareHomeId != careHomeId)
+                if (offer == null || (offer.CareHomeId != careHomeId && offer.IndividualId != careHomeId))
                     throw new ForbiddenException("You cannot manage this shift.");
 
                 if (item.Status != RequestStatus.Pending)
@@ -142,7 +142,7 @@ namespace Relief.Services.Implementations.Applications
         }
 
         // =====================================================
-        // REJECT SHIFT
+        // REJECT SHIFT by carehome and individual
         // =====================================================
         public async Task RejectShiftAsync(
             Guid jobRequestItemId,
@@ -166,7 +166,7 @@ namespace Relief.Services.Implementations.Applications
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
             var offer = await offerRepo.GetByIdAsync(shift.JobOfferId);
 
-            if (offer == null || offer.CareHomeId != careHomeId)
+            if (offer == null || (offer.CareHomeId != careHomeId && offer.IndividualId != careHomeId))
                 throw new ForbiddenException("You cannot reject this application.");
 
             if (item.Status != RequestStatus.Pending)

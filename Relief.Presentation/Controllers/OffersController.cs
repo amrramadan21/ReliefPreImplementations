@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.UpdateDTO;
@@ -21,7 +22,7 @@ namespace Relief.Web.Controllers
 
         // 🔐 CareHome only
 
-        [Authorize(Roles = "CareHome")]
+        [Authorize(Roles = "CareHome,Individual")]
         [HttpPost]
         public async Task<IActionResult> CreateOffer([FromBody] CreateJobOfferDto dto)
         {
@@ -39,29 +40,44 @@ namespace Relief.Web.Controllers
         }
 
 
-
+        [Authorize(Roles = "CareHome,Individual")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOfferById(Guid id)
         {
-            var offer = await _offerService.GetOfferByIdAsync(id);
+            var userId = User.FindFirstValue("userId");
 
-            if (offer == null)
-                return NotFound(new { message = "Offer not found" });
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
 
-            return Ok(offer);
+            var careHomeId = Guid.Parse(userId);
+
+            try
+            {
+                var result = await _offerService.GetOfferByIdAsync(id, careHomeId);
+                return Ok(result);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Forbid(); // 403
+            }
         }
 
         [HttpGet]
-        [Authorize] // أي حد مسجل يقدر يشوف
-        public async Task<IActionResult> GetAllOffers(int pageNumber = 1,int pageSize = 5)
+        public async Task<IActionResult> GetAllOffers([FromQuery] Guid? careHomeId = null,int pageNumber = 1,int pageSize = 5)
         {
             
-            var offers = await _offerService.GetAllOffersAsync();
+            var offers = await _offerService.GetAllOffersAsync(careHomeId);
             return Ok(offers);
         }
 
+        
+
         [HttpPut("{id}")]
-        [Authorize(Roles = "CareHome")]
+        [Authorize(Roles = "CareHome,Individual")]
         public async Task<IActionResult> UpdateOffer(Guid id, [FromBody] UpdateJobOfferDto dto)
         {
             var userId = User.FindFirstValue("userId");
@@ -81,7 +97,7 @@ namespace Relief.Web.Controllers
 
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "CareHome")]
+        [Authorize(Roles = "CareHome,Individual")]
         public async Task<IActionResult> DeleteOffer(Guid id)
         {
             var userId = User.FindFirstValue("userId");

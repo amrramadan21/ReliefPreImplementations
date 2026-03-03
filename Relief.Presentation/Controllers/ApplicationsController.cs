@@ -12,7 +12,7 @@ using Relief.ServiceAbstraction.Interfaces.Applications;
 namespace Relief.Presentation.Controllers
 {
 
-    [Authorize(Roles = "CareHome")]
+    [Authorize(Roles = "CareHome,Individual")]
     [ApiController]
     [Route("api/carehome/applications")]
     public class ApplicationsController : ControllerBase
@@ -26,7 +26,7 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // GET ALL APPLICATIONS FOR OFFER
+        // GET ALL APPLICATIONS FOR OFFER by care home and individual
         // =====================================================
         [HttpGet("{offerId}")]
         public async Task<IActionResult> GetApplications(Guid offerId)
@@ -41,7 +41,7 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // ACCEPT SHIFT
+        // ACCEPT SHIFT by care home and individual
         // =====================================================
         [HttpPost("accept")]
         public async Task<IActionResult> AcceptShift(
@@ -63,7 +63,7 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // REJECT SHIFT
+        // REJECT SHIFT by care home and individual
         // =====================================================
         [HttpPost("reject")]
         public async Task<IActionResult> RejectShift(
