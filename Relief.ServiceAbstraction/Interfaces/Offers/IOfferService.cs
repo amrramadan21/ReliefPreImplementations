@@ -18,6 +18,7 @@ namespace Relief.ServiceAbstraction.Interfaces.Offers
         Task<bool> UpdateOfferAsync(Guid offerId, Guid careHomeId, UpdateJobOfferDto dto);
         Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId);
 
+        Task<JobOfferDetailsDto?> GetOfferDetailsForPswAsync(Guid offerId);
 
 
     }

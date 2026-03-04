@@ -139,6 +139,42 @@ namespace Relief.Services.Implementations.Offers
         }
 
         // =========================================================
+        // View Details of an Offer 
+        // =========================================================
+
+        public async Task<JobOfferDetailsDto?> GetOfferDetailsForPswAsync(Guid offerId)
+        {
+            var repo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            var spec = new JobOfferWithDetailsSpecification(offerId);
+            var offer = await repo.GetByIdAsync(spec);
+
+            if (offer == null)
+                throw new NotFoundException("Offer not found");
+
+            return new JobOfferDetailsDto
+            {
+                Id = offer.Id,
+                Title = offer.Title,
+                Description = offer.Description,
+                HourlyRate = offer.HourlyRate,
+                Address = offer.Address,
+                Latitude = offer.Latitude,
+                Longitude = offer.Longitude,
+                Shifts = offer.Shifts
+                    .Where(s => s.IsAvailable)
+                    .Select(s => new OfferShiftDetailsDto
+                    {
+                        ShiftId = s.Id,
+                        Date = s.Date,
+                        StartTime = s.StartTime,
+                        EndTime = s.EndTime,
+                        IsAvailable = s.IsAvailable
+                    }).ToList()
+            };
+        }
+
+        // =========================================================
         // GET ALL OFFERS
         // =========================================================
         public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? careHomeId)
@@ -153,7 +189,9 @@ namespace Relief.Services.Implementations.Offers
                 Id = o.Id,
                 Title = o.Title,
                 Address = o.Address,
-                HourlyRate = o.HourlyRate
+                HourlyRate = o.HourlyRate,
+                Latitude = o.Latitude,
+                Longitude = o.Longitude
             }).ToList();
         }
 

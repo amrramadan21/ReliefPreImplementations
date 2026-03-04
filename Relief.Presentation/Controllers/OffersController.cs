@@ -39,8 +39,7 @@ namespace Relief.Web.Controllers
             return Ok(new { offerId });
         }
 
-
-        [Authorize(Roles = "CareHome,Individual")]
+        [Authorize(Roles = "CareHome,Individual,PSW")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOfferById(Guid id)
         {
@@ -49,20 +48,30 @@ namespace Relief.Web.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            var careHomeId = Guid.Parse(userId);
+            var role = User.FindFirstValue(ClaimTypes.Role);
 
             try
             {
-                var result = await _offerService.GetOfferByIdAsync(id, careHomeId);
-                return Ok(result);
+                if (role == "PSW")
+                {
+                    // PSW يشوف offer details بس
+                    var result = await _offerService.GetOfferDetailsForPswAsync(id);
+                    return Ok(result);
+                }
+
+                // CareHome / Individual
+                var careHomeId = Guid.Parse(userId);
+                var result2 = await _offerService.GetOfferByIdAsync(id, careHomeId);
+
+                return Ok(result2);
             }
             catch (NotFoundException ex)
             {
                 return NotFound(new { message = ex.Message });
             }
-            catch (UnauthorizedAccessException ex)
+            catch (UnauthorizedAccessException)
             {
-                return Forbid(); // 403
+                return Forbid();
             }
         }
 
