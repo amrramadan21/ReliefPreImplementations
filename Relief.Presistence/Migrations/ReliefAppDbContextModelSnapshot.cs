@@ -153,41 +153,7 @@ namespace Relief.Presistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.Address", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("ApartmentNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PostalCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Addresses");
-                });
-
-            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JobOffer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -230,7 +196,7 @@ namespace Relief.Presistence.Migrations
                     b.ToTable("JobOffers");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JobRequestItem", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JobRequestItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -254,7 +220,7 @@ namespace Relief.Presistence.Migrations
                     b.ToTable("JobRequestItems");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JopRequest", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JopRequest", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -274,12 +240,14 @@ namespace Relief.Presistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("JobOfferId");
+
                     b.HasIndex("PswId");
 
                     b.ToTable("JopRequests");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.OfferShift", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -305,9 +273,48 @@ namespace Relief.Presistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AssignedPswId");
+
                     b.HasIndex("JobOfferId");
 
                     b.ToTable("OfferShifts");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.Address", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ApartmentNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
@@ -337,7 +344,6 @@ namespace Relief.Presistence.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Gender")
@@ -347,7 +353,6 @@ namespace Relief.Presistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -572,7 +577,7 @@ namespace Relief.Presistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JobOffer", b =>
                 {
                     b.HasOne("Relief.Domain.Entities.Users.CareHomeUser", "CareHomeUser")
                         .WithMany("JobOffers")
@@ -589,15 +594,15 @@ namespace Relief.Presistence.Migrations
                     b.Navigation("IndividualCareHomeUser");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JobRequestItem", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JobRequestItem", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.JopRequest", "JopRequest")
+                    b.HasOne("Relief.Domain.Entities.Offers.JopRequest", "JopRequest")
                         .WithMany("Items")
                         .HasForeignKey("JopRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Relief.Domain.Entities.OfferShift", "OfferShift")
+                    b.HasOne("Relief.Domain.Entities.Offers.OfferShift", "OfferShift")
                         .WithMany()
                         .HasForeignKey("ShiftId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -608,31 +613,46 @@ namespace Relief.Presistence.Migrations
                     b.Navigation("OfferShift");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JopRequest", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JopRequest", b =>
                 {
+                    b.HasOne("Relief.Domain.Entities.Offers.JobOffer", "JobOffer")
+                        .WithMany()
+                        .HasForeignKey("JobOfferId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Relief.Domain.Entities.Users.PswUser", "PswUser")
                         .WithMany("JobRequests")
                         .HasForeignKey("PswId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.Navigation("JobOffer");
+
                     b.Navigation("PswUser");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.OfferShift", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.OfferShift", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.JobOffer", "JobOffer")
+                    b.HasOne("Relief.Domain.Entities.Users.PswUser", "AssignedPsw")
+                        .WithMany()
+                        .HasForeignKey("AssignedPswId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Relief.Domain.Entities.Offers.JobOffer", "JobOffer")
                         .WithMany("Shifts")
                         .HasForeignKey("JobOfferId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AssignedPsw");
 
                     b.Navigation("JobOffer");
                 });
 
             modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
                 {
-                    b.HasOne("Relief.Domain.Entities.Address", "Address")
+                    b.HasOne("Relief.Domain.Entities.Users.Address", "Address")
                         .WithOne("User")
                         .HasForeignKey("Relief.Domain.Entities.Users.ApplicationUser", "AddressId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -722,32 +742,29 @@ namespace Relief.Presistence.Migrations
                     b.Navigation("PswCertificateFile");
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.Address", b =>
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JobOffer", b =>
+                {
+                    b.Navigation("Shifts");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Offers.JopRequest", b =>
+                {
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("Relief.Domain.Entities.Users.Address", b =>
                 {
                     b.Navigation("User")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Relief.Domain.Entities.JobOffer", b =>
-                {
-                    b.Navigation("Shifts");
-                });
-
-            modelBuilder.Entity("Relief.Domain.Entities.JopRequest", b =>
-                {
-                    b.Navigation("Items");
-                });
-
             modelBuilder.Entity("Relief.Domain.Entities.Users.ApplicationUser", b =>
                 {
-                    b.Navigation("CareHomeUser")
-                        .IsRequired();
+                    b.Navigation("CareHomeUser");
 
-                    b.Navigation("IndividualCareHomeUser")
-                        .IsRequired();
+                    b.Navigation("IndividualCareHomeUser");
 
-                    b.Navigation("PswUser")
-                        .IsRequired();
+                    b.Navigation("PswUser");
                 });
 
             modelBuilder.Entity("Relief.Domain.Entities.Users.CareHomeUser", b =>

@@ -184,6 +184,29 @@ namespace Relief.Presistence.Data.DbContexts
                 .WithMany()
                 .HasForeignKey(i => i.ShiftId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            //Updates
+
+            // =========================================================
+            // JobRequest → JobOffer
+            // =========================================================
+            modelBuilder.Entity<JopRequest>()
+                .HasOne(r => r.JobOffer)
+                .WithMany()
+                .HasForeignKey(r => r.JobOfferId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // =========================================================
+            // OfferShift → AssignedPsw
+            // =========================================================
+            modelBuilder.Entity<OfferShift>()
+                .HasOne(s => s.AssignedPsw)
+                .WithMany()
+                .HasForeignKey(s => s.AssignedPswId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+
         }
+
     }
 }

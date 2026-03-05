@@ -123,12 +123,14 @@ namespace Relief.Services.Implementations.Users
                 signingCredentials: creds
             );
 
-            // Write the token to a string once so we can use it in either DTO
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
-            // Check the role and return the specific DTO for PSW
             if (role.Equals("PSW", StringComparison.OrdinalIgnoreCase))
             {
+                var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
+
+                var psw = await pswRepo.GetByIdAsync(user.Id);
+
                 return new PswAuthResponseDTO
                 {
                     Token = tokenString,
@@ -136,13 +138,13 @@ namespace Relief.Services.Implementations.Users
                     Email = user.Email ?? "",
                     Role = role,
                     UserId = user.Id,
-                    WorkStatus = false,
+                    WorkStatus = psw?.WorkStatus ?? false
                 };
             }
 
             return new AuthResponseDTO
             {
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Token = tokenString,
                 ExpiresAtUtc = expires,
                 Email = user.Email ?? "",
                 Role = role,
@@ -178,31 +180,40 @@ namespace Relief.Services.Implementations.Users
                 switch (role)
                 {
                     case "CareHome":
+
                         var careHomeRepo = _unitOfWork.GetRepository<CareHomeUser, Guid>();
+
                         await careHomeRepo.AddAsync(new CareHomeUser
                         {
                             Id = user.Id,
-                            BusinessLicense = "Pending",
                             LegalName = "Pending",
+                            BusinessLicense = "Pending",
                             VaccinationPolicy = "Pending"
                         });
+
                         break;
 
                     case "PSW":
+
                         var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
+
                         await pswRepo.AddAsync(new PswUser
                         {
                             ApplicationUserId = user.Id,
                             WorkStatus = false
                         });
+
                         break;
 
                     case "Individual":
+
                         var indRepo = _unitOfWork.GetRepository<IndividualCareHomeUser, Guid>();
+
                         await indRepo.AddAsync(new IndividualCareHomeUser
                         {
                             Id = user.Id
                         });
+
                         break;
 
                     default:
@@ -210,10 +221,43 @@ namespace Relief.Services.Implementations.Users
                 }
 
                 await _unitOfWork.SaveChangesAsync();
+
                 transaction.Complete();
             }
 
             return await BuildTokenAsync(user);
+        }
+
+        // =========================================================
+        // CareHome Register Logic
+        // =========================================================
+        public async Task<AuthResponseDTO> RegisterCareHomeAsync(RegisterCareHomeDto dto)
+        {
+            if (!Enum.TryParse<Gender>(dto.Gender, true, out var parsedGender))
+                throw new BadRequestException($"'{dto.Gender}' is not a valid gender.");
+
+            if (dto.Address == null)
+                throw new BadRequestException("Address is required.");
+
+            var user = new ApplicationUser
+            {
+                UserName = dto.Email,
+                Email = dto.Email,
+                PhoneNumber = dto.PhoneNumber,
+                BirthOfDate = dto.DateOfBirth,
+                Gender = parsedGender,
+                Address = new Address
+                {
+                    ApartmentNumber = dto.Address.ApartmentNumber,
+                    Street = dto.Address.Street,
+                    City = dto.Address.City,
+                    State = dto.Address.State,
+                    PostalCode = dto.Address.PostalCode,
+                    Country = dto.Address.Country
+                }
+            };
+
+            return await RegisterUserCoreAsync(user, dto.Password, "CareHome");
         }
     }
 }

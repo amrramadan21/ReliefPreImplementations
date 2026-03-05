@@ -11,5 +11,6 @@ namespace Relief.ServiceAbstraction.Interfaces.Users
     {
         Task<AuthResponseDTO> RegisterUserAsync(RegisterDTO dto, string role);
         Task<AuthResponseDTO> LoginAsync(LoginDTO dto);
+        Task<AuthResponseDTO> RegisterCareHomeAsync(RegisterCareHomeDto dto);
     }
 }

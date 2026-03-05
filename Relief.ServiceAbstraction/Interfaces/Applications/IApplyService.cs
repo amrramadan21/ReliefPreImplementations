@@ -1,4 +1,6 @@
-﻿using Shared.ApplyDTOs;
+﻿using Relief.Domain.Entities.Offers;
+using Shared.ApplyDTOs;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +12,8 @@ namespace Relief.ServiceAbstraction.Interfaces.Applications
     public interface IApplyService
     {
         Task ApplyAsync(Guid pswId, ApplyToOfferDto dto);
+        Task<Pagination<JopRequest>> GetRequestsAsync(
+    Guid careHomeId,
+    RequestQueryParams query);
     }
 }

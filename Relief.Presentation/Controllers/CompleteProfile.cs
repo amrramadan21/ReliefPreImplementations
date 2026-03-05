@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Relief.Presentation.Controllers
 {
+    [Authorize(Roles = "PSW")]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/psw/profile")]
     public class CompleteProfileController : ControllerBase
     {
         private readonly IPswService _pswService;
@@ -19,16 +20,37 @@ namespace Relief.Presentation.Controllers
             _pswService = pswService;
         }
 
-        [Authorize(Roles = "PSW")]
-        [HttpPost("complete-profile")]
-        public async Task<IActionResult> CompleteProfile([FromForm] CompletePswProfileDto dto)
+        // =====================================================
+        // Helper
+        // =====================================================
+        private Guid CurrentUserId
         {
-            var userId = Guid.Parse(User.FindFirstValue("userId")!);
+            get
+            {
+                var id = User.FindFirstValue("userId");
 
-            await _pswService.CompleteProfileAsync(userId, dto);
+                if (id == null)
+                    throw new UnauthorizedAccessException("Invalid token.");
+
+                return Guid.Parse(id);
+            }
+        }
+
+        // =====================================================
+        // COMPLETE PSW PROFILE
+        // =====================================================
+        [HttpPost]
+        public async Task<IActionResult> CompleteProfile(
+            [FromForm] CompletePswProfileDto dto)
+        {
+            if (dto == null)
+                return BadRequest("Profile data is required.");
+
+            await _pswService.CompleteProfileAsync(CurrentUserId, dto);
 
             return Ok(new
             {
+                success = true,
                 message = "Profile completed and verified successfully."
             });
         }

@@ -1,8 +1,50 @@
 [
   {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "GetAllApplications",
+    "RelativePath": "api/applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "GetApplications",
+    "RelativePath": "api/applications/{offerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "offerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "AcceptShift",
+    "RelativePath": "api/applications/accept",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplicationDTO.AcceptShiftDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Relief.Presentation.Controllers.ApplyController",
     "Method": "Apply",
-    "RelativePath": "api/apply",
+    "RelativePath": "api/applications/apply",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -10,6 +52,22 @@
       {
         "Name": "dto",
         "Type": "Shared.ApplyDTOs.ApplyToOfferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "RejectShift",
+    "RelativePath": "api/applications/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ApplicationDTO.RejectShiftDto",
         "IsRequired": true
       }
     ],
@@ -51,7 +109,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "Shared.IdentityDTOs.RegisterDTO",
+        "Type": "Shared.IdentityDTOs.RegisterCareHomeDto",
         "IsRequired": true
       }
     ],
@@ -120,15 +178,47 @@
     ]
   },
   {
-    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
-    "Method": "GetApplications",
-    "RelativePath": "api/carehome/applications/{offerId}",
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "CreateOffer",
+    "RelativePath": "api/offers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.OffersDTOs.CreateDTO.CreateJobOfferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "GetAllOffers",
+    "RelativePath": "api/offers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "offerId",
+        "Name": "careHomeId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "GetOfferById",
+    "RelativePath": "api/offers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -136,32 +226,105 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
-    "Method": "AcceptShift",
-    "RelativePath": "api/carehome/applications/accept",
-    "HttpMethod": "POST",
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "UpdateOffer",
+    "RelativePath": "api/offers/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
         "Name": "dto",
-        "Type": "Shared.ApplicationDTO.AcceptShiftDto",
+        "Type": "Shared.OffersDTOs.UpdateDTO.UpdateJobOfferDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
-    "Method": "RejectShift",
-    "RelativePath": "api/carehome/applications/reject",
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "DeleteOffer",
+    "RelativePath": "api/offers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ProfileController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Shared.ProfileDTOs.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ProfileController",
+    "Method": "GetUserProfile",
+    "RelativePath": "api/profile/{id}/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
+    "Method": "GetMyApplications",
+    "RelativePath": "api/psw/applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
+    "Method": "CancelApplication",
+    "RelativePath": "api/psw/applications/cancel",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "Shared.ApplicationDTO.RejectShiftDto",
+        "Type": "Shared.ApplicationDTO.CancelApplicationDto",
         "IsRequired": true
       }
     ],
@@ -170,7 +333,7 @@
   {
     "ContainingType": "Relief.Presentation.Controllers.CompleteProfileController",
     "Method": "CompleteProfile",
-    "RelativePath": "api/CompleteProfile/complete-profile",
+    "RelativePath": "api/psw/profile",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -214,127 +377,6 @@
         "Name": "FirstAidOrCPRFile",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Web.Controllers.OffersController",
-    "Method": "CreateOffer",
-    "RelativePath": "api/Offers",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Shared.OffersDTOs.CreateDTO.CreateJobOfferDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Web.Controllers.OffersController",
-    "Method": "GetAllOffers",
-    "RelativePath": "api/Offers",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "careHomeId",
-        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Web.Controllers.OffersController",
-    "Method": "GetOfferById",
-    "RelativePath": "api/Offers/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Web.Controllers.OffersController",
-    "Method": "UpdateOffer",
-    "RelativePath": "api/Offers/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "Shared.OffersDTOs.UpdateDTO.UpdateJobOfferDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Web.Controllers.OffersController",
-    "Method": "DeleteOffer",
-    "RelativePath": "api/Offers/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
-    "Method": "GetMyApplications",
-    "RelativePath": "api/psw/applications",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Presentation.Controllers.PswApplicationsController",
-    "Method": "CancelApplication",
-    "RelativePath": "api/psw/applications/cancel",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Shared.ApplicationDTO.CancelApplicationDto",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

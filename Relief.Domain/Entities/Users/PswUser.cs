@@ -44,3 +44,4 @@ namespace Relief.Domain.Entities.Users
         public ICollection<JopRequest> JobRequests { get; set; } = new List<JopRequest>();
     }
 }
+ 

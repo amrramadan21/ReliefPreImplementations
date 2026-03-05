@@ -4,10 +4,14 @@ using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Applications;
+using Relief.Services.Common;
+using Relief.Services.Specifications;
 using Shared.ApplyDTOs;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,8 +54,12 @@ namespace Relief.Services.Implementations.Applications
             // =========================
             // Prevent Duplicate Apply
             // =========================
-            var existingRequests = (await requestRepo.GetAllAsync())
-                .Where(r => r.PswId == pswId && r.JobOfferId == dto.OfferId && r.Status == RequestStatus.Pending);
+            var spec = new PswOfferApplicationSpecification(pswId, dto.OfferId);
+
+            var existingRequests = (await requestRepo.GetAllAsync(spec))
+     .        Where(r => r.PswId == pswId
+              && r.JobOfferId == dto.OfferId
+              && r.Status == RequestStatus.Pending);
 
             if (existingRequests.Any())
                 throw new ConflictException("You have already applied for this offer.");
@@ -68,6 +76,13 @@ namespace Relief.Services.Implementations.Applications
                 CreatedAt = DateTime.UtcNow,
                 Items = new List<JobRequestItem>()
             };
+
+            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            var offer = await offerRepo.GetByIdAsync(dto.OfferId);
+
+            if (offer == null)
+                throw new NotFoundException("Offer not found.");
 
             foreach (var shiftId in dto.ShiftIds)
             {
@@ -95,6 +110,54 @@ namespace Relief.Services.Implementations.Applications
 
             await requestRepo.AddAsync(request);
             await _unitOfWork.SaveChangesAsync();
+        }
+
+        // =========================
+        // Request Query with Pagination & Filtering
+        // ========================= 
+        public async Task<Pagination<JopRequest>> GetRequestsAsync(
+                        Guid careHomeId,
+                        RequestQueryParams query)
+        {
+            var repo = _unitOfWork.GetRepository<JopRequest, Guid>();
+
+            Expression<Func<JopRequest, bool>> criteria =
+                r => r.JobOffer.CareHomeId == careHomeId &&
+                (!query.Status.HasValue || r.Status == query.Status);
+
+            var countSpec = new PaginationSpecification<JopRequest, Guid>(criteria);
+
+            var totalCount = await repo.CountAsync(countSpec);
+
+            PaginationSpecification<JopRequest, Guid> spec;
+
+            // dynamic sorting
+            if (query.Sort == "-createdAt")
+            {
+                spec = new PaginationSpecification<JopRequest, Guid>(
+                    criteria,
+                    r => r.CreatedAt,
+                    query.PageIndex,
+                    query.PageSize
+                );
+            }
+            else
+            {
+                spec = new PaginationSpecification<JopRequest, Guid>(
+                    criteria,
+                    r => r.CreatedAt,
+                    query.PageIndex,
+                    query.PageSize
+                );
+            }
+
+            var data = await repo.GetAllAsync(spec);
+
+            return new Pagination<JopRequest>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                data.ToList());
         }
     }
 }

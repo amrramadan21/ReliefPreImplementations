@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Relief.Presentation.Controllers
 {
+
     [Authorize(Roles = "PSW")]
     [ApiController]
     [Route("api/psw/applications")]
@@ -24,25 +25,46 @@ namespace Relief.Presentation.Controllers
             _service = service;
         }
 
+        // =====================================================
+        // Helper
+        // =====================================================
+        private Guid CurrentUserId
+        {
+            get
+            {
+                var id = User.FindFirstValue("userId");
+
+                if (id == null)
+                    throw new UnauthorizedAccessException("Invalid token.");
+
+                return Guid.Parse(id);
+            }
+        }
+
+        // =====================================================
+        // GET MY APPLICATIONS
+        // =====================================================
         [HttpGet]
         public async Task<IActionResult> GetMyApplications()
         {
-            var pswId = Guid.Parse(User.FindFirstValue("userId")!);
-
-            var result = await _service.GetPswApplicationsAsync(pswId);
+            var result = await _service.GetPswApplicationsAsync(CurrentUserId);
 
             return Ok(result);
         }
 
+        // =====================================================
+        // CANCEL APPLICATION
+        // =====================================================
         [HttpPost("cancel")]
         public async Task<IActionResult> CancelApplication(
-                                        [FromBody] CancelApplicationDto dto)
+            [FromBody] CancelApplicationDto dto)
         {
-            var pswId = Guid.Parse(User.FindFirstValue("userId")!);
+            if (dto == null)
+                return BadRequest("Application data is required.");
 
             await _service.CancelApplicationAsync(
                 dto.JobRequestItemId,
-                pswId);
+                CurrentUserId);
 
             return Ok(new
             {

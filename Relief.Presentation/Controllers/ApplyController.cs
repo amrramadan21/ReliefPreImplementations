@@ -1,36 +1,65 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Relief.ServiceAbstraction.Interfaces.Applications;
 using Shared.ApplyDTOs;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Claims;
-using Relief.ServiceAbstraction.Interfaces.Applications;
 
 namespace Relief.Presentation.Controllers
 {
     [Authorize(Roles = "PSW")]
     [ApiController]
-    [Route("api/apply")]
+    [Route("api/applications/apply")]
     public class ApplyController : ControllerBase
     {
         private readonly IApplyService _applyService;
+        private readonly IApplicationManagementService _managementService;
 
-        public ApplyController(IApplyService applyService)
+        public ApplyController(IApplyService applyService, IApplicationManagementService managementService)
         {
             _applyService = applyService;
+            _managementService = managementService;
         }
 
+        // =====================================================
+        // Helper
+        // =====================================================
+        private Guid CurrentUserId
+        {
+            get
+            {
+                var id = User.FindFirstValue("userId");
+
+                if (id == null)
+                    throw new UnauthorizedAccessException("Invalid token.");
+
+                return Guid.Parse(id);
+            }
+        }
+
+        // =====================================================
+        // APPLY FOR OFFER
+        // =====================================================
         [HttpPost]
         public async Task<IActionResult> Apply([FromBody] ApplyToOfferDto dto)
         {
-            var pswId = Guid.Parse(User.FindFirstValue("userId")!);
+            if (dto == null)
+                return BadRequest("Application data is required.");
 
-            await _applyService.ApplyAsync(pswId, dto);
+            await _applyService.ApplyAsync(CurrentUserId, dto);
 
-            return Ok("Application submitted successfully.");
+            return Ok(new
+            {
+                success = true,
+                message = "Application submitted successfully."
+            });
         }
+
+ 
     }
 }

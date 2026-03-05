@@ -1,7 +1,9 @@
 ﻿using Relief.Domain.Entities;
+using Relief.Domain.Entities.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
 using Shared.OffersDTOs.UpdateDTO;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +21,6 @@ namespace Relief.ServiceAbstraction.Interfaces.Offers
         Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId);
 
         Task<JobOfferDetailsDto?> GetOfferDetailsForPswAsync(Guid offerId);
-
-
+        Task<Pagination<JobOffer>> GetOffersAsync(BaseQueryParams query);
     }
 }

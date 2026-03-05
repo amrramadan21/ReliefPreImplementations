@@ -16,6 +16,7 @@ namespace Relief.Services.Implementations.Applications.Specifications
         {
             AddInclude(r => r.PswUser);
             AddInclude("PswUser.ApplicationUser");
+
             AddInclude(r => r.Items);
             AddInclude("Items.OfferShift");
         }

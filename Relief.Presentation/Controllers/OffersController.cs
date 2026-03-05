@@ -4,13 +4,14 @@ using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.UpdateDTO;
+using Shared.QueryDTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace Relief.Web.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/offers")]
     public class OffersController : ControllerBase
     {
         private readonly IOfferService _offerService;
@@ -20,83 +21,87 @@ namespace Relief.Web.Controllers
             _offerService = offerService;
         }
 
-        // 🔐 CareHome only
+        // =====================================================
+        // Helper
+        // =====================================================
+        private Guid CurrentUserId
+        {
+            get
+            {
+                var id = User.FindFirstValue("userId");
 
+                if (id == null)
+                    throw new UnauthorizedAccessException("Invalid token.");
+
+                return Guid.Parse(id);
+            }
+        }
+
+        private string CurrentRole
+        {
+            get
+            {
+                return User.FindFirstValue(ClaimTypes.Role) ?? "";
+            }
+        }
+
+        // =====================================================
+        // CREATE OFFER
+        // =====================================================
         [Authorize(Roles = "CareHome,Individual")]
         [HttpPost]
         public async Task<IActionResult> CreateOffer([FromBody] CreateJobOfferDto dto)
         {
-            var userId = User.FindFirstValue("userId");
+            var offerId = await _offerService.CreateOfferAsync(CurrentUserId, dto);
 
-            if (string.IsNullOrEmpty(userId))
-                return Unauthorized(new { message = "UserId claim not found in token" });
-
-            if (!Guid.TryParse(userId, out var careHomeId))
-                return Unauthorized(new { message = "Invalid UserId format in token" });
-
-            var offerId = await _offerService.CreateOfferAsync(careHomeId, dto);
-
-            return Ok(new { offerId });
+            return Ok(new
+            {
+                success = true,
+                offerId
+            });
         }
 
+        // =====================================================
+        // GET OFFER BY ID
+        // =====================================================
         [Authorize(Roles = "CareHome,Individual,PSW")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOfferById(Guid id)
         {
-            var userId = User.FindFirstValue("userId");
-
-            if (string.IsNullOrEmpty(userId))
-                return Unauthorized();
-
-            var role = User.FindFirstValue(ClaimTypes.Role);
-
-            try
+            if (CurrentRole == "PSW")
             {
-                if (role == "PSW")
-                {
-                    // PSW يشوف offer details بس
-                    var result = await _offerService.GetOfferDetailsForPswAsync(id);
-                    return Ok(result);
-                }
+                var result = await _offerService.GetOfferDetailsForPswAsync(id);
+                return Ok(result);
+            }
 
-                // CareHome / Individual
-                var careHomeId = Guid.Parse(userId);
-                var result2 = await _offerService.GetOfferByIdAsync(id, careHomeId);
-
-                return Ok(result2);
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(new { message = ex.Message });
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
+            var result2 = await _offerService.GetOfferByIdAsync(id, CurrentUserId);
+            return Ok(result2);
         }
 
+        // =====================================================
+        // GET ALL OFFERS
+        // =====================================================
         [HttpGet]
-        public async Task<IActionResult> GetAllOffers([FromQuery] Guid? careHomeId = null,int pageNumber = 1,int pageSize = 5)
+        public async Task<IActionResult> GetAllOffers(
+            [FromQuery] Guid? careHomeId = null)
         {
-            
             var offers = await _offerService.GetAllOffersAsync(careHomeId);
+
             return Ok(offers);
         }
 
-        
+      
 
-        [HttpPut("{id}")]
+        // =====================================================
+        // UPDATE OFFER
+        // =====================================================
         [Authorize(Roles = "CareHome,Individual")]
-        public async Task<IActionResult> UpdateOffer(Guid id, [FromBody] UpdateJobOfferDto dto)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateOffer(
+            Guid id,
+            [FromBody] UpdateJobOfferDto dto)
         {
-            var userId = User.FindFirstValue("userId");
-
-            if (string.IsNullOrEmpty(userId))
-                return Unauthorized();
-
-            var careHomeId = Guid.Parse(userId);
-
-            var result = await _offerService.UpdateOfferAsync(id, careHomeId, dto);
+            var result = await _offerService.UpdateOfferAsync(id, CurrentUserId, dto);
 
             if (!result)
                 return NotFound(new { message = "Offer not found" });
@@ -104,26 +109,19 @@ namespace Relief.Web.Controllers
             return NoContent();
         }
 
-
-        [HttpDelete("{id}")]
+        // =====================================================
+        // DELETE OFFER
+        // =====================================================
         [Authorize(Roles = "CareHome,Individual")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOffer(Guid id)
         {
-            var userId = User.FindFirstValue("userId");
-
-            if (string.IsNullOrEmpty(userId))
-                return Unauthorized();
-
-            var careHomeId = Guid.Parse(userId);
-
-            var result = await _offerService.DeleteOfferAsync(id, careHomeId);
+            var result = await _offerService.DeleteOfferAsync(id, CurrentUserId);
 
             if (!result)
                 return NotFound(new { message = "Offer not found" });
 
-            return NoContent(); // 204
+            return NoContent();
         }
-
-
     }
 }

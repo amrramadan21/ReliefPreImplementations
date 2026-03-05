@@ -14,7 +14,7 @@ namespace Relief.Presentation.Controllers
 
     [Authorize(Roles = "CareHome,Individual")]
     [ApiController]
-    [Route("api/carehome/applications")]
+    [Route("api/applications")]
     public class ApplicationsController : ControllerBase
     {
         private readonly IApplicationManagementService _applicationService;
@@ -26,34 +26,56 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // GET ALL APPLICATIONS FOR OFFER by care home and individual
+        // Helper
         // =====================================================
-        [HttpGet("{offerId}")]
-        public async Task<IActionResult> GetApplications(Guid offerId)
+        private Guid CurrentUserId
         {
-            var careHomeId = Guid.Parse(
-                User.FindFirstValue("userId")!);
+            get
+            {
+                var id = User.FindFirstValue("userId");
 
+                if (id == null)
+                    throw new UnauthorizedAccessException("Invalid token.");
+
+                return Guid.Parse(id);
+            }
+        }
+
+        // =====================================================
+        // GET ALL APPLICATIONS FOR ALL OFFERS
+        // =====================================================
+        [HttpGet]
+        public async Task<IActionResult> GetAllApplications()
+        {
             var result = await _applicationService
-                .GetApplicationsForOfferAsync(offerId, careHomeId);
+                .GetApplicationsForCareHomeAsync(CurrentUserId);
 
             return Ok(result);
         }
 
         // =====================================================
-        // ACCEPT SHIFT by care home and individual
+        // GET APPLICATIONS FOR SPECIFIC OFFER
+        // =====================================================
+        [HttpGet("{offerId}")]
+        public async Task<IActionResult> GetApplications(Guid offerId)
+        {
+            var result = await _applicationService
+                .GetApplicationsForOfferAsync(offerId, CurrentUserId);
+
+            return Ok(result);
+        }
+
+        // =====================================================
+        // ACCEPT SHIFT
         // =====================================================
         [HttpPost("accept")]
         public async Task<IActionResult> AcceptShift(
             [FromBody] AcceptShiftDto dto)
         {
-            var careHomeId = Guid.Parse(
-                User.FindFirstValue("userId")!);
-
             await _applicationService.AcceptShiftAsync(
                 dto.ShiftId,
                 dto.JobRequestItemId,
-                careHomeId);
+                CurrentUserId);
 
             return Ok(new
             {
@@ -63,18 +85,15 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // REJECT SHIFT by care home and individual
+        // REJECT SHIFT
         // =====================================================
         [HttpPost("reject")]
         public async Task<IActionResult> RejectShift(
             [FromBody] RejectShiftDto dto)
         {
-            var careHomeId = Guid.Parse(
-                User.FindFirstValue("userId")!);
-
             await _applicationService.RejectShiftAsync(
                 dto.JobRequestItemId,
-                careHomeId);
+                CurrentUserId);
 
             return Ok(new
             {

@@ -1,17 +1,19 @@
 ﻿using Relief.Domain.Contracts;
+using Relief.Domain.Entities.Offers;
+using Relief.Domain.Entities.Users;
+using Relief.Domain.Exceptions;
+using Relief.ServiceAbstraction.Interfaces.Offers;
 using Relief.Services.Implementations;
+using Relief.Services.Implementations.Offers.Specifications;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
 using Shared.OffersDTOs.UpdateDTO;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Relief.Domain.Entities.Offers;
-using Relief.Domain.Exceptions;
-using Relief.ServiceAbstraction.Interfaces.Offers;
-using Relief.Services.Implementations.Offers.Specifications;
 
 namespace Relief.Services.Implementations.Offers
 {
@@ -28,10 +30,15 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // CREATE OFFER
         // =========================================================
-        public async Task<Guid> CreateOfferAsync(Guid careHomeId, CreateJobOfferDto dto)
+        public async Task<Guid> CreateOfferAsync(Guid userId, CreateJobOfferDto dto)
         {
             if (dto.Shifts == null || !dto.Shifts.Any())
                 throw new BadRequestException("Offer must contain at least one shift.");
+
+            var careHomeRepo = _unitOfWork.GetRepository<CareHomeUser, Guid>();
+            var individualRepo = _unitOfWork.GetRepository<IndividualCareHomeUser, Guid>();
+
+            var careHome = await careHomeRepo.GetByIdAsync(userId);
 
             var offer = new JobOffer
             {
@@ -41,9 +48,22 @@ namespace Relief.Services.Implementations.Offers
                 Address = dto.Address,
                 Latitude = dto.Latitude,
                 Longitude = dto.Longitude,
-                HourlyRate = dto.HourlyRate,
-                CareHomeId = careHomeId
+                HourlyRate = dto.HourlyRate
             };
+
+            if (careHome != null)
+            {
+                offer.CareHomeId = userId;
+            }
+            else
+            {
+                var individual = await individualRepo.GetByIdAsync(userId);
+
+                if (individual == null)
+                    throw new NotFoundException("User is not CareHome or Individual.");
+
+                offer.IndividualId = userId;
+            }
 
             var shiftRepo = _unitOfWork.GetRepository<OfferShift, Guid>();
 
@@ -52,39 +72,34 @@ namespace Relief.Services.Implementations.Offers
                 if (shiftDto.StartTime == null || shiftDto.EndTime == null)
                     throw new BadRequestException($"Shift on {shiftDto.Date:yyyy-MM-dd} must have start and end time.");
 
-                // Determine if it's an overnight shift
                 bool isOvernightShift = shiftDto.EndTime <= shiftDto.StartTime;
 
                 var shiftStart = shiftDto.Date.ToDateTime(shiftDto.StartTime.Value);
+
                 var shiftEnd = isOvernightShift
-                    ? shiftDto.Date.AddDays(1).ToDateTime(shiftDto.EndTime.Value)  // next day
+                    ? shiftDto.Date.AddDays(1).ToDateTime(shiftDto.EndTime.Value)
                     : shiftDto.Date.ToDateTime(shiftDto.EndTime.Value);
-                
 
-                var shiftSpecification =
-                    new JobOfferShiftSpecification(careHomeId, shiftDto.Date);
+                var spec = new JobOfferShiftSpecification(userId, shiftDto.Date);
 
-                var existingShiftsForDate =
-                    await shiftRepo.GetAllAsync(shiftSpecification);
+                var existingShifts = await shiftRepo.GetAllAsync(spec);
 
-                foreach (var existingShift in existingShiftsForDate)
+                foreach (var existingShift in existingShifts)
                 {
                     var existingStart = existingShift.Date.Value.ToDateTime(existingShift.StartTime.Value);
-                    bool existingIsOvernight = existingShift.EndTime <= existingShift.StartTime;
-                    var existingEnd = existingIsOvernight
+
+                    bool existingOvernight = existingShift.EndTime <= existingShift.StartTime;
+
+                    var existingEnd = existingOvernight
                         ? existingShift.Date.Value.AddDays(1).ToDateTime(existingShift.EndTime.Value)
                         : existingShift.Date.Value.ToDateTime(existingShift.EndTime.Value);
 
                     bool isOverlapping =
-                        shiftDto.StartTime < existingShift.EndTime &&
-                        shiftDto.EndTime > existingShift.StartTime;
+                        shiftStart < existingEnd &&
+                        shiftEnd > existingStart;
 
                     if (isOverlapping)
-                    {
-                        throw new ConflictException(
-                            $"Shift overlaps with existing shift on {shiftDto.Date:yyyy-MM-dd}."
-                        );
-                    }
+                        throw new ConflictException($"Shift overlaps with existing shift on {shiftDto.Date:yyyy-MM-dd}.");
                 }
 
                 offer.Shifts.Add(new OfferShift
@@ -97,8 +112,10 @@ namespace Relief.Services.Implementations.Offers
                 });
             }
 
-            var repository = _unitOfWork.GetRepository<JobOffer, Guid>();
-            await repository.AddAsync(offer);
+            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            await offerRepo.AddAsync(offer);
+
             await _unitOfWork.SaveChangesAsync();
 
             return offer.Id;
@@ -107,16 +124,17 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // GET OFFER BY ID
         // =========================================================
-        public async Task<JobOfferDetailsDto> GetOfferByIdAsync(Guid id, Guid careHomeId)
+        public async Task<JobOfferDetailsDto> GetOfferByIdAsync(Guid id, Guid userId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
             var spec = new JobOfferWithDetailsSpecification(id);
 
             var offer = await offerRepo.GetByIdAsync(spec);
 
-            if (offer == null || offer.CareHomeId != careHomeId)
+            if (offer == null ||
+               (offer.CareHomeId != userId && offer.IndividualId != userId))
                 throw new NotFoundException("Offer not found.");
-
 
             return new JobOfferDetailsDto
             {
@@ -139,14 +157,14 @@ namespace Relief.Services.Implementations.Offers
         }
 
         // =========================================================
-        // View Details of an Offer 
+        // VIEW OFFER DETAILS FOR PSW
         // =========================================================
-
         public async Task<JobOfferDetailsDto?> GetOfferDetailsForPswAsync(Guid offerId)
         {
             var repo = _unitOfWork.GetRepository<JobOffer, Guid>();
 
             var spec = new JobOfferWithDetailsSpecification(offerId);
+
             var offer = await repo.GetByIdAsync(spec);
 
             if (offer == null)
@@ -177,14 +195,24 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // GET ALL OFFERS
         // =========================================================
-        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? careHomeId)
+        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? userId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
-            var offers = await offerRepo.GetAllAsync();
-            if (careHomeId.HasValue)
-                offers = offers.Where(o => o.CareHomeId == careHomeId.Value).ToList();
 
-            return offers.Select(o => new JobOfferSummaryDto
+            IEnumerable<JobOffer> results;
+
+            if (userId.HasValue)
+            {
+                var spec = new OffersByOwnerSpecification(userId.Value);
+
+                results = await offerRepo.GetAllAsync(spec);
+            }
+            else
+            {
+                results = await offerRepo.GetAllAsync();
+            }
+
+            return results.Select(o => new JobOfferSummaryDto
             {
                 Id = o.Id,
                 Title = o.Title,
@@ -195,21 +223,46 @@ namespace Relief.Services.Implementations.Offers
             }).ToList();
         }
 
-        
+        //pagi
+        public async Task<Pagination<JobOffer>> GetOffersAsync(BaseQueryParams query)
+        {
+            var repo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            var countSpec = new PaginationSpecification<JobOffer, Guid>(o => true);
+
+            var totalCount = await repo.CountAsync(countSpec);
+
+            var spec = new PaginationSpecification<JobOffer, Guid>(
+                o => true,
+                o => o.Title,
+                query.PageIndex,
+                query.PageSize
+            );
+
+            var data = await repo.GetAllAsync(spec);
+
+            return new Pagination<JobOffer>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                data.ToList());
+        }
 
         // =========================================================
         // UPDATE OFFER
         // =========================================================
-        public async Task<bool> UpdateOfferAsync(Guid offerId, Guid careHomeId, UpdateJobOfferDto dto)
+        public async Task<bool> UpdateOfferAsync(Guid offerId, Guid userId, UpdateJobOfferDto dto)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
             var spec = new JobOfferWithDetailsSpecification(offerId);
+
             var offer = await offerRepo.GetByIdAsync(spec);
 
             if (offer == null)
                 throw new NotFoundException("Offer not found.");
 
-            if (offer.CareHomeId != careHomeId)
+            if (offer.CareHomeId != userId && offer.IndividualId != userId)
                 throw new ForbiddenException("You cannot update this offer.");
 
             if (!string.IsNullOrWhiteSpace(dto.Title))
@@ -230,48 +283,30 @@ namespace Relief.Services.Implementations.Offers
             if (dto.HourlyRate.HasValue)
                 offer.HourlyRate = dto.HourlyRate.Value;
 
-            if (dto.Shifts != null && dto.Shifts.Any())
-            {
-                foreach (var shiftDto in dto.Shifts)
-                {
-                    if (!shiftDto.ShiftId.HasValue)
-                        continue;
-
-                    var existingShift =
-                        offer.Shifts.FirstOrDefault(s => s.Id == shiftDto.ShiftId.Value);
-
-                    if (existingShift == null)
-                        throw new NotFoundException("Shift not found for update.");
-
-                    if (shiftDto.StartTime >= shiftDto.EndTime)
-                        throw new BadRequestException("Invalid shift time.");
-
-                    existingShift.Date = shiftDto.Date ?? existingShift.Date;
-                    existingShift.StartTime = shiftDto.StartTime ?? existingShift.StartTime;
-                    existingShift.EndTime = shiftDto.EndTime ?? existingShift.EndTime;
-                }
-            }
-
             await _unitOfWork.SaveChangesAsync();
+
             return true;
         }
 
         // =========================================================
         // DELETE OFFER
         // =========================================================
-        public async Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId)
+        public async Task<bool> DeleteOfferAsync(Guid offerId, Guid userId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
             var offer = await offerRepo.GetByIdAsync(offerId);
 
             if (offer == null)
                 throw new NotFoundException("Offer not found.");
 
-            if (offer.CareHomeId != careHomeId)
+            if (offer.CareHomeId != userId && offer.IndividualId != userId)
                 throw new ForbiddenException("You cannot delete this offer.");
 
             offerRepo.Delete(offer);
+
             await _unitOfWork.SaveChangesAsync();
+
             return true;
         }
     }

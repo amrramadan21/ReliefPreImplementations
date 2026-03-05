@@ -11,6 +11,7 @@ using Relief.Presistence.Repositories;
 using Relief.ServiceAbstraction.Interfaces.Applications;
 using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Offers;
+using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Relief.ServiceAbstraction.Interfaces.Users;
 using Relief.Services.Implementations.Applications;
 using Relief.Services.Implementations.Files;
@@ -178,6 +179,8 @@ namespace Relief.Web
             builder.Services.AddScoped<IApplyService, ApplyService>();
             builder.Services.AddScoped<IApplicationManagementService, ApplicationManagementService>();
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddScoped<IProfileService, ProfileService>();
 
             var app = builder.Build();
 
@@ -198,6 +201,8 @@ namespace Relief.Web
                 app.UseHttpsRedirection();
             }
 
+
+            app.UseCors("AllowAngular");
 
             app.UseAuthentication();  // لازم قبل Authorization
             app.UseAuthorization();
@@ -221,7 +226,7 @@ namespace Relief.Web
                 var roleManager = scope.ServiceProvider
                     .GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 
-                foreach (var role in new[] { "CareHome", "PSW" })
+                foreach (var role in new[] { "CareHome", "PSW", "Individual" })
                 {
                     if (!await roleManager.RoleExistsAsync(role))
                     {

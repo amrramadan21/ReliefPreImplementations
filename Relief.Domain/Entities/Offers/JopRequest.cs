@@ -1,10 +1,5 @@
 ﻿using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Relief.Domain.Entities.Offers
 {
@@ -13,9 +8,12 @@ namespace Relief.Domain.Entities.Offers
         public Guid Id { get; set; }
 
         public Guid PswId { get; set; }
-        public PswUser PswUser { get; set; } = null!;   // 👈 Navigation
+
+        public PswUser PswUser { get; set; } = null!;
 
         public Guid JobOfferId { get; set; }
+
+        public JobOffer JobOffer { get; set; } = null!;
 
         public RequestStatus Status { get; set; }
 

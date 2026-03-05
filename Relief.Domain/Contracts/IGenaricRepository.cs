@@ -15,6 +15,8 @@ namespace Relief.Domain.Contracts
         Task<IEnumerable<TEntity>> GetAllAsync(ISpecifications<TEntity, TKey> specifications);
         Task<TEntity?> GetByIdAsync(ISpecifications<TEntity, TKey> specifications);
 
+        Task<int> CountAsync(ISpecifications<TEntity, TKey> specifications);
+
         //Task<List<JobOffer>> GetPagedAsync(int pageNumber, int pageSize);
         Task AddAsync(TEntity entity);
         void Update(TEntity entity);

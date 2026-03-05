@@ -1,4 +1,4 @@
-﻿using E_CommerceLyaer.Presistence;
+﻿using Relief.Presistence;
 using Microsoft.EntityFrameworkCore;
 using Relief.Domain.Contracts;
 using Relief.Domain.Entities;
@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_CommerceLyaer.Presistence;
 
 namespace Relief.Presistence.Repositories
 {
@@ -36,6 +37,13 @@ namespace Relief.Presistence.Repositories
         public async Task<TEntity?> GetByIdAsync(ISpecifications<TEntity, TKey> specifications)
         {
             return await SpecificationsEvaluator.CreateQuery(_dbContext.Set<TEntity>(), specifications).FirstOrDefaultAsync();
+        }
+
+        public async Task<int> CountAsync(ISpecifications<TEntity, TKey> specifications)
+        {
+            return await SpecificationsEvaluator
+                .CreateQuery(_dbContext.Set<TEntity>(), specifications)
+                .CountAsync();
         }
     }
 }

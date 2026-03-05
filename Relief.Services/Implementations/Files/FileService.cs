@@ -71,9 +71,9 @@ namespace Relief.Services.Implementations.Files
                     await file.CopyToAsync(stream);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                throw new Exception("Error while saving the file.");
+                throw new Exception("Error while saving file.", ex);
             }
 
             // =============================

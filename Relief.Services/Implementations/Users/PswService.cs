@@ -99,6 +99,8 @@ namespace Relief.Services.Implementations.Users
                 psw.IsProfileCompleted = true;
                 psw.IsVerified = true; // ممكن نخليها Admin Verification بعدين
 
+                psw.WorkStatus = true;
+
                 pswRepo.Update(psw);
 
                 await _unitOfWork.SaveChangesAsync();

@@ -12,7 +12,7 @@ namespace Relief.Services.Implementations.Offers.Specifications
     {
         public JobOfferWithDetailsSpecification(Guid id) : base(j => j.Id == id)
         {
-            AddInclude("Shifts");
+            AddInclude(o => o.Shifts );
         }
     }
 }

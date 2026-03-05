@@ -48,7 +48,12 @@ namespace Relief.Services.Implementations.Applications
             return requests.Select(r =>
             {
                 var user = r.PswUser.ApplicationUser;
-                var age = DateTime.UtcNow.Year - user.BirthOfDate.Year;
+                var today = DateTime.UtcNow;
+
+                var age = today.Year - user.BirthOfDate.Year;
+
+                if (user.BirthOfDate.Date > today.AddYears(-age))
+                    age--;
 
                 return new OfferApplicationDto
                 {
@@ -182,8 +187,8 @@ namespace Relief.Services.Implementations.Applications
         // =====================================================
 
         public async Task CancelApplicationAsync(
-    Guid jobRequestItemId,
-    Guid pswId)
+                Guid jobRequestItemId,
+                Guid pswId)
         {
             var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
 
@@ -212,7 +217,7 @@ namespace Relief.Services.Implementations.Applications
         // =====================================================
 
         public async Task<List<PswApplicationViewDto>>
-    GetPswApplicationsAsync(Guid pswId)
+                     GetPswApplicationsAsync(Guid pswId)
         {
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
 
@@ -230,6 +235,71 @@ namespace Relief.Services.Implementations.Applications
                 EndTime = i.OfferShift.EndTime,
                 Status = i.Status
             })).ToList();
+        }
+
+        // =====================================================
+        // Get Applications For CareHome
+        // =====================================================
+
+        public async Task<List<OfferApplicationDto>> GetApplicationsForCareHomeAsync(Guid careHomeId)
+        {
+            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
+
+            var offers = await offerRepo.GetAllAsync();
+
+            var ownedOffers = offers
+                .Where(o => o.CareHomeId == careHomeId || o.IndividualId == careHomeId)
+                .Select(o => o.Id)
+                .ToList();
+
+            if (!ownedOffers.Any())
+                return new List<OfferApplicationDto>();
+
+
+            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+
+            var spec = new CareHomeApplicationsSpecification(ownedOffers);
+
+            var requests = await requestRepo.GetAllAsync(spec);
+
+
+            return requests.Select(r =>
+            {
+                var user = r.PswUser.ApplicationUser;
+
+                var today = DateTime.UtcNow;
+                var age = today.Year - user.BirthOfDate.Year;
+
+                if (user.BirthOfDate.Date > today.AddYears(-age))
+                    age--;
+
+                return new OfferApplicationDto
+                {
+                    JobRequestId = r.Id,
+                    AppliedAt = r.CreatedAt,
+
+                    Psw = new PswApplicationBriefDto
+                    {
+                        PswId = r.PswId,
+                        FullName = $"{user.FirstName} {user.LastName}",
+                        Age = age,
+                        IsVerified = r.PswUser.IsVerified,
+                        WorkStatus = r.PswUser.WorkStatus,
+                        ProofIdentityType = r.PswUser.ProofIdentityType,
+                        CVFileId = r.PswUser.CVFileId
+                    },
+
+                    Shifts = r.Items.Select(i => new ShiftApplicationDto
+                    {
+                        JobRequestItemId = i.Id,
+                        ShiftId = i.ShiftId,
+                        Date = i.OfferShift.Date,
+                        StartTime = i.OfferShift.StartTime,
+                        EndTime = i.OfferShift.EndTime,
+                        Status = i.Status
+                    }).ToList()
+                };
+            }).ToList();
         }
     }
 }

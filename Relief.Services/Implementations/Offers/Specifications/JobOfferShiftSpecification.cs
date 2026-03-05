@@ -10,8 +10,10 @@ namespace Relief.Services.Implementations.Offers.Specifications
 {
     public class JobOfferShiftSpecification : BaseSpecifications<OfferShift, Guid>
     {
-        public JobOfferShiftSpecification(Guid careHomeId, DateOnly? date) 
-            : base(shift => shift.JobOffer.CareHomeId == careHomeId && shift.Date == date)
+        public JobOfferShiftSpecification(Guid userId, DateOnly? date)
+            : base(shift =>
+                (shift.JobOffer.CareHomeId == userId || shift.JobOffer.IndividualId == userId)
+                && shift.Date == date)
         {
         }
     }
