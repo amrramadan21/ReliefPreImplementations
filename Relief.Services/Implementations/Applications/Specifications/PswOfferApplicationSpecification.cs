@@ -7,8 +7,7 @@ public class PswOfferApplicationSpecification
 {
     public PswOfferApplicationSpecification(Guid pswId, Guid offerId)
         : base(r => r.PswId == pswId &&
-                    r.JobOfferId == offerId &&
-                    r.Status == RequestStatus.Pending)
+                    r.JobOfferId == offerId)
     {
     }
 }

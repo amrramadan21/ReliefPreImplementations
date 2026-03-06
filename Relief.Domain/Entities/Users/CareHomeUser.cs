@@ -12,7 +12,7 @@ namespace Relief.Domain.Entities.Users
         public Guid Id { get; set; }
         public string BusinessLicense { get; set; } = null!;
         public string LegalName { get; set; } = null!;
-        public string VaccinationPolicy { get; set; } = null!;
+        public string? VaccinationPolicy { get; set; }
 
         // no need the id will be the same as the application user id and it will be the primary key as well
         //public Guid ApplicationUserId { get; set; }

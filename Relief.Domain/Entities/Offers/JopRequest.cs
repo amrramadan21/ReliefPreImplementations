@@ -15,7 +15,6 @@ namespace Relief.Domain.Entities.Offers
 
         public JobOffer JobOffer { get; set; } = null!;
 
-        public RequestStatus Status { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

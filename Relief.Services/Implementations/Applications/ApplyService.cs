@@ -58,8 +58,7 @@ namespace Relief.Services.Implementations.Applications
 
             var existingRequests = (await requestRepo.GetAllAsync(spec))
      .        Where(r => r.PswId == pswId
-              && r.JobOfferId == dto.OfferId
-              && r.Status == RequestStatus.Pending);
+              && r.JobOfferId == dto.OfferId);
 
             if (existingRequests.Any())
                 throw new ConflictException("You have already applied for this offer.");
@@ -72,7 +71,6 @@ namespace Relief.Services.Implementations.Applications
                 Id = Guid.NewGuid(),
                 PswId = pswId,
                 JobOfferId = dto.OfferId,
-                Status = RequestStatus.Pending,
                 CreatedAt = DateTime.UtcNow,
                 Items = new List<JobRequestItem>()
             };
@@ -122,8 +120,7 @@ namespace Relief.Services.Implementations.Applications
             var repo = _unitOfWork.GetRepository<JopRequest, Guid>();
 
             Expression<Func<JopRequest, bool>> criteria =
-                r => r.JobOffer.CareHomeId == careHomeId &&
-                (!query.Status.HasValue || r.Status == query.Status);
+                r => r.JobOffer.CareHomeId == careHomeId;
 
             var countSpec = new PaginationSpecification<JopRequest, Guid>(criteria);
 

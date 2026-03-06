@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,8 @@ namespace Shared.IdentityDTOs
 
         [Required]
         public string LastName { get; set; } = default!;
+        public string? BusinessLicense { get; set; }
+        public string? LegalName { get; set; }
 
         [Required]
         [EmailAddress]

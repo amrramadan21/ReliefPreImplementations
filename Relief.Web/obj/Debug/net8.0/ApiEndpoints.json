@@ -109,7 +109,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "Shared.IdentityDTOs.RegisterCareHomeDto",
+        "Type": "Shared.IdentityDTOs.RegisterDTO",
         "IsRequired": true
       }
     ],

@@ -183,7 +183,7 @@ namespace Relief.Presistence.Data.DbContexts
                 .HasOne(i => i.OfferShift)
                 .WithMany()
                 .HasForeignKey(i => i.ShiftId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             //Updates
 

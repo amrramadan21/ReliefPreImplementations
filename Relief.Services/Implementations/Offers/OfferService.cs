@@ -4,6 +4,7 @@ using Relief.Domain.Entities.Users;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Relief.Services.Implementations;
+using Relief.Services.Implementations.Applications.Specifications;
 using Relief.Services.Implementations.Offers.Specifications;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
@@ -302,6 +303,16 @@ namespace Relief.Services.Implementations.Offers
 
             if (offer.CareHomeId != userId && offer.IndividualId != userId)
                 throw new ForbiddenException("You cannot delete this offer.");
+
+            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+
+            var requestSpec = new JopRequestsByOfferIdSpec(offerId);
+            var relatedRequests = await requestRepo.GetAllAsync(requestSpec);
+
+            foreach (var request in relatedRequests)
+            {
+                requestRepo.Delete(request);
+            }
 
             offerRepo.Delete(offer);
 

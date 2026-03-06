@@ -13,7 +13,7 @@ namespace E_CommerceLyaer.Presistence
     {
         public static IQueryable<TEntity> CreateQuery<TEntity, TKey>(IQueryable<TEntity> entryPoint, ISpecifications<TEntity, TKey> specifications) where TEntity : class
         {
-            var query = entryPoint.AsQueryable().AsNoTracking();
+            var query = entryPoint.AsQueryable();
 
             if (specifications is not null)
             {

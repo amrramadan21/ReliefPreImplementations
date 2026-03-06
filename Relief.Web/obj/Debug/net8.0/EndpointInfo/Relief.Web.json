@@ -143,17 +143,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCareHomeDto"
+                "$ref": "#/components/schemas/RegisterDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCareHomeDto"
+                "$ref": "#/components/schemas/RegisterDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCareHomeDto"
+                "$ref": "#/components/schemas/RegisterDTO"
               }
             }
           }
@@ -841,55 +841,6 @@
         },
         "additionalProperties": false
       },
-      "RegisterCareHomeDto": {
-        "required": [
-          "address",
-          "businessLicense",
-          "dateOfBirth",
-          "email",
-          "gender",
-          "legalName",
-          "password",
-          "phoneNumber"
-        ],
-        "type": "object",
-        "properties": {
-          "legalName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "businessLicense": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "password": {
-            "minLength": 8,
-            "type": "string"
-          },
-          "phoneNumber": {
-            "minLength": 1,
-            "type": "string",
-            "format": "tel"
-          },
-          "dateOfBirth": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "gender": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "address": {
-            "$ref": "#/components/schemas/AddressDTO"
-          }
-        },
-        "additionalProperties": false
-      },
       "RegisterDTO": {
         "required": [
           "address",
@@ -910,6 +861,14 @@
           "lastName": {
             "minLength": 1,
             "type": "string"
+          },
+          "businessLicense": {
+            "type": "string",
+            "nullable": true
+          },
+          "legalName": {
+            "type": "string",
+            "nullable": true
           },
           "email": {
             "minLength": 1,

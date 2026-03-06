@@ -13,8 +13,7 @@ namespace Relief.Services.Specifications
             int pageIndex,
             int pageSize)
         : base(r =>
-            r.JobOffer.CareHomeId == careHomeId &&
-            (!status.HasValue || r.Status == status))
+            r.JobOffer.CareHomeId == careHomeId)
         {
             AddInclude(r => r.Items);
             AddInclude(r => r.PswUser);

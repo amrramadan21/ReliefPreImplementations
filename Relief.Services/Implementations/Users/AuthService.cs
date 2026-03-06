@@ -66,7 +66,7 @@ namespace Relief.Services.Implementations.Users
                 }
             };
 
-            return await RegisterUserCoreAsync(user, dto.Password, role);
+            return await RegisterUserCoreAsync(user, dto, dto.Password, role);
         }
 
         // =========================================================
@@ -157,6 +157,7 @@ namespace Relief.Services.Implementations.Users
         // =========================================================
         private async Task<AuthResponseDTO> RegisterUserCoreAsync(
             ApplicationUser user,
+            RegisterDTO dto,
             string password,
             string role)
         {
@@ -186,8 +187,8 @@ namespace Relief.Services.Implementations.Users
                         await careHomeRepo.AddAsync(new CareHomeUser
                         {
                             Id = user.Id,
-                            LegalName = "Pending",
-                            BusinessLicense = "Pending",
+                            LegalName = dto.LegalName ?? "Pending",
+                            BusinessLicense = dto.BusinessLicense??"Pending",
                             VaccinationPolicy = "Pending"
                         });
 
@@ -228,36 +229,6 @@ namespace Relief.Services.Implementations.Users
             return await BuildTokenAsync(user);
         }
 
-        // =========================================================
-        // CareHome Register Logic
-        // =========================================================
-        public async Task<AuthResponseDTO> RegisterCareHomeAsync(RegisterCareHomeDto dto)
-        {
-            if (!Enum.TryParse<Gender>(dto.Gender, true, out var parsedGender))
-                throw new BadRequestException($"'{dto.Gender}' is not a valid gender.");
-
-            if (dto.Address == null)
-                throw new BadRequestException("Address is required.");
-
-            var user = new ApplicationUser
-            {
-                UserName = dto.Email,
-                Email = dto.Email,
-                PhoneNumber = dto.PhoneNumber,
-                BirthOfDate = dto.DateOfBirth,
-                Gender = parsedGender,
-                Address = new Address
-                {
-                    ApartmentNumber = dto.Address.ApartmentNumber,
-                    Street = dto.Address.Street,
-                    City = dto.Address.City,
-                    State = dto.Address.State,
-                    PostalCode = dto.Address.PostalCode,
-                    Country = dto.Address.Country
-                }
-            };
-
-            return await RegisterUserCoreAsync(user, dto.Password, "CareHome");
-        }
+     
     }
 }

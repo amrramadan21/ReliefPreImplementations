@@ -20,12 +20,12 @@ namespace Relief.Presentation.Controllers
         // =====================================================
         [HttpPost("register/carehome")]
         public async Task<ActionResult<AuthResponseDTO>> RegisterCareHome(
-            [FromBody] RegisterCareHomeDto dto)
+            [FromBody] RegisterDTO dto)
         {
             if (dto == null)
                 return BadRequest("Registration data is required.");
 
-            var result = await _auth.RegisterCareHomeAsync(dto);
+            var result = await _auth.RegisterUserAsync(dto, "CareHome");
 
             return Ok(result);
         }

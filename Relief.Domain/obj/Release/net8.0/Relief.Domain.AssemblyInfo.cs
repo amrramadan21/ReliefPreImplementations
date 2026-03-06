@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Relief.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af290cf0003f370ecfdc69206df9cd08259f1bc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c371a296537b3614ededf36462dfbad52762b08")]
 [assembly: System.Reflection.AssemblyProductAttribute("Relief.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Relief.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

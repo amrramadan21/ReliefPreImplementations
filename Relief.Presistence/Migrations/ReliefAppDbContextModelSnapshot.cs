@@ -17,7 +17,7 @@ namespace Relief.Presistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.23")
+                .HasAnnotation("ProductVersion", "8.0.24")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -235,9 +235,6 @@ namespace Relief.Presistence.Migrations
                     b.Property<Guid>("PswId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("JobOfferId");
@@ -418,7 +415,6 @@ namespace Relief.Presistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VaccinationPolicy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -605,7 +601,7 @@ namespace Relief.Presistence.Migrations
                     b.HasOne("Relief.Domain.Entities.Offers.OfferShift", "OfferShift")
                         .WithMany()
                         .HasForeignKey("ShiftId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("JopRequest");
