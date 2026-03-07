@@ -1,4 +1,5 @@
-﻿using Relief.Domain.Entities.Offers;
+using Relief.Domain.Entities.Offers;
+using Relief.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,10 @@ namespace Relief.Domain.Entities.Users
         public bool IsProfileCompleted { get; set; } = false;
         public bool IsVerified { get; set; } = false;
 
+        public VerificationStatus VerificationStatus { get; set; } = VerificationStatus.None;
+
+        public string? VerificationRejectionReason { get; set; }
+
         public ICollection<JopRequest> JobRequests { get; set; } = new List<JopRequest>();
     }
 }
- 

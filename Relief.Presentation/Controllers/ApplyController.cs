@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Applications;
 using Shared.ApplyDTOs;
 using Shared.QueryDTOs;
@@ -36,7 +37,7 @@ namespace Relief.Presentation.Controllers
                 var id = User.FindFirstValue("userId");
 
                 if (id == null)
-                    throw new UnauthorizedAccessException("Invalid token.");
+                    throw new UnauthorizedException("Invalid token.");
 
                 return Guid.Parse(id);
             }

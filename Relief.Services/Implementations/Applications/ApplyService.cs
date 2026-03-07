@@ -1,4 +1,4 @@
-﻿using Relief.Domain.Contracts;
+using Relief.Domain.Contracts;
 using Relief.Domain.Entities.Offers;
 using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
@@ -56,9 +56,7 @@ namespace Relief.Services.Implementations.Applications
             // =========================
             var spec = new PswOfferApplicationSpecification(pswId, dto.OfferId);
 
-            var existingRequests = (await requestRepo.GetAllAsync(spec))
-     .        Where(r => r.PswId == pswId
-              && r.JobOfferId == dto.OfferId);
+            var existingRequests = await requestRepo.GetAllAsync(spec);
 
             if (existingRequests.Any())
                 throw new ConflictException("You have already applied for this offer.");
@@ -134,6 +132,7 @@ namespace Relief.Services.Implementations.Applications
                 spec = new PaginationSpecification<JopRequest, Guid>(
                     criteria,
                     r => r.CreatedAt,
+                    desc: true,
                     query.PageIndex,
                     query.PageSize
                 );

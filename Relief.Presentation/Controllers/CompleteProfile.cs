@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Users;
 using Shared.IdentityDTOs;
 using System;
@@ -30,7 +31,7 @@ namespace Relief.Presentation.Controllers
                 var id = User.FindFirstValue("userId");
 
                 if (id == null)
-                    throw new UnauthorizedAccessException("Invalid token.");
+                    throw new UnauthorizedException("Invalid token.");
 
                 return Guid.Parse(id);
             }
@@ -51,7 +52,7 @@ namespace Relief.Presentation.Controllers
             return Ok(new
             {
                 success = true,
-                message = "Profile completed and verified successfully."
+                message = "Profile completed. Your documents are pending admin verification."
             });
         }
     }

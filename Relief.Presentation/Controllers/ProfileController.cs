@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
@@ -39,7 +39,7 @@ namespace Relief.Presentation.Controllers
             return NoContent();
         }
 
-        [HttpGet("{id}/profile")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetUserProfile(Guid id)
         {
             var result = await _profileService.GetUserProfileAsync(id);

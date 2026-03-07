@@ -1,5 +1,9 @@
-﻿using Relief.Domain.Entities.Users;
+using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Relief.Domain.Entities.Offers
 {
@@ -17,6 +21,10 @@ namespace Relief.Domain.Entities.Offers
 
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public RequestStatus Status { get; set; } = RequestStatus.Pending;
+
+        public string? RejectionReason { get; set; }
 
         public ICollection<JobRequestItem> Items { get; set; } = new List<JobRequestItem>();
     }

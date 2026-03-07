@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Relief.Domain.Exceptions;
 using Shared.ApplicationDTO;
+using Shared.QueryDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +20,14 @@ namespace Relief.Presentation.Controllers
     public class ApplicationsController : ControllerBase
     {
         private readonly IApplicationManagementService _applicationService;
+        private readonly IApplyService _applyService;
 
         public ApplicationsController(
-            IApplicationManagementService applicationService)
+            IApplicationManagementService applicationService,
+            IApplyService applyService)
         {
             _applicationService = applicationService;
+            _applyService = applyService;
         }
 
         // =====================================================
@@ -35,7 +40,7 @@ namespace Relief.Presentation.Controllers
                 var id = User.FindFirstValue("userId");
 
                 if (id == null)
-                    throw new UnauthorizedAccessException("Invalid token.");
+                    throw new UnauthorizedException("Invalid token.");
 
                 return Guid.Parse(id);
             }
@@ -100,6 +105,19 @@ namespace Relief.Presentation.Controllers
                 success = true,
                 message = "Application rejected successfully."
             });
+        }
+
+        // =====================================================
+        // GET REQUESTS (PAGINATED + FILTERED)
+        // =====================================================
+        [HttpGet("requests")]
+        public async Task<IActionResult> GetRequests(
+            [FromQuery] RequestQueryParams query)
+        {
+            var result = await _applyService
+                .GetRequestsAsync(CurrentUserId, query);
+
+            return Ok(result);
         }
     }
 }

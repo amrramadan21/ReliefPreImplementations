@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {}
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
         "projectName": "Relief.Domain",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
         "projectName": "Relief.Presentation",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,8 +100,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
         "projectName": "Relief.Presistence",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +178,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj"
               }
             }
           }
@@ -239,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
         "projectName": "Relief.ServiceAbstraction",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -267,11 +267,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj"
               }
             }
           }
@@ -311,14 +311,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
         "projectName": "Relief.Services",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -339,11 +339,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
               }
             }
           }
@@ -393,14 +393,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
         "projectName": "Relief.Web",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Web\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -421,11 +421,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj"
               }
             }
           }
@@ -500,14 +500,14 @@
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj": {
+    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -528,8 +528,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
               }
             }
           }

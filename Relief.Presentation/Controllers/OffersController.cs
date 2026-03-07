@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.UpdateDTO;
 using Shared.QueryDTOs;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace Relief.Web.Controllers
@@ -31,7 +30,7 @@ namespace Relief.Web.Controllers
                 var id = User.FindFirstValue("userId");
 
                 if (id == null)
-                    throw new UnauthorizedAccessException("Invalid token.");
+                    throw new UnauthorizedException("Invalid token.");
 
                 return Guid.Parse(id);
             }
@@ -90,7 +89,17 @@ namespace Relief.Web.Controllers
             return Ok(offers);
         }
 
-      
+        // =====================================================
+        // BROWSE OFFERS (PAGINATED)
+        // =====================================================
+        [HttpGet("browse")]
+        public async Task<IActionResult> BrowseOffers(
+            [FromQuery] BaseQueryParams query)
+        {
+            var result = await _offerService.GetOffersAsync(query);
+
+            return Ok(result);
+        }
 
         // =====================================================
         // UPDATE OFFER

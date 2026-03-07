@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I/LVt9D7eio=",
+  "dgSpecHash": "dgCN4TDHyoM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
+  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LOQ\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LOQ\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

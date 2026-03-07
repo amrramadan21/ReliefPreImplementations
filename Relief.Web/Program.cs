@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,10 +9,12 @@ using Relief.Presentation.Middleware;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
 using Relief.ServiceAbstraction.Interfaces.Applications;
+using Relief.ServiceAbstraction.Interfaces.Admin;
 using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Relief.ServiceAbstraction.Interfaces.Users;
+using Relief.Services.Implementations.Admin;
 using Relief.Services.Implementations.Applications;
 using Relief.Services.Implementations.Files;
 using Relief.Services.Implementations.Offers;
@@ -125,10 +127,6 @@ namespace Relief.Web
             var issuer = jwt["Issuer"];
             var audience = jwt["Audience"];
 
-            Console.WriteLine("========== STARTUP CHECK ==========");
-            Console.WriteLine("VALIDATION KEY USED: " + key);
-            Console.WriteLine("===================================");
-
             builder.Services
                 .AddAuthentication(options =>
                 {
@@ -178,6 +176,7 @@ namespace Relief.Web
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IApplyService, ApplyService>();
             builder.Services.AddScoped<IApplicationManagementService, ApplicationManagementService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<IProfileService, ProfileService>();
@@ -221,13 +220,20 @@ namespace Relief.Web
             try
             {
                 using var scope = app.Services.CreateScope();
-                var dbContext = scope.ServiceProvider.GetRequiredService<ReliefAppDbContext>();
+
+                var dbContext = scope.ServiceProvider
+                    .GetRequiredService<ReliefAppDbContext>();
+
                 await dbContext.Database.MigrateAsync();
 
                 var roleManager = scope.ServiceProvider
                     .GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 
-                foreach (var role in new[] { "CareHome", "PSW", "Individual" })
+                var userManager = scope.ServiceProvider
+                    .GetRequiredService<UserManager<ApplicationUser>>();
+
+                // Create Roles
+                foreach (var role in new[] { "Admin", "CareHome", "PSW", "Individual" })
                 {
                     if (!await roleManager.RoleExistsAsync(role))
                     {
@@ -238,12 +244,62 @@ namespace Relief.Web
                         });
                     }
                 }
+
+                // Create Admin User
+                var adminEmail = "admin@test.com";
+
+                var admin = await userManager.FindByEmailAsync(adminEmail);
+
+                if (admin != null)
+                {
+                    // Check if existing user has the Admin role
+                    var roles = await userManager.GetRolesAsync(admin);
+                    if (!roles.Contains("Admin"))
+                    {
+                        // Broken record from previous seed — delete and recreate
+                        await userManager.DeleteAsync(admin);
+                        admin = null;
+                    }
+                }
+
+                if (admin == null)
+                {
+                    admin = new ApplicationUser
+                    {
+                        UserName = adminEmail,
+                        Email = adminEmail,
+                        EmailConfirmed = true,
+                        FirstName = "System",
+                        LastName = "Admin",
+                        BirthOfDate = new DateTime(1990, 1, 1),
+                        Address = new Address
+                        {
+                            ApartmentNumber = 0,
+                            Street = "Admin",
+                            City = "Admin",
+                            State = "Admin",
+                            PostalCode = "00000",
+                            Country = "Admin"
+                        }
+                    };
+
+                    var result = await userManager.CreateAsync(admin, "Admin123!");
+
+                    if (result.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(admin, "Admin");
+                    }
+                    else
+                    {
+                        Console.WriteLine("⚠️ Admin seed failed: " +
+                            string.Join("; ", result.Errors.Select(e => e.Description)));
+                    }
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"⚠️ SEED FAILED: {ex.Message}");
                 Console.WriteLine($"⚠️ INNER: {ex.InnerException?.Message}");
-                // App will still start — you'll see the error in logs
             }
         }
     }

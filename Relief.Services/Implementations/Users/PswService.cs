@@ -1,6 +1,7 @@
-﻿using Relief.Domain.Contracts;
+using Relief.Domain.Contracts;
 using Relief.Domain.Entities;
 using Relief.Domain.Entities.Users;
+using Relief.Domain.Enums;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Users;
@@ -35,7 +36,9 @@ namespace Relief.Services.Implementations.Users
             if (psw == null)
                 throw new NotFoundException("PSW not found.");
 
-            if (psw.IsProfileCompleted)
+            // Allow re-upload if verification was rejected
+            if (psw.IsProfileCompleted &&
+                psw.VerificationStatus != VerificationStatus.Rejected)
                 throw new ConflictException("Profile is already completed.");
 
             if (string.IsNullOrWhiteSpace(dto.ProofIdentityType))
@@ -97,7 +100,9 @@ namespace Relief.Services.Implementations.Users
                 psw.FirstAidOrCPRFileId = cprFile?.Id;
 
                 psw.IsProfileCompleted = true;
-                psw.IsVerified = true; // ممكن نخليها Admin Verification بعدين
+                psw.IsVerified = false;
+                psw.VerificationStatus = VerificationStatus.Pending;
+                psw.VerificationRejectionReason = null;
 
                 psw.WorkStatus = true;
 

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Relief.Domain.Exceptions;
 using System;
@@ -62,10 +62,9 @@ namespace Relief.Presentation.Middleware
                     success = false,
                     message = isDev ? ex.Message : "Internal Server Error",
                     statusCode = 500,
-                    // ADD THESE TEMPORARILY — REMOVE BEFORE PRODUCTION
-                    debugMessage = ex.Message,
-                    debugStackTrace = ex.StackTrace,
-                    debugInner = ex.InnerException?.Message
+                    debugMessage = isDev ? ex.Message : null,
+                    debugStackTrace = isDev ? ex.StackTrace : null,
+                    debugInner = isDev ? ex.InnerException?.Message : null
                 };
 
                 var json = JsonSerializer.Serialize(response);

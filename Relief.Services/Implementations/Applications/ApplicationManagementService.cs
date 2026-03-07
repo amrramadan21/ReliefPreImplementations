@@ -1,4 +1,4 @@
-﻿using Relief.Domain.Contracts;
+using Relief.Domain.Contracts;
 using Relief.Domain.Entities;
 using Relief.Domain.Entities.Offers;
 using Relief.Domain.Enums;
@@ -26,7 +26,8 @@ namespace Relief.Services.Implementations.Applications
         }
 
         // =====================================================
-        // GET APPLICATIONS FOR OFFER (CareHome and individual View)
+        // GET APPLICATIONS FOR OFFER (CareHome View)
+        // Only shows Admin-approved applications
         // =====================================================
         public async Task<List<OfferApplicationDto>>
             GetApplicationsForOfferAsync(Guid offerId, Guid careHomeId)
@@ -45,7 +46,13 @@ namespace Relief.Services.Implementations.Applications
 
             var requests = await requestRepo.GetAllAsync(spec);
 
-            return requests.Select(r =>
+            // CareHome only sees QualifiedByAdmin, Accepted, or RejectedByCareHome
+            var filtered = requests.Where(r =>
+                r.Status == RequestStatus.QualifiedByAdmin ||
+                r.Status == RequestStatus.Accepted ||
+                r.Status == RequestStatus.RejectedByCareHome);
+
+            return filtered.Select(r =>
             {
                 var user = r.PswUser.ApplicationUser;
                 var today = DateTime.UtcNow;
@@ -76,14 +83,15 @@ namespace Relief.Services.Implementations.Applications
                         Date = i.OfferShift.Date,
                         StartTime = i.OfferShift.StartTime,
                         EndTime = i.OfferShift.EndTime,
-                        Status = i.Status
+                        Status = r.Status // Use JopRequest status
                     }).ToList()
                 };
             }).ToList();
         }
 
         // =====================================================
-        // ACCEPT SHIFT by carehome and individual (Atomic Operation)
+        // ACCEPT APPLICATION by CareHome (Atomic Operation)
+        // Works on JopRequest.Status (not JobRequestItem)
         // =====================================================
         public async Task AcceptShiftAsync(
             Guid shiftId,
@@ -105,6 +113,16 @@ namespace Relief.Services.Implementations.Applications
                 if (item.ShiftId != shiftId)
                     throw new BadRequestException("Shift mismatch.");
 
+                var request = item.JopRequest;
+
+                if (request == null)
+                    throw new NotFoundException("Job request not found.");
+
+                // Must be QualifiedByAdmin to be accepted by CareHome
+                if (request.Status != RequestStatus.QualifiedByAdmin)
+                    throw new ConflictException(
+                        "Only admin-approved applications can be accepted.");
+
                 var shift = item.OfferShift;
 
                 if (shift == null)
@@ -119,25 +137,24 @@ namespace Relief.Services.Implementations.Applications
                 if (offer == null || (offer.CareHomeId != careHomeId && offer.IndividualId != careHomeId))
                     throw new ForbiddenException("You cannot manage this shift.");
 
-                if (item.Status != RequestStatus.Pending)
-                    throw new ConflictException("Application already processed.");
-
                 // Assign shift
-                shift.AssignedPswId = item.JopRequest.PswId;
+                shift.AssignedPswId = request.PswId;
                 shift.IsAvailable = false;
 
-                item.Status = RequestStatus.AcceptedByCareHome;
+                // Update JopRequest status
+                request.Status = RequestStatus.Accepted;
 
-                // Reject other pending applications for same shift
-                var shiftItemsSpec = new ShiftApplicationsSpecification(shiftId);
-                var allItems = await itemRepo.GetAllAsync(shiftItemsSpec);
+                // Reject other QualifiedByAdmin requests for the same offer
+                var offerRequestsSpec = new OfferApplicationsSpecification(shift.JobOfferId);
+                var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+                var allRequests = await requestRepo.GetAllAsync(offerRequestsSpec);
 
-                foreach (var other in allItems)
+                foreach (var other in allRequests)
                 {
-                    if (other.Id != jobRequestItemId &&
-                        other.Status == RequestStatus.Pending)
+                    if (other.Id != request.Id &&
+                        other.Status == RequestStatus.QualifiedByAdmin)
                     {
-                        other.Status = RequestStatus.Rejected;
+                        other.Status = RequestStatus.RejectedByCareHome;
                     }
                 }
 
@@ -147,7 +164,8 @@ namespace Relief.Services.Implementations.Applications
         }
 
         // =====================================================
-        // REJECT SHIFT by carehome and individual
+        // REJECT APPLICATION by CareHome
+        // Works on JopRequest.Status
         // =====================================================
         public async Task RejectShiftAsync(
             Guid jobRequestItemId,
@@ -163,6 +181,16 @@ namespace Relief.Services.Implementations.Applications
             if (item == null)
                 throw new NotFoundException("Application item not found.");
 
+            var request = item.JopRequest;
+
+            if (request == null)
+                throw new NotFoundException("Job request not found.");
+
+            // Must be QualifiedByAdmin to be rejected by CareHome
+            if (request.Status != RequestStatus.QualifiedByAdmin)
+                throw new ConflictException(
+                    "Only admin-approved applications can be rejected by CareHome.");
+
             var shift = item.OfferShift;
 
             if (shift == null)
@@ -174,18 +202,16 @@ namespace Relief.Services.Implementations.Applications
             if (offer == null || (offer.CareHomeId != careHomeId && offer.IndividualId != careHomeId))
                 throw new ForbiddenException("You cannot reject this application.");
 
-            if (item.Status != RequestStatus.Pending)
-                throw new ConflictException("Application already processed.");
-
-            item.Status = RequestStatus.Rejected;
+            // Update JopRequest status
+            request.Status = RequestStatus.RejectedByCareHome;
 
             await _unitOfWork.SaveChangesAsync();
         }
 
         // =====================================================
-        // Cancel Applications
+        // Cancel Application (PSW)
+        // Works on JopRequest.Status
         // =====================================================
-
         public async Task CancelApplicationAsync(
                 Guid jobRequestItemId,
                 Guid pswId)
@@ -198,24 +224,28 @@ namespace Relief.Services.Implementations.Applications
             if (item == null)
                 throw new NotFoundException("Application item not found.");
 
-            if (item.JopRequest.PswId != pswId)
+            var request = item.JopRequest;
+
+            if (request.PswId != pswId)
                 throw new ForbiddenException("You cannot cancel this application.");
 
-            if (item.Status == RequestStatus.AcceptedByCareHome)
+            if (request.Status == RequestStatus.Accepted)
                 throw new ConflictException("Accepted application cannot be cancelled.");
 
-            if (item.Status == RequestStatus.Rejected)
+            if (request.Status == RequestStatus.RejectedByAdmin ||
+                request.Status == RequestStatus.RejectedByCareHome)
                 throw new ConflictException("Application already rejected.");
 
-            item.Status = RequestStatus.Canceled;
+            // Update JopRequest status
+            request.Status = RequestStatus.Canceled;
 
             await _unitOfWork.SaveChangesAsync();
         }
 
         // =====================================================
-        // Psw ViewSiftApplicationsAsync (PSW View)
+        // PSW View Applications
+        // Uses JopRequest.Status
         // =====================================================
-
         public async Task<List<PswApplicationViewDto>>
                      GetPswApplicationsAsync(Guid pswId)
         {
@@ -233,14 +263,14 @@ namespace Relief.Services.Implementations.Applications
                 Date = i.OfferShift.Date,
                 StartTime = i.OfferShift.StartTime,
                 EndTime = i.OfferShift.EndTime,
-                Status = i.Status
+                Status = r.Status // Use JopRequest status
             })).ToList();
         }
 
         // =====================================================
         // Get Applications For CareHome
+        // Only shows Admin-approved applications
         // =====================================================
-
         public async Task<List<OfferApplicationDto>> GetApplicationsForCareHomeAsync(Guid careHomeId)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
@@ -255,15 +285,19 @@ namespace Relief.Services.Implementations.Applications
             if (!ownedOffers.Any())
                 return new List<OfferApplicationDto>();
 
-
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
 
             var spec = new CareHomeApplicationsSpecification(ownedOffers);
 
             var requests = await requestRepo.GetAllAsync(spec);
 
+            // Filter to only Admin-approved requests
+            var filtered = requests.Where(r =>
+                r.Status == RequestStatus.QualifiedByAdmin ||
+                r.Status == RequestStatus.Accepted ||
+                r.Status == RequestStatus.RejectedByCareHome);
 
-            return requests.Select(r =>
+            return filtered.Select(r =>
             {
                 var user = r.PswUser.ApplicationUser;
 
@@ -296,7 +330,7 @@ namespace Relief.Services.Implementations.Applications
                         Date = i.OfferShift.Date,
                         StartTime = i.OfferShift.StartTime,
                         EndTime = i.OfferShift.EndTime,
-                        Status = i.Status
+                        Status = r.Status // Use JopRequest status
                     }).ToList()
                 };
             }).ToList();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "62Zm3BJ6GSs=",
+  "dgSpecHash": "bMTnHux4KUw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
+  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.24\\microsoft.entityframeworkcore.8.0.24.nupkg.sha512",

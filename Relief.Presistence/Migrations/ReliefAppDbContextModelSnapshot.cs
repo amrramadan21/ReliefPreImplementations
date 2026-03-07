@@ -235,6 +235,12 @@ namespace Relief.Presistence.Migrations
                     b.Property<Guid>("PswId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("RejectionReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("JobOfferId");
@@ -504,6 +510,12 @@ namespace Relief.Presistence.Migrations
 
                     b.Property<Guid?>("PswCertificateFileId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("VerificationRejectionReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VerificationStatus")
+                        .HasColumnType("int");
 
                     b.Property<bool>("WorkStatus")
                         .HasColumnType("bit");

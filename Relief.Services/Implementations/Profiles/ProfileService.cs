@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Relief.Domain.Entities.Users;
+using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Shared.IdentityDTOs;
@@ -60,7 +61,7 @@ public class ProfileService : IProfileService
             .FirstOrDefaultAsync(x => x.Id == userId);
 
         if (user == null)
-            throw new Exception("User not found");
+            throw new NotFoundException("User not found");
 
         // =========================
         // PSW Profile
@@ -146,7 +147,7 @@ public class ProfileService : IProfileService
             };
         }
 
-        throw new Exception("Profile type not found");
+        throw new NotFoundException("Profile type not found");
     }
 
     // =========================
@@ -161,13 +162,13 @@ public class ProfileService : IProfileService
             .FirstOrDefaultAsync(x => x.Id == userId);
 
         if (user == null)
-            throw new Exception("User not found");
+            throw new NotFoundException("User not found");
 
         user.FirstName = dto.FirstName;
         user.LastName = dto.LastName;
         user.PhoneNumber = dto.PhoneNumber;
 
-        if (user.Address != null)
+        if (user.Address != null && dto.Address != null)
         {
             user.Address.ApartmentNumber = dto.Address.ApartmentNumber;
             user.Address.Street = dto.Address.Street;
@@ -181,7 +182,7 @@ public class ProfileService : IProfileService
     }
 
     // =========================
-    // Upload Profile
+    // Upload Profile photo
     // =========================
     public async Task UploadProfilePhotoAsync(IFormFile file)
     {
@@ -191,7 +192,7 @@ public class ProfileService : IProfileService
             .FirstOrDefaultAsync(x => x.Id == userId);
 
         if (user == null)
-            throw new Exception("User not found");
+            throw new NotFoundException("User not found");
 
         var folder = Path.Combine("uploads", "profile-photos", userId.ToString());
 
@@ -211,7 +212,7 @@ public class ProfileService : IProfileService
         var httpContext = _httpContextAccessor.HttpContext;
 
         if (httpContext == null)
-            throw new Exception("HttpContext is not available");
+            throw new UnauthorizedException("HttpContext is not available");
 
         var user = httpContext.User;
 
@@ -221,7 +222,7 @@ public class ProfileService : IProfileService
             user.FindFirst("sub")?.Value;
 
         if (string.IsNullOrEmpty(userId))
-            throw new Exception("UserId claim not found in token");
+            throw new UnauthorizedException("UserId claim not found in token");
 
         return Guid.Parse(userId);
     }

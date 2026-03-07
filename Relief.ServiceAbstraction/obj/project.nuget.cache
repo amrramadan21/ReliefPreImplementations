@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hz/J+W44Hjs=",
+  "dgSpecHash": "4gSkDJjd8hw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
+  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",

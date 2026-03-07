@@ -1,13 +1,13 @@
-﻿
+
 namespace Relief.Domain.Enums
 {
     public enum RequestStatus
     {
-        Pending=1,
-        QualifiedByAdmin=2,
-        AcceptedByCareHome=3,
-        Rejected=4 ,
-        Canceled = 5
-        
+        Pending = 1,
+        QualifiedByAdmin = 2,
+        Accepted = 3,
+        Canceled = 5,
+        RejectedByAdmin = 6,
+        RejectedByCareHome = 7
     }
 }

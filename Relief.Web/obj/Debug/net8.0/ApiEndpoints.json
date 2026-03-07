@@ -1,5 +1,109 @@
 [
   {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "ApproveApplication",
+    "RelativePath": "api/admin/applications/{requestId}/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "RejectApplication",
+    "RelativePath": "api/admin/applications/{requestId}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Shared.AdminDTOs.AdminRejectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetPendingApplications",
+    "RelativePath": "api/admin/applications/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetAllOffers",
+    "RelativePath": "api/admin/offers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "ApproveVerification",
+    "RelativePath": "api/admin/verifications/{pswId}/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pswId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "RejectVerification",
+    "RelativePath": "api/admin/verifications/{pswId}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pswId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Shared.AdminDTOs.AdminRejectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetPendingVerifications",
+    "RelativePath": "api/admin/verifications/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
     "Method": "GetAllApplications",
     "RelativePath": "api/applications",
@@ -69,6 +173,42 @@
         "Name": "dto",
         "Type": "Shared.ApplicationDTO.RejectShiftDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ApplicationsController",
+    "Method": "GetRequests",
+    "RelativePath": "api/applications/requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sort",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -273,6 +413,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Relief.Web.Controllers.OffersController",
+    "Method": "BrowseOffers",
+    "RelativePath": "api/offers/browse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sort",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Relief.Presentation.Controllers.ProfileController",
     "Method": "GetMyProfile",
     "RelativePath": "api/profile",
@@ -301,7 +472,7 @@
   {
     "ContainingType": "Relief.Presentation.Controllers.ProfileController",
     "Method": "GetUserProfile",
-    "RelativePath": "api/profile/{id}/profile",
+    "RelativePath": "api/profile/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
