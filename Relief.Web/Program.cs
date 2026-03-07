@@ -201,6 +201,7 @@ namespace Relief.Web
                 app.UseHttpsRedirection();
             }
 
+            app.UseStaticFiles(); //show photo
 
             app.UseCors("AllowAngular");
 

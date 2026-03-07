@@ -375,6 +375,9 @@ namespace Relief.Presistence.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<Guid?>("ProfilePhotoId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -397,6 +400,8 @@ namespace Relief.Presistence.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("ProfilePhotoId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -654,7 +659,13 @@ namespace Relief.Presistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("Relief.Domain.Entities.Users.FileMetadata", "ProfilePhoto")
+                        .WithMany()
+                        .HasForeignKey("ProfilePhotoId");
+
                     b.Navigation("Address");
+
+                    b.Navigation("ProfilePhoto");
                 });
 
             modelBuilder.Entity("Relief.Domain.Entities.Users.CareHomeUser", b =>

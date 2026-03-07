@@ -23,5 +23,9 @@ namespace Relief.Domain.Entities.Users
         public IndividualCareHomeUser? IndividualCareHomeUser { get; set; }
 
         public PswUser? PswUser { get; set; }
+
+        //profile picture
+        public Guid? ProfilePhotoId { get; set; }
+        public FileMetadata? ProfilePhoto { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Relief.Domain.Entities.Users;
+using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Shared.IdentityDTOs;
 using Shared.ProfileDTOs;
@@ -11,13 +12,16 @@ public class ProfileService : IProfileService
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly IFileService _fileService;
 
     public ProfileService(
         UserManager<ApplicationUser> userManager,
-        IHttpContextAccessor httpContextAccessor)
+        IHttpContextAccessor httpContextAccessor,
+        IFileService fileService)
     {
         _userManager = userManager;
         _httpContextAccessor = httpContextAccessor;
+        _fileService = fileService;
     }
 
     // =========================
@@ -35,6 +39,7 @@ public class ProfileService : IProfileService
     public async Task<object> GetUserProfileAsync(Guid userId)
     {
         var user = await _userManager.Users
+            .Include(x => x.ProfilePhoto) //Uploaded profile photo
             .Include(x => x.Address)
             .Include(x => x.CareHomeUser)
             .Include(x => x.IndividualCareHomeUser)
@@ -74,6 +79,9 @@ public class ProfileService : IProfileService
 
                 Address = MapAddress(user),
 
+                ProfilePhoto = MapFile(user.ProfilePhoto), //Upload
+
+
                 ProofIdentityType = user.PswUser.ProofIdentityType,
                 WorkStatus = user.PswUser.WorkStatus,
                 IsProfileCompleted = user.PswUser.IsProfileCompleted,
@@ -105,6 +113,8 @@ public class ProfileService : IProfileService
                 Gender = user.Gender.ToString(),
 
                 Address = MapAddress(user),
+
+                ProfilePhoto = MapFile(user.ProfilePhoto), //upload
 
                 BusinessLicense = user.CareHomeUser.BusinessLicense,
                 LegalName = user.CareHomeUser.LegalName,
@@ -166,6 +176,28 @@ public class ProfileService : IProfileService
             user.Address.Country = dto.Address.Country;
             user.Address.PostalCode = dto.Address.PostalCode;
         }
+
+        await _userManager.UpdateAsync(user);
+    }
+
+    // =========================
+    // Upload Profile
+    // =========================
+    public async Task UploadProfilePhotoAsync(IFormFile file)
+    {
+        var userId = GetCurrentUserId();
+
+        var user = await _userManager.Users
+            .FirstOrDefaultAsync(x => x.Id == userId);
+
+        if (user == null)
+            throw new Exception("User not found");
+
+        var folder = Path.Combine("uploads", "profile-photos", userId.ToString());
+
+        var metadata = await _fileService.UploadFileAsync(file, userId, folder);
+
+        user.ProfilePhotoId = metadata.Id;
 
         await _userManager.UpdateAsync(user);
     }

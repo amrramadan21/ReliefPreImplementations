@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Relief.Presistence\Relief.Presistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YyTsj+e/urA=",
+  "dgSpecHash": "uHMBYuk1oTY=",
   "success": true,
-  "projectFilePath": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj",
+  "projectFilePath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief\\ReliefPreImplementations\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\seife\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
-    "C:\\Users\\seife\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\seife\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+    "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\LOQ\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\LOQ\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }

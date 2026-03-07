@@ -660,3 +660,4 @@ F:\Projects\Relief\Relief\Relief.Web\obj\Debug\net8.0\refint\Relief.Web.dll
 F:\Projects\Relief\Relief\Relief.Web\obj\Debug\net8.0\Relief.Web.pdb
 F:\Projects\Relief\Relief\Relief.Web\obj\Debug\net8.0\Relief.Web.genruntimeconfig.cache
 F:\Projects\Relief\Relief\Relief.Web\obj\Debug\net8.0\ref\Relief.Web.dll
+C:\Users\LOQ\Desktop\Amr\Web\ProjectsRelief\ReliefPreImplementations\Relief.Web\bin\Debug\net8.0\Relief.Web.staticwebassets.runtime.json

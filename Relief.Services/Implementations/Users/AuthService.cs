@@ -151,6 +151,15 @@ namespace Relief.Services.Implementations.Users
                 UserId = user.Id
             };
         }
+        // =========================================================
+        // Logout Logic
+        // =========================================================
+        public async Task LogoutAsync()
+        {
+            // JWT is stateless
+            // logout is handled on the client by removing the token
+            await Task.CompletedTask;
+        }
 
         // =========================================================
         // Core Register Logic
@@ -225,6 +234,7 @@ namespace Relief.Services.Implementations.Users
 
                 transaction.Complete();
             }
+
 
             return await BuildTokenAsync(user);
         }

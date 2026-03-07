@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Shared.ProfileDTOs;
@@ -44,6 +45,14 @@ namespace Relief.Presentation.Controllers
             var result = await _profileService.GetUserProfileAsync(id);
 
             return Ok(result);
+        }
+
+        [HttpPost("upload-photo")]
+        public async Task<IActionResult> UploadProfilePhoto(IFormFile file)
+        {
+            await _profileService.UploadProfilePhotoAsync(file);
+
+            return Ok(new { message = "Profile photo uploaded successfully" });
         }
     }
 

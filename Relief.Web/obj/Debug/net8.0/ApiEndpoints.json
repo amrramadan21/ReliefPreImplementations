@@ -101,6 +101,16 @@
   },
   {
     "ContainingType": "Relief.Presentation.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AuthController",
     "Method": "RegisterCareHome",
     "RelativePath": "api/auth/register/carehome",
     "HttpMethod": "POST",
@@ -300,6 +310,22 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.ProfileController",
+    "Method": "UploadProfilePhoto",
+    "RelativePath": "api/profile/upload-photo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

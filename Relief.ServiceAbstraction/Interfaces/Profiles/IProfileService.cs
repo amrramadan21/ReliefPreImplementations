@@ -1,4 +1,5 @@
-﻿using Shared.ProfileDTOs;
+﻿using Microsoft.AspNetCore.Http;
+using Shared.ProfileDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace Relief.ServiceAbstraction.Interfaces.Profiles
         Task<object> GetUserProfileAsync(Guid userId);
 
         Task UpdateProfileAsync(UpdateProfileDto dto);
+        Task UploadProfilePhotoAsync(IFormFile file);
     }
 }

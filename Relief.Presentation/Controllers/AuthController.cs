@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces.Users;
 using Shared.IdentityDTOs;
 
@@ -73,6 +74,21 @@ namespace Relief.Presentation.Controllers
             var result = await _auth.LoginAsync(dto);
 
             return Ok(result);
+        }
+
+        // =====================================================
+        // LOGOUT
+        // =====================================================
+        [Authorize]
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await _auth.LogoutAsync();
+
+            return Ok(new
+            {
+                message = "Logged out successfully"
+            });
         }
     }
 }

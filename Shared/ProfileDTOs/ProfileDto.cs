@@ -23,5 +23,7 @@ namespace Shared.ProfileDTOs
         public string Gender { get; set; }
 
         public AddressDTO Address { get; set; }
+        public FileDto? ProfilePhoto { get; set; }
+
     }
 }
