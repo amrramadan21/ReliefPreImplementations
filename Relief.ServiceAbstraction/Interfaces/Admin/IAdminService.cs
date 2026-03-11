@@ -11,11 +11,11 @@ namespace Relief.ServiceAbstraction.Interfaces.Admin
         Task RejectVerificationAsync(Guid pswId, string reason);
 
         // Application Review
-        Task<List<AdminApplicationListDto>> GetPendingApplicationsAsync();
+        Task<List<AdminApplicationListDto>> GetApplicationsByStatusAsync(string? status = null);
         Task ApproveApplicationAsync(Guid requestId);
         Task RejectApplicationAsync(Guid requestId, string reason);
 
         // Offers Monitoring
-        Task<List<JobOfferSummaryDto>> GetAllOffersAsync();
+        Task<List<JobOfferDetailsDto>> GetAllOffersAsync();
     }
 }

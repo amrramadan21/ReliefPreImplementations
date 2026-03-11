@@ -6,8 +6,12 @@ using Relief.Domain.Entities.Users;
 using Relief.Domain.Enums;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Admin;
+using Relief.Services.Implementations.Admin.Specifications;
+using Relief.Services.Implementations.Offers.Specifications;
 using Shared.AdminDTOs;
+using Shared.ApplicationDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
+using System;
 
 namespace Relief.Services.Implementations.Admin
 {
@@ -115,25 +119,42 @@ namespace Relief.Services.Implementations.Admin
         }
 
         // =====================================================
-        // APPLICATIONS — GET PENDING
+        // APPLICATIONS — GET By status
         // =====================================================
-        public async Task<List<AdminApplicationListDto>> GetPendingApplicationsAsync()
+        public async Task<List<AdminApplicationListDto>> GetApplicationsByStatusAsync(string? status = null)
         {
-            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
-            var allRequests = await requestRepo.GetAllAsync();
+            RequestStatus? requestStatus = null;
 
-            var pending = allRequests
-                .Where(r => r.Status == RequestStatus.Pending)
-                .ToList();
+            // 2. Safely parse the string into your RequestStatus enum
+            if (!string.IsNullOrEmpty(status))
+            {
+                // 'true' makes the parsing case-insensitive (e.g., "pending" matches "Pending")
+                if (Enum.TryParse<RequestStatus>(status, true, out var parsedStatus))
+                {
+                    requestStatus = parsedStatus;
+                }
+                else
+                {
+                    // If someone sends an invalid status like "Apples", you can either 
+                    // throw an exception or just return an empty list. 
+                    return new List<AdminApplicationListDto>();
+                }
+            }
+            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+            var spec = new PendingJopRequestsWithDetailsSpecification(requestStatus);
+
+            var pending = await requestRepo.GetAllAsync(spec);
+
+
 
             var result = new List<AdminApplicationListDto>();
+            var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
+
 
             foreach (var req in pending)
             {
-                var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
-                var offer = await offerRepo.GetByIdAsync(req.JobOfferId);
+              
 
-                var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
                 var psw = await pswRepo.GetByIdAsync(req.PswId);
 
                 var user = psw != null
@@ -144,7 +165,7 @@ namespace Relief.Services.Implementations.Admin
                 {
                     JobRequestId = req.Id,
                     OfferId = req.JobOfferId,
-                    OfferTitle = offer?.Title ?? "",
+                    OfferTitle = req.JobOffer?.Title ?? "",
                     Status = req.Status,
                     AppliedAt = req.CreatedAt,
                     RejectionReason = req.RejectionReason,
@@ -152,8 +173,20 @@ namespace Relief.Services.Implementations.Admin
                     PswFullName = user != null
                         ? $"{user.FirstName} {user.LastName}"
                         : "",
+                    PswPhone = user != null ? $"{user.PhoneNumber}" : "",
+                    PswEmail = user?.Email ?? "",
                     IsVerified = psw?.IsVerified ?? false,
-                    ShiftCount = req.Items.Count
+                    Shifts = req.Items.Select(i => new ShiftApplicationDto
+                    {
+                        JobRequestItemId = i.Id,
+                        ShiftId = i.OfferShift.Id,
+                        Date = i.OfferShift.Date,
+                        StartTime = i.OfferShift.StartTime,
+                        EndTime = i.OfferShift.EndTime,
+                        Status = i.Status
+
+                    }).ToList()
+
                 });
             }
 
@@ -205,20 +238,44 @@ namespace Relief.Services.Implementations.Admin
         // =====================================================
         // OFFERS — GET ALL (MONITORING)
         // =====================================================
-        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync()
+        public async Task<List<JobOfferDetailsDto>> GetAllOffersAsync()
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
             var offers = await offerRepo.GetAllAsync();
 
-            return offers.Select(o => new JobOfferSummaryDto
+            var result = new List<JobOfferDetailsDto>();
+
+            foreach (var o in offers)
             {
-                Id = o.Id,
-                Title = o.Title,
-                Address = o.Address,
-                HourlyRate = o.HourlyRate,
-                Latitude = o.Latitude,
-                Longitude = o.Longitude
-            }).ToList();
+                var userRepo = _unitOfWork.GetRepository<ApplicationUser, Guid>();
+                var careHomeId = (o.CareHomeId ?? o.IndividualId).Value;
+                var user = await userRepo.GetByIdAsync(careHomeId);
+
+                var spec = new JobOfferWithDetailsSpecification(o.Id);
+
+                var offer = await offerRepo.GetByIdAsync(spec);
+
+                result.Add(new JobOfferDetailsDto
+                {
+                    Id = offer.Id,
+                    Title = offer.Title,
+                    CareHomeId = user?.Id,
+                    CareHomeName = user?.FirstName + " " + user?.LastName,
+                    Address = offer.Address,
+                    HourlyRate = offer.HourlyRate,
+                    Latitude = offer.Latitude,
+                    Longitude = offer.Longitude,
+                    Shifts = offer.Shifts.Select(s => new OfferShiftDetailsDto
+                    {
+                        ShiftId = s.Id,
+                        Date = s.Date,
+                        StartTime = s.StartTime,
+                        EndTime = s.EndTime,
+                        IsAvailable = s.IsAvailable
+                    }).ToList()
+                });
+            }
+            return result;
         }
     }
 }

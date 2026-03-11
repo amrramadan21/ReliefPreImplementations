@@ -8,8 +8,8 @@ using Relief.Domain.Entities.Users;
 using Relief.Presentation.Middleware;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
-using Relief.ServiceAbstraction.Interfaces.Applications;
 using Relief.ServiceAbstraction.Interfaces.Admin;
+using Relief.ServiceAbstraction.Interfaces.Applications;
 using Relief.ServiceAbstraction.Interfaces.Files;
 using Relief.ServiceAbstraction.Interfaces.Offers;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
@@ -22,6 +22,7 @@ using Relief.Services.Implementations.Users;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
 
 
 namespace Relief.Web
@@ -54,6 +55,7 @@ namespace Relief.Web
                {
                    options.JsonSerializerOptions.ReferenceHandler =
                        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                   options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                });
             builder.Services.AddEndpointsApiExplorer();
 

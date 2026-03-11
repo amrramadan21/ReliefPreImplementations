@@ -9,7 +9,10 @@ namespace Shared.OffersDTOs.OfferInfoDTO
     public class JobOfferDetailsDto
     {
         public Guid Id { get; set; }
-
+        public Guid? CareHomeId { get; set; }
+        public string? CareHomeName { get; set; }
+        public Guid? IndividualId { get; set; }
+        public string? IndividualName { get; set; }
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;
 

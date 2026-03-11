@@ -54,12 +54,12 @@ namespace Relief.Services.Implementations.Applications
             // =========================
             // Prevent Duplicate Apply
             // =========================
-            var spec = new PswOfferApplicationSpecification(pswId, dto.OfferId);
+            var spec = new PswOfferApplicationSpecification(pswId, dto.ShiftIds);
 
             var existingRequests = await requestRepo.GetAllAsync(spec);
 
             if (existingRequests.Any())
-                throw new ConflictException("You have already applied for this offer.");
+                throw new ConflictException("You have already applied to one of this offer shifts before.");
 
             // =========================
             // Create Request

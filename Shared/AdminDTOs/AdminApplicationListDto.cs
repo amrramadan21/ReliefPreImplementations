@@ -1,4 +1,5 @@
 using Relief.Domain.Enums;
+using Shared.ApplicationDTO;
 
 namespace Shared.AdminDTOs
 {
@@ -20,10 +21,10 @@ namespace Shared.AdminDTOs
         public Guid PswId { get; set; }
 
         public string PswFullName { get; set; } = "";
-
+        public string PswPhone { get; set; } = "";
+        public string PswEmail { get; set; } = "";
         public bool IsVerified { get; set; }
 
-        // Shift count
-        public int ShiftCount { get; set; }
+        public List<ShiftApplicationDto> Shifts { get; set; } = new ();
     }
 }

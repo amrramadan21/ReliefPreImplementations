@@ -11,5 +11,7 @@ namespace Relief.Domain.Contracts
         Task<int> SaveChangesAsync();
 
         IGenaricRepository<TEntity, TKey> GetRepository<TEntity, TKey>() where TEntity : class;
+
+        Task RebuildDatabaseAsync();
     }
 }

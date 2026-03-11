@@ -66,12 +66,12 @@ namespace Relief.Presentation.Controllers
         }
 
         // =====================================================
-        // APPLICATION REVIEW — LIST PENDING
+        // APPLICATION REVIEW — LIST BY STATUS
         // =====================================================
-        [HttpGet("applications/pending")]
-        public async Task<IActionResult> GetPendingApplications()
+        [HttpGet("applications")]
+        public async Task<IActionResult> GetApplications([FromQuery] string? status)
         {
-            var result = await _adminService.GetPendingApplicationsAsync();
+            var result = await _adminService.GetApplicationsByStatusAsync(status);
 
             return Ok(new
             {

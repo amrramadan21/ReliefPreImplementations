@@ -5,9 +5,9 @@ using Relief.Services.Common;
 public class PswOfferApplicationSpecification
     : BaseSpecifications<JopRequest, Guid>
 {
-    public PswOfferApplicationSpecification(Guid pswId, Guid offerId)
+    public PswOfferApplicationSpecification(Guid pswId, List<Guid> shiftIds)
         : base(r => r.PswId == pswId &&
-                    r.JobOfferId == offerId)
+                    r.Items.Any(i => shiftIds.Contains(i.ShiftId)))
     {
     }
 }

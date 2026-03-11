@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {}
+    "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj",
         "projectName": "Relief.Domain",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -68,24 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj",
         "projectName": "Relief.Presentation",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,8 +100,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
               }
             }
           }
@@ -116,7 +116,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -146,24 +146,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj",
         "projectName": "Relief.Presistence",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -178,8 +178,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj"
               }
             }
           }
@@ -194,7 +194,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -235,24 +235,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
         "projectName": "Relief.ServiceAbstraction",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -267,11 +267,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj"
+              "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj"
               }
             }
           }
@@ -286,7 +286,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -307,24 +307,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj",
         "projectName": "Relief.Services",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\Relief.Services.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Services\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Relief.Services.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -339,11 +339,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj"
               }
             }
           }
@@ -358,7 +358,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -389,24 +389,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj",
         "projectName": "Relief.Web",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\Relief.Web.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Web\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Relief.Web.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Relief.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -421,11 +421,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presentation\\Relief.Presentation.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Relief.Presentation.csproj"
               },
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Presistence\\Relief.Presistence.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj"
               }
             }
           }
@@ -440,7 +440,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -496,24 +496,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj": {
+    "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj",
+        "projectUniqueName": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Shared\\obj\\",
+        "projectPath": "F:\\Projects\\Relief\\Relief\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\seife\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Relief\\Relief\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -528,8 +528,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj": {
-                "projectPath": "C:\\Users\\LOQ\\Desktop\\Amr\\Web\\ProjectsRelief - AI\\ReliefPreImplementations\\Relief.Domain\\Relief.Domain.csproj"
+              "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj": {
+                "projectPath": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Relief.Domain.csproj"
               }
             }
           }
@@ -544,7 +544,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -571,7 +571,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

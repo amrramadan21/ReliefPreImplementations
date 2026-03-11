@@ -83,10 +83,19 @@
         }
       }
     },
-    "/api/admin/applications/pending": {
+    "/api/admin/applications": {
       "get": {
         "tags": [
           "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1236,15 +1245,14 @@
       },
       "RequestStatus": {
         "enum": [
-          1,
-          2,
-          3,
-          5,
-          6,
-          7
+          "Pending",
+          "QualifiedByAdmin",
+          "Accepted",
+          "Canceled",
+          "RejectedByAdmin",
+          "RejectedByCareHome"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "UpdateJobOfferDto": {
         "type": "object",

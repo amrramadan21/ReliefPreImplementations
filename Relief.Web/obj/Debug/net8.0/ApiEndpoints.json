@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetApplications",
+    "RelativePath": "api/admin/applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
     "Method": "ApproveApplication",
     "RelativePath": "api/admin/applications/{requestId}/approve",
     "HttpMethod": "POST",
@@ -34,16 +50,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Relief.Presentation.Controllers.AdminController",
-    "Method": "GetPendingApplications",
-    "RelativePath": "api/admin/applications/pending",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
