@@ -12,6 +12,8 @@ namespace Relief.ServiceAbstraction.Interfaces.Admin
 
         // Application Review
         Task<List<AdminApplicationListDto>> GetApplicationsByStatusAsync(string? status = null);
+        Task<List<UserListDto>> GetUsersByRoleAsync(string? role);
+        Task<List<PswListDto>> GetAllPswUsersAsync();
         Task ApproveApplicationAsync(Guid requestId);
         Task RejectApplicationAsync(Guid requestId, string reason);
 

@@ -277,5 +277,78 @@ namespace Relief.Services.Implementations.Admin
             }
             return result;
         }
+
+        public async Task<List<UserListDto>> GetUsersByRoleAsync(string? role)
+        {
+            List<ApplicationUser> users;
+
+            // 1. Fetch users based on whether a role was provided
+            if (!string.IsNullOrWhiteSpace(role))
+            {
+                // Use Identity's built-in method to find users by role
+                var usersInRole = await _userManager.GetUsersInRoleAsync(role);
+                users = usersInRole.ToList();
+            }
+            else
+            {
+                // Fallback: Get all users if no role filter is applied
+                users = _userManager.Users.ToList();
+            }
+
+            var result = new List<UserListDto>();
+
+            // 2. Map the entities to your DTO
+            foreach (var user in users)
+            {
+                // If you need to attach the exact role to the DTO, fetch it.
+                // Note: If a user has multiple roles, you might want to adjust this.
+                var userRoles = await _userManager.GetRolesAsync(user);
+                var primaryRole = userRoles.FirstOrDefault();
+
+                result.Add(new UserListDto
+                {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    Gender = user.Gender.ToString(),
+                    Role = primaryRole ?? "No Role"
+                });
+            }
+
+            return result;
+        }
+
+        public async Task<List<PswListDto>> GetAllPswUsersAsync()
+        {
+            // 1. Get the repository for PswUser
+            var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
+
+            // 2. Instantiate your specification
+            var spec = new PswUserWithDetailsSpecification();
+
+            // 3. Fetch data (this will generate an INNER JOIN or LEFT JOIN to AspNetUsers)
+            var pswUsers = await pswRepo.GetAllAsync(spec);
+
+            // 4. Map the entities to the DTO
+            var result = pswUsers.Select(psw => new PswListDto
+            {
+                Id = psw.ApplicationUserId,
+                FirstName = psw.ApplicationUser.FirstName,
+                LastName = psw.ApplicationUser.LastName,
+                Email = psw.ApplicationUser.Email,
+                PhoneNumber = psw.ApplicationUser.PhoneNumber,
+                Gender = psw.ApplicationUser.Gender.ToString(),
+                VerificationStatus = psw.VerificationStatus,
+                VerificationRejectionReason = psw.VerificationRejectionReason,
+                IsProfileCompleted = psw.IsProfileCompleted,
+                IsVerified = psw.IsVerified
+            }).ToList();
+
+            return result;
+        }
+
+       
     }
 }

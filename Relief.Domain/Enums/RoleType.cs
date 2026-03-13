@@ -5,6 +5,7 @@ namespace Relief.Domain.Enums
     {
         Admin = 1,
         CareHome=2,
-        PersonalSupprotWorker = 3
+        PSW = 3,
+        Individual = 4
     }
 }

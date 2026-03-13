@@ -64,6 +64,32 @@
   },
   {
     "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetAllUsersByRole",
+    "RelativePath": "api/admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetAllPsw",
+    "RelativePath": "api/admin/users/PSW",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
     "Method": "ApproveVerification",
     "RelativePath": "api/admin/verifications/{pswId}/approve",
     "HttpMethod": "POST",

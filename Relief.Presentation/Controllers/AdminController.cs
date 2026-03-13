@@ -128,5 +128,31 @@ namespace Relief.Presentation.Controllers
                 data = result
             });
         }
+
+        [HttpGet("users")]
+        public async Task<IActionResult> GetAllUsersByRole([FromQuery] string? role)
+        {
+            var result = await _adminService.GetUsersByRoleAsync(role);
+            return Ok(new
+            {
+                success = true,
+                count = result.Count,
+                data = result
+            });
+
+        }
+        [HttpGet("users/PSW")]
+        public async Task<IActionResult> GetAllPsw()
+        {
+            var result = await _adminService.GetAllPswUsersAsync();
+            return Ok(new
+            {
+                success = true,
+                count = result.Count,
+                data = result
+            });
+
+        }
+
     }
 }
