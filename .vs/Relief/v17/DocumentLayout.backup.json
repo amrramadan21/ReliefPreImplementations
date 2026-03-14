@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "F:\\Projects\\Relief\\Relief\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\applications\\applicationmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\applications\\applicationmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\offerapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\offerapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\pswapplicationbriefdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\pswapplicationbriefdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\profiles\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\profiles\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\admin\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\admin\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|f:\\projects\\relief\\relief\\relief.serviceabstraction\\interfaces\\admin\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{743728D4-BE8E-4227-AE48-638A9B483456}|Relief.ServiceAbstraction\\Relief.ServiceAbstraction.csproj|solutionrelative:relief.serviceabstraction\\interfaces\\admin\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\admindtos\\userlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +83,8 @@
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\users\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\pswapplicationbriefdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\pswapplicationbriefdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\pswapplicationviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\pswapplicationviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\offerapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\offerapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\users\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\applications\\applicationmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\applications\\applicationmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,10 +167,6 @@
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\offers\\offershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|f:\\projects\\relief\\relief\\relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93A03323-C5B4-4E2E-AC4B-50B653B616D5}|Relief.Web\\Relief.Web.csproj|solutionrelative:relief.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\applicationdto\\shiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\applicationdto\\shiftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -177,10 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\resetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\resetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|solutionrelative:relief.presentation\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:1:0:{140D9EF5-5A88-4B03-8D8D-FF3E9E315275}|Relief.Presentation\\Relief.Presentation.csproj|f:\\projects\\relief\\relief\\relief.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -217,10 +221,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\entities\\users\\carehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|solutionrelative:relief.domain\\entities\\users\\carehomeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\profiles\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\profiles\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -472,7 +472,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -536,15 +536,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PswListDto.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswListDto.cs",
-              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\PswListDto.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswListDto.cs",
-              "RelativeToolTip": "Shared\\AdminDTOs\\PswListDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T03:23:52.281Z",
+              "WhenOpened": "2026-03-07T21:00:10.104Z",
               "EditorCaption": ""
             },
             {
@@ -555,66 +555,92 @@
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\AdminController.cs",
               "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Relief.Presentation\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAiwJIAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAUwKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-07T20:33:43.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationsController.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ApplicationsController.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ApplicationsController.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ApplicationsController.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\ApplicationsController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T04:45:19.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "ViewState": "AgIAAEcBAAAAAAAAAAAAAFcBAAA7AAAAAAAAAA==",
+              "Title": "ApplicationManagementService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
+              "ViewState": "AgIAADMBAAAAAAAAAAAwwEUBAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T19:57:27.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
-              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
-              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T20:47:13.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserListDto.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\UserListDto.cs",
-              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\UserListDto.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\UserListDto.cs",
-              "RelativeToolTip": "Shared\\AdminDTOs\\UserListDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T03:12:32.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PswVerificationListDto.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswVerificationListDto.cs",
-              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\PswVerificationListDto.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswVerificationListDto.cs",
-              "RelativeToolTip": "Shared\\AdminDTOs\\PswVerificationListDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T20:41:57.802Z",
+              "WhenOpened": "2026-03-02T01:28:00.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "OfferApplicationDto.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\OfferApplicationDto.cs",
+              "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\OfferApplicationDto.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\OfferApplicationDto.cs",
+              "RelativeToolTip": "Shared\\ApplicationDTO\\OfferApplicationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T01:26:15.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PswApplicationBriefDto.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
+              "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
+              "RelativeToolTip": "Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T01:26:26.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ProfileController.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Relief.Presentation\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:45:44.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
+              "RelativeToolTip": "Relief.Web\\Program.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAwMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T18:20:19.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "PswUser.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Users\\PswUser.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\PswUser.cs",
@@ -622,12 +648,71 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Users\\PswUser.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAA/wCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T13:26:02.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T13:26:02.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
+              "Title": "PswVerificationListDto.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswVerificationListDto.cs",
+              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\PswVerificationListDto.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswVerificationListDto.cs",
+              "RelativeToolTip": "Shared\\AdminDTOs\\PswVerificationListDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T20:41:57.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserListDto.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\UserListDto.cs",
+              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\UserListDto.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\UserListDto.cs",
+              "RelativeToolTip": "Shared\\AdminDTOs\\UserListDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T03:12:32.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
+              "RelativeToolTip": "Relief.ServiceAbstraction\\Interfaces\\Admin\\IAdminService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T20:47:13.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAAAFcBAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T19:57:27.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PswListDto.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswListDto.cs",
+              "RelativeDocumentMoniker": "Shared\\AdminDTOs\\PswListDto.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\PswListDto.cs",
+              "RelativeToolTip": "Shared\\AdminDTOs\\PswListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T03:23:52.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PswUserWithDetailsSpecification.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\Specifications\\PswUserWithDetailsSpecification.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\Specifications\\PswUserWithDetailsSpecification.cs",
@@ -635,12 +720,11 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\Specifications\\PswUserWithDetailsSpecification.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T03:31:00.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T03:31:00.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "VerificationStatus.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\VerificationStatus.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\VerificationStatus.cs",
@@ -648,12 +732,11 @@
               "RelativeToolTip": "Relief.Domain\\Enums\\VerificationStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T19:15:28.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T19:15:28.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Users\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\ApplicationUser.cs",
@@ -661,12 +744,11 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Users\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:51:52.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T17:51:52.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "SpecificationsEvaluator.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\SpecificationsEvaluator.cs",
               "RelativeDocumentMoniker": "Relief.Presistence\\SpecificationsEvaluator.cs",
@@ -674,12 +756,11 @@
               "RelativeToolTip": "Relief.Presistence\\SpecificationsEvaluator.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAvwCcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T19:47:12.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T19:47:12.461Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "BaseSpecifications.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Common\\BaseSpecifications.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Common\\BaseSpecifications.cs",
@@ -687,12 +768,11 @@
               "RelativeToolTip": "Relief.Services\\Common\\BaseSpecifications.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAewAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T20:35:36.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T20:35:36.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "Address.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Users\\Address.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\Address.cs",
@@ -700,25 +780,11 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Users\\Address.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T20:58:32.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T20:58:32.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PswApplicationBriefDto.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
-              "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
-              "RelativeToolTip": "Shared\\ApplicationDTO\\PswApplicationBriefDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:26:26.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "PswApplicationViewDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\PswApplicationViewDto.cs",
               "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\PswApplicationViewDto.cs",
@@ -726,38 +792,11 @@
               "RelativeToolTip": "Shared\\ApplicationDTO\\PswApplicationViewDto.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:26:28.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T01:26:28.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OfferApplicationDto.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\OfferApplicationDto.cs",
-              "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\OfferApplicationDto.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\OfferApplicationDto.cs",
-              "RelativeToolTip": "Shared\\ApplicationDTO\\OfferApplicationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:26:15.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApplicationsController.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ApplicationsController.cs",
-              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ApplicationsController.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ApplicationsController.cs",
-              "RelativeToolTip": "Relief.Presentation\\Controllers\\ApplicationsController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwFQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T04:45:19.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "AuthService.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Users\\AuthService.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Users\\AuthService.cs",
@@ -765,12 +804,11 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Users\\AuthService.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAuwMYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T01:21:40.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T01:21:40.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "RoleType.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RoleType.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RoleType.cs",
@@ -778,12 +816,11 @@
               "RelativeToolTip": "Relief.Domain\\Enums\\RoleType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:27:03.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T13:27:03.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "PendingJopRequestsWithDetailsSpecification.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\Specifications\\PendingJopRequestsWithDetailsSpecification.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\Specifications\\PendingJopRequestsWithDetailsSpecification.cs",
@@ -791,12 +828,11 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\Specifications\\PendingJopRequestsWithDetailsSpecification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:07:30.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T20:07:30.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Relief.Presistence\\Repositories\\GenericRepository.cs",
@@ -804,12 +840,11 @@
               "RelativeToolTip": "Relief.Presistence\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAABwAAAAAAAAAAIA1wB8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T21:01:52.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T21:01:52.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Relief.Presistence\\Repositories\\UnitOfWork.cs",
@@ -817,12 +852,11 @@
               "RelativeToolTip": "Relief.Presistence\\Repositories\\UnitOfWork.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:38:54.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T22:38:54.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "AdminApplicationListDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\AdminApplicationListDto.cs",
               "RelativeDocumentMoniker": "Shared\\AdminDTOs\\AdminApplicationListDto.cs",
@@ -830,12 +864,11 @@
               "RelativeToolTip": "Shared\\AdminDTOs\\AdminApplicationListDto.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T20:41:50.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T20:41:50.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "CompleteProfile.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\CompleteProfile.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\CompleteProfile.cs",
@@ -843,12 +876,11 @@
               "RelativeToolTip": "Relief.Presentation\\Controllers\\CompleteProfile.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T05:01:18.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T05:01:18.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "PswApplicationsController.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\PswApplicationsController.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\PswApplicationsController.cs",
@@ -856,12 +888,11 @@
               "RelativeToolTip": "Relief.Presentation\\Controllers\\PswApplicationsController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwDQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T05:01:29.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T05:01:29.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "appsettings.json",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\appsettings.json",
               "RelativeDocumentMoniker": "Relief.Web\\appsettings.json",
@@ -869,25 +900,11 @@
               "RelativeToolTip": "Relief.Web\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-27T18:29:42.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T18:29:42.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ApplicationManagementService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\Applications\\ApplicationManagementService.cs",
-              "ViewState": "AgIAAC4BAAAAAAAAAADgv0IBAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:28:00.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "RequestStatus.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Enums\\RequestStatus.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Enums\\RequestStatus.cs",
@@ -899,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "ApplyService.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\ApplyService.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Applications\\ApplyService.cs",
@@ -911,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "ApplyToOfferDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
               "RelativeDocumentMoniker": "Shared\\ApplyDTOs\\ApplyToOfferDto.cs",
@@ -923,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "PswOfferApplicationSpecification.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Applications\\Specifications\\PswOfferApplicationSpecification.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Applications\\Specifications\\PswOfferApplicationSpecification.cs",
@@ -935,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "ApplyController.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ApplyController.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ApplyController.cs",
@@ -947,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "OfferService.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Offers\\OfferService.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Offers\\OfferService.cs",
@@ -959,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "JobOffer.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Offers\\JobOffer.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Offers\\JobOffer.cs",
@@ -971,7 +988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "JopRequest.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Offers\\JopRequest.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Offers\\JopRequest.cs",
@@ -983,7 +1000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "SmartSpecification.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Common\\SmartSpecification.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Common\\SmartSpecification.cs",
@@ -995,7 +1012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "JobRequestItem.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Offers\\JobRequestItem.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Offers\\JobRequestItem.cs",
@@ -1007,7 +1024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "OfferShift.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Offers\\OfferShift.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Offers\\OfferShift.cs",
@@ -1019,19 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Relief.Web\\Program.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Web\\Program.cs",
-              "RelativeToolTip": "Relief.Web\\Program.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAxwN4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T18:20:19.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "JobOfferDetailsDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
@@ -1043,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "OfferShiftDetailsDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
@@ -1055,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "ShiftDTO.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\ShiftDTO.cs",
               "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\ShiftDTO.cs",
@@ -1067,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "JobOfferSummaryDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
@@ -1079,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "ResetController.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ResetController.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ResetController.cs",
@@ -1091,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "AuthController.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\AuthController.cs",
@@ -1103,19 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\ProfileController.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Relief.Presentation\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T21:45:44.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "OffersController.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Controllers\\OffersController.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Controllers\\OffersController.cs",
@@ -1127,7 +1120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Contracts\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Contracts\\IUnitOfWork.cs",
@@ -1139,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "IOfferService.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.ServiceAbstraction\\Interfaces\\Offers\\IOfferService.cs",
               "RelativeDocumentMoniker": "Relief.ServiceAbstraction\\Interfaces\\Offers\\IOfferService.cs",
@@ -1151,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "AcceptShiftDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\AcceptShiftDto.cs",
               "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\AcceptShiftDto.cs",
@@ -1163,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "AdminRejectDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\AdminDTOs\\AdminRejectDto.cs",
               "RelativeDocumentMoniker": "Shared\\AdminDTOs\\AdminRejectDto.cs",
@@ -1175,7 +1168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "RejectShiftDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\ApplicationDTO\\RejectShiftDto.cs",
               "RelativeDocumentMoniker": "Shared\\ApplicationDTO\\RejectShiftDto.cs",
@@ -1187,7 +1180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presentation\\Middleware\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Relief.Presentation\\Middleware\\ExceptionMiddleware.cs",
@@ -1199,7 +1192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "CareHomeUser.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Domain\\Entities\\Users\\CareHomeUser.cs",
               "RelativeDocumentMoniker": "Relief.Domain\\Entities\\Users\\CareHomeUser.cs",
@@ -1208,18 +1201,6 @@
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwBMAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T13:26:09.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ProfileService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:00:10.104Z"
             },
             {
               "$type": "Document",

@@ -80,6 +80,22 @@
   },
   {
     "ContainingType": "Relief.Presentation.Controllers.AdminController",
+    "Method": "GetUserProfile",
+    "RelativePath": "api/admin/users/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Relief.Presentation.Controllers.AdminController",
     "Method": "GetAllPsw",
     "RelativePath": "api/admin/users/PSW",
     "HttpMethod": "GET",

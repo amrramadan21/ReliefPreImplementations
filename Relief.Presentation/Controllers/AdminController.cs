@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces.Admin;
+using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Shared.AdminDTOs;
 
 namespace Relief.Presentation.Controllers
@@ -11,10 +12,12 @@ namespace Relief.Presentation.Controllers
     public class AdminController : ControllerBase
     {
         private readonly IAdminService _adminService;
+        private readonly IProfileService _profileService;
 
-        public AdminController(IAdminService adminService)
+        public AdminController(IAdminService adminService, IProfileService profileService)
         {
             _adminService = adminService;
+            _profileService = profileService;
         }
 
         // =====================================================
@@ -149,6 +152,18 @@ namespace Relief.Presentation.Controllers
             {
                 success = true,
                 count = result.Count,
+                data = result
+            });
+
+        }
+
+        [HttpGet("users/profile")]
+        public async Task<IActionResult> GetUserProfile(Guid id)
+        {
+            var result = await _profileService.GetUserProfileAsync(id);
+            return Ok(new
+            {
+                success = true,
                 data = result
             });
 

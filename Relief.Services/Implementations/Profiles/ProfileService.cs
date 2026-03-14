@@ -146,8 +146,44 @@ public class ProfileService : IProfileService
                 VaccinationPolicy = "N/A"
             };
         }
+        // =========================
+        // Individual Profile
+        // =========================
+        if (user.IndividualCareHomeUser != null)
+        {
+            return new CareHomeProfileDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName!,
+                LastName = user.LastName!,
+                Email = user.Email!,
+                PhoneNumber = user.PhoneNumber!,
+                DateOfBirth = user.BirthOfDate,
+                Gender = user.Gender.ToString(),
 
-        throw new NotFoundException("Profile type not found");
+                Address = MapAddress(user),
+
+                // Individual ماعندوش البيانات دي
+                BusinessLicense = "Individual",
+                LegalName = $"{user.FirstName} {user.LastName}",
+                VaccinationPolicy = "N/A"
+            };
+        }
+        // return admin profile
+        return new CareHomeProfileDto
+        {
+            Id = user.Id,
+            FirstName = user.FirstName!,
+            LastName = user.LastName!,
+            Email = user.Email!,
+            PhoneNumber = user.PhoneNumber!,
+            DateOfBirth = user.BirthOfDate,
+            Gender = user.Gender.ToString(),
+
+            Address = MapAddress(user)
+        };
+        
+            throw new NotFoundException("Profile type not found");
     }
 
     // =========================

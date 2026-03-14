@@ -70,6 +70,8 @@ namespace Relief.Services.Implementations.Applications
                     {
                         PswId = r.PswId,
                         FullName = $"{user.FirstName} {user.LastName}",
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
                         Age = age,
                         IsVerified = r.PswUser.IsVerified,
                         WorkStatus = r.PswUser.WorkStatus,
@@ -317,6 +319,8 @@ namespace Relief.Services.Implementations.Applications
                         PswId = r.PswId,
                         FullName = $"{user.FirstName} {user.LastName}",
                         Age = age,
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
                         IsVerified = r.PswUser.IsVerified,
                         WorkStatus = r.PswUser.WorkStatus,
                         ProofIdentityType = r.PswUser.ProofIdentityType,
