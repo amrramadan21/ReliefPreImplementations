@@ -138,7 +138,7 @@ namespace Relief.Services.Implementations.Users
                     Email = user.Email ?? "",
                     Role = role,
                     UserId = user.Id,
-                    WorkStatus = psw?.WorkStatus ?? false
+                    VerficationStatus = psw.VerificationStatus.ToString()
                 };
             }
 
@@ -210,9 +210,9 @@ namespace Relief.Services.Implementations.Users
                         await pswRepo.AddAsync(new PswUser
                         {
                             ApplicationUserId = user.Id,
-                            WorkStatus = false
+                            VerificationStatus = VerificationStatus.None,
+                            VerificationRejectionReason = "",
                         });
-
                         break;
 
                     case "Individual":

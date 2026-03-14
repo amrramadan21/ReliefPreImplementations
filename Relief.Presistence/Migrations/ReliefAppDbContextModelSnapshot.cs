@@ -499,9 +499,6 @@ namespace Relief.Presistence.Migrations
                     b.Property<bool>("IsProfileCompleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsVerified")
-                        .HasColumnType("bit");
-
                     b.Property<Guid?>("ProofIdentityFileId")
                         .HasColumnType("uniqueidentifier");
 
@@ -516,9 +513,6 @@ namespace Relief.Presistence.Migrations
 
                     b.Property<int>("VerificationStatus")
                         .HasColumnType("int");
-
-                    b.Property<bool>("WorkStatus")
-                        .HasColumnType("bit");
 
                     b.HasKey("ApplicationUserId");
 

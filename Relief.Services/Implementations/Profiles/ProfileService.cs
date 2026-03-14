@@ -84,9 +84,9 @@ public class ProfileService : IProfileService
 
 
                 ProofIdentityType = user.PswUser.ProofIdentityType,
-                WorkStatus = user.PswUser.WorkStatus,
+                VerificationStatus = user.PswUser.VerificationStatus.ToString(),
+                RejectionReason = user.PswUser.VerificationRejectionReason,
                 IsProfileCompleted = user.PswUser.IsProfileCompleted,
-                IsVerified = user.PswUser.IsVerified,
 
                 ProofIdentityFile = MapFile(user.PswUser.ProofIdentityFile),
                 InsuranceFile = MapFile(user.PswUser.InsuranceFile),

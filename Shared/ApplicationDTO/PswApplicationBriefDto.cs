@@ -13,8 +13,8 @@ namespace Shared.ApplicationDTO
         public string Email { get; set; } = default!;
         public string PhoneNumber { get; set; } = default!;
         public int Age { get; set; }
-        public bool IsVerified { get; set; }
-        public bool WorkStatus { get; set; }
+        public string VerificationStatus { get; set; } = default!;
+        public string? RejectionReason { get; set; }
         public string? ProofIdentityType { get; set; }
         public Guid? CVFileId { get; set; }
     }

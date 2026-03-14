@@ -73,8 +73,8 @@ namespace Relief.Services.Implementations.Applications
                         Email = user.Email,
                         PhoneNumber = user.PhoneNumber,
                         Age = age,
-                        IsVerified = r.PswUser.IsVerified,
-                        WorkStatus = r.PswUser.WorkStatus,
+                        VerificationStatus = r.PswUser.VerificationStatus.ToString(),
+                        RejectionReason = r.PswUser.VerificationRejectionReason,
                         ProofIdentityType = r.PswUser.ProofIdentityType,
                         CVFileId = r.PswUser.CVFileId
                     },
@@ -321,8 +321,8 @@ namespace Relief.Services.Implementations.Applications
                         Age = age,
                         Email = user.Email,
                         PhoneNumber = user.PhoneNumber,
-                        IsVerified = r.PswUser.IsVerified,
-                        WorkStatus = r.PswUser.WorkStatus,
+                        VerificationStatus = r.PswUser.VerificationStatus.ToString(),
+                        RejectionReason = r.PswUser.VerificationRejectionReason,
                         ProofIdentityType = r.PswUser.ProofIdentityType,
                         CVFileId = r.PswUser.CVFileId
                     },

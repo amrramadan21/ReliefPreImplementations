@@ -10,11 +10,11 @@ namespace Shared.ProfileDTOs
     {
         public string? ProofIdentityType { get; set; }
 
-        public bool WorkStatus { get; set; }
+        public string VerificationStatus { get; set; } = default!;
 
+        public string? RejectionReason { get; set; }
         public bool IsProfileCompleted { get; set; }
 
-        public bool IsVerified { get; set; }
 
         public string Role { get; set; } = null!;
 

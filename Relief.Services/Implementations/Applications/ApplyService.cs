@@ -45,7 +45,7 @@ namespace Relief.Services.Implementations.Applications
             if (!psw.IsProfileCompleted)
                 throw new ForbiddenException("Please complete your profile before applying.");
 
-            if (!psw.IsVerified)
+            if (psw.VerificationStatus != VerificationStatus.Approved)
                 throw new ForbiddenException("Your profile is not verified yet.");
 
             if (dto.ShiftIds == null || !dto.ShiftIds.Any())

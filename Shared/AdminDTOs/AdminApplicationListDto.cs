@@ -23,8 +23,8 @@ namespace Shared.AdminDTOs
         public string PswFullName { get; set; } = "";
         public string PswPhone { get; set; } = "";
         public string PswEmail { get; set; } = "";
-        public bool IsVerified { get; set; }
-
+        public string VerificationStatus { get; set; } = default!;
+        public string? VerificationReason { get; set; }
         public List<ShiftApplicationDto> Shifts { get; set; } = new ();
     }
 }

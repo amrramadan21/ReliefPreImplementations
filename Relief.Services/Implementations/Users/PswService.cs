@@ -90,7 +90,6 @@ namespace Relief.Services.Implementations.Users
                 // ===============================
 
                 psw.ProofIdentityType = dto.ProofIdentityType;
-                psw.WorkStatus = dto.WorkStatus;
 
                 psw.ProofIdentityFileId = proofFile.Id;
                 psw.PswCertificateFileId = certFile.Id;
@@ -100,11 +99,8 @@ namespace Relief.Services.Implementations.Users
                 psw.FirstAidOrCPRFileId = cprFile?.Id;
 
                 psw.IsProfileCompleted = true;
-                psw.IsVerified = false;
                 psw.VerificationStatus = VerificationStatus.Pending;
                 psw.VerificationRejectionReason = null;
-
-                psw.WorkStatus = true;
 
                 pswRepo.Update(psw);
 

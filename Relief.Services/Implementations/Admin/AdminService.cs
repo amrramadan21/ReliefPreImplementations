@@ -89,7 +89,6 @@ namespace Relief.Services.Implementations.Admin
                 throw new ConflictException("PSW is already verified.");
 
             psw.VerificationStatus = VerificationStatus.Approved;
-            psw.IsVerified = true;
             psw.VerificationRejectionReason = null;
 
             pswRepo.Update(psw);
@@ -111,7 +110,6 @@ namespace Relief.Services.Implementations.Admin
                 throw new BadRequestException("PSW has not completed their profile.");
 
             psw.VerificationStatus = VerificationStatus.Rejected;
-            psw.IsVerified = false;
             psw.VerificationRejectionReason = reason;
 
             pswRepo.Update(psw);
@@ -175,7 +173,8 @@ namespace Relief.Services.Implementations.Admin
                         : "",
                     PswPhone = user != null ? $"{user.PhoneNumber}" : "",
                     PswEmail = user?.Email ?? "",
-                    IsVerified = psw?.IsVerified ?? false,
+                    VerificationStatus = psw.VerificationStatus.ToString(),
+                    VerificationReason = psw.VerificationRejectionReason,
                     Shifts = req.Items.Select(i => new ShiftApplicationDto
                     {
                         JobRequestItemId = i.Id,
@@ -343,7 +342,6 @@ namespace Relief.Services.Implementations.Admin
                 VerificationStatus = psw.VerificationStatus,
                 VerificationRejectionReason = psw.VerificationRejectionReason,
                 IsProfileCompleted = psw.IsProfileCompleted,
-                IsVerified = psw.IsVerified
             }).ToList();
 
             return result;

@@ -16,8 +16,6 @@ namespace Relief.Domain.Entities.Users
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
         public string? ProofIdentityType { get; set; }
-        public bool WorkStatus { get; set; }
-
         public Guid? ProofIdentityFileId { get; set; }
         public FileMetadata? ProofIdentityFile { get; set; }
 
@@ -40,7 +38,6 @@ namespace Relief.Domain.Entities.Users
         public FileMetadata? FirstAidOrCPRFile { get; set; }
 
         public bool IsProfileCompleted { get; set; } = false;
-        public bool IsVerified { get; set; } = false;
 
         public VerificationStatus VerificationStatus { get; set; } = VerificationStatus.None;
 

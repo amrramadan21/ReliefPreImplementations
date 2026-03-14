@@ -8,6 +8,7 @@ namespace Shared.IdentityDTOs
 {
     public class PswAuthResponseDTO : AuthResponseDTO
     {
-        public bool WorkStatus { get; set; } = default!;
+        public string VerficationStatus { get; set; } = default!;
+        public string? RejctionReason { get; set; }
     }
 }
