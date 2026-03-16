@@ -1,3 +1,4 @@
+﻿using Microsoft.AspNetCore.Http;
 using Shared.IdentityDTOs;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,23 @@ namespace Shared.ProfileDTOs
 {
     public class UpdateProfileDto
     {
-        [Required]
-        public string FirstName { get; set; }
+        // ── Common (all roles) ──
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
 
-        [Required]
-        public string LastName { get; set; }
-
-        [Required]
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
+        public AddressDTO? Address { get; set; }
+        public IFormFile? ProfilePhoto { get; set; }
 
-        [Required]
-        public AddressDTO Address { get; set; }
+        // ── PSW-only ──
+        public string? ProofIdentityType { get; set; }
+        public IFormFile? ProofIdentityFile { get; set; }
+        public IFormFile? InsuranceFile { get; set; }
+        public IFormFile? PswCertificateFile { get; set; }
+        public IFormFile? CVFile { get; set; }
+        public IFormFile? ImmunizationRecordFile { get; set; }
+        public IFormFile? CriminalRecordFile { get; set; }
+        public IFormFile? FirstAidOrCPRFile { get; set; }
     }
 }

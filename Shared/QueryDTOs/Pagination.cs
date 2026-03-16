@@ -14,9 +14,9 @@ namespace Shared.QueryDTOs
 
         public int Count { get; set; }
 
-        public IReadOnlyList<T> Data { get; set; }
+        public IEnumerable<T> Data { get; set; }
 
-        public Pagination(int pageIndex, int pageSize, int count, IReadOnlyList<T> data)
+        public Pagination(int pageIndex, int pageSize, int count, IEnumerable<T> data)
         {
             PageIndex = pageIndex;
             PageSize = pageSize;

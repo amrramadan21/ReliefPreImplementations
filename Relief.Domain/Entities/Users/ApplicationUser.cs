@@ -17,6 +17,10 @@ namespace Relief.Domain.Entities.Users
 
         public DateTime BirthOfDate { get; set; }
 
+
+        public string? EmailVerificationCode { get; set; }
+        public DateTime? VerificationCodeExpiry { get; set; }
+
         // Profiles (Optional)
         public CareHomeUser? CareHomeUser { get; set; }
 

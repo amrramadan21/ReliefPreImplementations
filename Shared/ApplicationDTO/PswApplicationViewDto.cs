@@ -13,6 +13,7 @@ namespace Shared.ApplicationDTO
         public Guid JobRequestItemId { get; set; }
         public Guid ShiftId { get; set; }
         public string OfferTitle { get; set; } = "";
+        public Guid OfferId { get; set; }
         public DateOnly? Date { get; set; }
         public TimeOnly? StartTime { get; set; }
         public TimeOnly? EndTime { get; set; }

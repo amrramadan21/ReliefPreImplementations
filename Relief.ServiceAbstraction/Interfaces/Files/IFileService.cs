@@ -11,5 +11,9 @@ namespace Relief.ServiceAbstraction.Interfaces.Files
             IFormFile file,
             Guid ownerId,
             string folderPath);
+
+        string GetPresignedUrl(string s3Key, int expiryMinutes = 30);
+
+        Task DeleteFileAsync(string s3Key);
     }
 }

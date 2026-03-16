@@ -6,7 +6,11 @@ using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces;
 using Relief.ServiceAbstraction.Interfaces.Applications;
 using Relief.Services.Implementations.Applications.Specifications;
+using Relief.Services.Implementations.Applications.Specifications.Pagination;
 using Shared.ApplicationDTO;
+using Shared.QueryDTOs;
+using Shared.QueryDTOs.CareHome;
+using Shared.QueryDTOs.Psw;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -248,64 +252,57 @@ namespace Relief.Services.Implementations.Applications
         // PSW View Applications
         // Uses JopRequest.Status
         // =====================================================
-        public async Task<List<PswApplicationViewDto>>
-                     GetPswApplicationsAsync(Guid pswId)
+        public async Task<Pagination<PswApplicationViewDto>>
+                     GetPswApplicationsAsync(Guid pswId, PswApplicationQueryParams query)
         {
-            var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
+            var itemRepo = _unitOfWork.GetRepository<JobRequestItem, Guid>();
 
-            var spec = new PswApplicationsSpecification(pswId);
-            var requests = await requestRepo.GetAllAsync(spec);
+            var spec = new PswApplicationPaginatedSpecification(pswId, query);
+            var countSpec = new PswApplicationCountSpecification(pswId);
 
-            return requests.SelectMany(r => r.Items.Select(i => new PswApplicationViewDto
+            var items = await itemRepo.GetAllAsync(spec);
+            var totalCount = await itemRepo.CountAsync(countSpec);
+
+            var dtos = items.Select(i => new PswApplicationViewDto
             {
-                JobRequestId = r.Id,
+                JobRequestId = i.JopRequestId,
                 JobRequestItemId = i.Id,
                 ShiftId = i.ShiftId,
                 OfferTitle = i.OfferShift.JobOffer.Title,
+                OfferId = i.OfferShift.JobOfferId,
                 Date = i.OfferShift.Date,
                 StartTime = i.OfferShift.StartTime,
                 EndTime = i.OfferShift.EndTime,
-                Status = r.Status // Use JopRequest status
-            })).ToList();
+                Status = i.JopRequest.Status
+            }).ToList();
+
+            return new Pagination<PswApplicationViewDto>(
+        query.PageIndex,
+         query.PageSize,
+           totalCount,
+            dtos);
         }
 
         // =====================================================
         // Get Applications For CareHome
         // Only shows Admin-approved applications
         // =====================================================
-        public async Task<List<OfferApplicationDto>> GetApplicationsForCareHomeAsync(Guid careHomeId)
+        public async Task<Pagination<OfferApplicationDto>> GetApplicationsForCareHomeAsync(
+    Guid careHomeId, CareHomeApplicationQueryParams query)
         {
-            var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
-
-            var offers = await offerRepo.GetAllAsync();
-
-            var ownedOffers = offers
-                .Where(o => o.CareHomeId == careHomeId || o.IndividualId == careHomeId)
-                .Select(o => o.Id)
-                .ToList();
-
-            if (!ownedOffers.Any())
-                return new List<OfferApplicationDto>();
-
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
 
-            var spec = new CareHomeApplicationsSpecification(ownedOffers);
+            var spec = new CareHomeApplicationPaginatedSpecification(careHomeId, query);
+            var countSpec = new CareHomeApplicationCountSpecification(careHomeId);
 
             var requests = await requestRepo.GetAllAsync(spec);
+            var totalCount = await requestRepo.CountAsync(countSpec);
 
-            // Filter to only Admin-approved requests
-            var filtered = requests.Where(r =>
-                r.Status == RequestStatus.QualifiedByAdmin ||
-                r.Status == RequestStatus.Accepted ||
-                r.Status == RequestStatus.RejectedByCareHome);
-
-            return filtered.Select(r =>
+            var dtos = requests.Select(r =>
             {
                 var user = r.PswUser.ApplicationUser;
-
                 var today = DateTime.UtcNow;
                 var age = today.Year - user.BirthOfDate.Year;
-
                 if (user.BirthOfDate.Date > today.AddYears(-age))
                     age--;
 
@@ -313,7 +310,6 @@ namespace Relief.Services.Implementations.Applications
                 {
                     JobRequestId = r.Id,
                     AppliedAt = r.CreatedAt,
-
                     Psw = new PswApplicationBriefDto
                     {
                         PswId = r.PswId,
@@ -326,7 +322,6 @@ namespace Relief.Services.Implementations.Applications
                         ProofIdentityType = r.PswUser.ProofIdentityType,
                         CVFileId = r.PswUser.CVFileId
                     },
-
                     Shifts = r.Items.Select(i => new ShiftApplicationDto
                     {
                         JobRequestItemId = i.Id,
@@ -334,10 +329,16 @@ namespace Relief.Services.Implementations.Applications
                         Date = i.OfferShift.Date,
                         StartTime = i.OfferShift.StartTime,
                         EndTime = i.OfferShift.EndTime,
-                        Status = r.Status // Use JopRequest status
+                        Status = r.Status
                     }).ToList()
                 };
             }).ToList();
+
+            return new Pagination<OfferApplicationDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
     }
 }

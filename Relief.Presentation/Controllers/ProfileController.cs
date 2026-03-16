@@ -32,10 +32,10 @@ namespace Relief.Presentation.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateProfile(UpdateProfileDto dto)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDto dto)
         {
             await _profileService.UpdateProfileAsync(dto);
-
             return NoContent();
         }
 
@@ -53,6 +53,14 @@ namespace Relief.Presentation.Controllers
             await _profileService.UploadProfilePhotoAsync(file);
 
             return Ok(new { message = "Profile photo uploaded successfully" });
+        }
+
+        [HttpDelete("remove-photo")]
+        public async Task<IActionResult> RemoveProfilePhoto()
+        {
+            await _profileService.RemoveProfilePhotoAsync();
+
+            return Ok(new { message = "Profile photo removed successfully" });
         }
     }
 

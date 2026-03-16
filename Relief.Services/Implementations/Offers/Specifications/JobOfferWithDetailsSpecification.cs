@@ -13,6 +13,15 @@ namespace Relief.Services.Implementations.Offers.Specifications
         public JobOfferWithDetailsSpecification(Guid id) : base(j => j.Id == id)
         {
             AddInclude(o => o.Shifts );
+            // Include CareHomeUser for LegalName
+            AddInclude(o => o.CareHomeUser);
+            AddInclude("CareHomeUser.ApplicationUser");
+
+            // Include IndividualCareHomeUser -> ApplicationUser for FirstName/LastName
+            AddInclude(o => o.IndividualCareHomeUser);
+            AddInclude("IndividualCareHomeUser.ApplicationUser");
+
+            ApplySplitQuery(); // Use split queries to avoid Cartesian explosion
         }
     }
 }

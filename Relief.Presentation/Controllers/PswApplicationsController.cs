@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Applications;
 using Shared.ApplicationDTO;
+using Shared.QueryDTOs.Psw;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,9 +47,9 @@ namespace Relief.Presentation.Controllers
         // GET MY APPLICATIONS
         // =====================================================
         [HttpGet]
-        public async Task<IActionResult> GetMyApplications()
+        public async Task<IActionResult> GetMyApplications([FromQuery] PswApplicationQueryParams query)
         {
-            var result = await _service.GetPswApplicationsAsync(CurrentUserId);
+            var result = await _service.GetPswApplicationsAsync(CurrentUserId, query);
 
             return Ok(result);
         }

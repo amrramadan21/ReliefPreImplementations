@@ -13,5 +13,6 @@ namespace Shared.AdminDTOs
         public string? VerificationRejectionReason { get; set; }
         public bool IsProfileCompleted { get; set; } 
         public bool IsVerified { get; set; }
+        public string Role { get; set; } = default!;
     }
 }

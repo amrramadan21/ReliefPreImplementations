@@ -16,4 +16,9 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.24\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.24\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\seife\.nuget\packages\awssdk.core\4.0.3.17</PkgAWSSDK_Core>
+    <PkgAWSSDK_SimpleEmailV2 Condition=" '$(PkgAWSSDK_SimpleEmailV2)' == '' ">C:\Users\seife\.nuget\packages\awssdk.simpleemailv2\4.0.12.2</PkgAWSSDK_SimpleEmailV2>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\seife\.nuget\packages\awssdk.s3\4.0.19</PkgAWSSDK_S3>
+  </PropertyGroup>
 </Project>

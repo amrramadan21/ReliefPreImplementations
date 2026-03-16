@@ -8,16 +8,29 @@ namespace Shared.QueryDTOs
 {
     public class BaseQueryParams
     {
-        const int MaxPageSize = 50;
+        private const int MaxPageSize = 20;
+        private const int DefaultPageSize = 10;
 
         public int PageIndex { get; set; } = 1;
 
-        private int pageSize = 10;
+        private int pageSize = DefaultPageSize;
 
         public int PageSize
         {
             get => pageSize;
-            set => pageSize = value > MaxPageSize ? MaxPageSize : value;
+            set
+            {
+                if (value <= 0)
+                {
+                    pageSize = DefaultPageSize;
+                }
+                else if (value > MaxPageSize)
+                {
+                    pageSize = MaxPageSize;
+                }
+                else
+                    pageSize = value;
+            }
         }
 
         // مثال:

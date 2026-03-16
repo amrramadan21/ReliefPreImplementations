@@ -1,3 +1,7 @@
+using Amazon.Extensions.NETCore.Setup;
+using Amazon.Runtime;
+using Amazon.S3;
+using Amazon.SimpleEmailV2;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using Relief.Domain.Contracts;
 using Relief.Domain.Entities.Users;
 using Relief.Presentation.Middleware;
+using Relief.Presistence;
 using Relief.Presistence.Data.DbContexts;
 using Relief.Presistence.Repositories;
 using Relief.ServiceAbstraction.Interfaces.Admin;
@@ -16,14 +21,12 @@ using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Relief.ServiceAbstraction.Interfaces.Users;
 using Relief.Services.Implementations.Admin;
 using Relief.Services.Implementations.Applications;
-using Relief.Services.Implementations.Files;
 using Relief.Services.Implementations.Offers;
 using Relief.Services.Implementations.Users;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
-
 
 namespace Relief.Web
 {
@@ -32,6 +35,14 @@ namespace Relief.Web
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            //// ✅ Debug: Check if config is loaded
+            //Console.WriteLine("=== AWS CONFIG DEBUG ===");
+            //Console.WriteLine($"Region: {builder.Configuration["AWS:Region"]}");
+            //Console.WriteLine($"SESFromEmail: {builder.Configuration["AWS:SESFromEmail"]}");
+            //Console.WriteLine($"Access Key: {accessKey}");
+            //Console.WriteLine($"Secret Key Length: {secretKey?.Length}");
+            //Console.WriteLine($"Access Key starts with: {accessKey?.Substring(0, 8)}");
+            //Console.WriteLine("========================");
 
             // -----------------------------
             // CORS
@@ -97,7 +108,7 @@ namespace Relief.Web
             // -----------------------------
             // Databases
             // -----------------------------
-            
+
             builder.Services.AddDbContext<ReliefAppDbContext>(opt =>
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -111,6 +122,28 @@ namespace Relief.Web
                 })
                 .AddEntityFrameworkStores<ReliefAppDbContext>()
                 .AddDefaultTokenProviders();
+
+            // -----------------------------
+            // Aws SES
+            // -----------------------------
+            var awsOptions = new AWSOptions
+            {
+                Region = Amazon.RegionEndpoint.CACentral1
+            };
+
+            //builder.Services.AddDefaultAWSOptions(awsOptions);
+            builder.Services.AddAWSService<IAmazonSimpleEmailServiceV2>();
+
+
+
+            // -----------------------------------------
+            // Aws S3  relates to file upload
+            // -----------------------------------------
+            builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+            builder.Services.AddAWSService<IAmazonS3>();
+            builder.Services.Configure<S3Settings>(builder.Configuration.GetSection("S3Settings"));
+
+
 
             // -----------------------------
             // JWT Configuration
@@ -173,13 +206,14 @@ namespace Relief.Web
             // Dependency Injection
             // -----------------------------
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IEmailService, SESEmailService>();
             builder.Services.AddScoped<IOfferService, OfferService>();
             builder.Services.AddScoped<IPswService, PswService>();
-            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IFileService, S3FileService>();
             builder.Services.AddScoped<IApplyService, ApplyService>();
             builder.Services.AddScoped<IApplicationManagementService, ApplicationManagementService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
-            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<IProfileService, ProfileService>();
 
@@ -190,10 +224,10 @@ namespace Relief.Web
             // -----------------------------
             // Middleware
             // -----------------------------
-           // if (app.Environment.IsDevelopment())
-           //{
-                app.UseSwagger();
-                app.UseSwaggerUI();
+            // if (app.Environment.IsDevelopment())
+            //{
+            app.UseSwagger();
+            app.UseSwaggerUI();
             //}
             app.UseMiddleware<ExceptionMiddleware>();
 

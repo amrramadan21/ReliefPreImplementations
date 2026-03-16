@@ -11,18 +11,18 @@ namespace Shared.ProfileDTOs
     {
         public Guid Id { get; set; }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; set; } = default!;
+        public string LastName { get; set; } = default!;
+        public string Role { get; set; } = default!;
+        public string Email { get; set; } = default!;
 
-        public string Email { get; set; }
-
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = default!;
 
         public DateTime DateOfBirth { get; set; }
 
-        public string Gender { get; set; }
+        public string Gender { get; set; } = default!;
 
-        public AddressDTO Address { get; set; }
+        public AddressDTO Address { get; set; } = default!;
         public FileDto? ProfilePhoto { get; set; }
 
     }

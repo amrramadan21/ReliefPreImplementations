@@ -1,6 +1,10 @@
 F:\Projects\Relief\Relief\publish\Relief.Presistence.dll
 F:\Projects\Relief\Relief\publish\Relief.Presistence.runtimeconfig.json
 F:\Projects\Relief\Relief\publish\Relief.Presistence.pdb
+F:\Projects\Relief\Relief\publish\AWSSDK.Core.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.Extensions.NETCore.Setup.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.S3.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.SimpleEmailV2.dll
 F:\Projects\Relief\Relief\publish\Azure.Core.dll
 F:\Projects\Relief\Relief\publish\Azure.Identity.dll
 F:\Projects\Relief\Relief\publish\Microsoft.AspNetCore.Cryptography.Internal.dll

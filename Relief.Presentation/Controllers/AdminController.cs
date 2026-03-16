@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Relief.ServiceAbstraction.Interfaces.Admin;
 using Relief.ServiceAbstraction.Interfaces.Profiles;
 using Shared.AdminDTOs;
+using Shared.QueryDTOs.Admin;
 
 namespace Relief.Presentation.Controllers
 {
@@ -24,16 +25,11 @@ namespace Relief.Presentation.Controllers
         // PSW VERIFICATION — LIST PENDING
         // =====================================================
         [HttpGet("verifications/pending")]
-        public async Task<IActionResult> GetPendingVerifications()
+        public async Task<IActionResult> GetPendingVerifications([FromQuery] PendingVerificationQueryParams query)
         {
-            var result = await _adminService.GetPendingVerificationsAsync();
+            var result = await _adminService.GetPendingVerificationsAsync(query);
 
-            return Ok(new
-            {
-                success = true,
-                count = result.Count,
-                data = result
-            });
+            return Ok(result);
         }
 
         // =====================================================
@@ -72,16 +68,12 @@ namespace Relief.Presentation.Controllers
         // APPLICATION REVIEW — LIST BY STATUS
         // =====================================================
         [HttpGet("applications")]
-        public async Task<IActionResult> GetApplications([FromQuery] string? status)
+        public async Task<IActionResult> GetApplications(
+        [FromQuery] AdminApplicationQueryParams query)
         {
-            var result = await _adminService.GetApplicationsByStatusAsync(status);
+            var result = await _adminService.GetApplicationsByStatusAsync(query);
 
-            return Ok(new
-            {
-                success = true,
-                count = result.Count,
-                data = result
-            });
+            return Ok(result);
         }
 
         // =====================================================
@@ -120,16 +112,11 @@ namespace Relief.Presentation.Controllers
         // OFFERS — VIEW ALL
         // =====================================================
         [HttpGet("offers")]
-        public async Task<IActionResult> GetAllOffers()
+        public async Task<IActionResult> GetAllOffers([FromQuery] AdminOfferQueryParams query)
         {
-            var result = await _adminService.GetAllOffersAsync();
+            var result = await _adminService.GetAllOffersAsync(query);
 
-            return Ok(new
-            {
-                success = true,
-                count = result.Count,
-                data = result
-            });
+            return Ok(result);
         }
 
         [HttpGet("users")]
@@ -144,17 +131,12 @@ namespace Relief.Presentation.Controllers
             });
 
         }
-        [HttpGet("users/PSW")]
-        public async Task<IActionResult> GetAllPsw()
-        {
-            var result = await _adminService.GetAllPswUsersAsync();
-            return Ok(new
-            {
-                success = true,
-                count = result.Count,
-                data = result
-            });
 
+        [HttpGet("users/PSW")]
+        public async Task<IActionResult> GetAllPsw([FromQuery] AdminPswQueryParams query)
+        {
+            var result = await _adminService.GetAllPswUsersAsync(query);
+            return Ok(result);
         }
 
         [HttpGet("users/profile")]

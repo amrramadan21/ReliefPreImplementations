@@ -16,7 +16,20 @@ namespace Shared.OffersDTOs.CreateDTO
         public string Description { get; set; } = null!;
 
         [Required]
+        public string Position { get; set; } = null!;
+        
+        public List<string> Preferences { get; set; } = [];
+
+        [Required]
         public string Address { get; set; } = null!;
+        [Required]
+        public string? Address2 { get; set; }
+        [Required]
+        public string City { get; set; } = null!;
+        [Required]
+        public string PostalCode { get; set; } = null!;
+        [Required]
+        public string Province { get; set; } = null!;
 
         public double Latitude { get; set; }
         public double Longitude { get; set; }

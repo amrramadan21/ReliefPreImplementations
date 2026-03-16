@@ -7,10 +7,13 @@ using Relief.Domain.Enums;
 using Relief.Domain.Exceptions;
 using Relief.ServiceAbstraction.Interfaces.Admin;
 using Relief.Services.Implementations.Admin.Specifications;
+using Relief.Services.Implementations.Admin.Specifications.Pagination;
 using Relief.Services.Implementations.Offers.Specifications;
 using Shared.AdminDTOs;
 using Shared.ApplicationDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
+using Shared.QueryDTOs;
+using Shared.QueryDTOs.Admin;
 using System;
 
 namespace Relief.Services.Implementations.Admin
@@ -31,44 +34,39 @@ namespace Relief.Services.Implementations.Admin
         // =====================================================
         // PSW VERIFICATION — GET PENDING
         // =====================================================
-        public async Task<List<PswVerificationListDto>> GetPendingVerificationsAsync()
+        public async Task<Pagination<PswVerificationListDto>> GetPendingVerificationsAsync(
+               PendingVerificationQueryParams query)
         {
             var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
-            var allPsws = await pswRepo.GetAllAsync();
 
-            var pending = allPsws
-                .Where(p => p.IsProfileCompleted &&
-                            p.VerificationStatus == VerificationStatus.Pending)
-                .ToList();
+            var spec = new PendingVerificationPaginatedSpecification(query);
+            var countSpec = new PendingVerificationCountSpecification();
 
-            var result = new List<PswVerificationListDto>();
+            var pending = await pswRepo.GetAllAsync(spec);
+            var totalCount = await pswRepo.CountAsync(countSpec);
 
-            foreach (var psw in pending)
+            var dtos = pending.Select(psw => new PswVerificationListDto
             {
-                var user = await _userManager.FindByIdAsync(
-                    psw.ApplicationUserId.ToString());
+                PswUserId = psw.ApplicationUserId,
+                FullName = $"{psw.ApplicationUser.FirstName} {psw.ApplicationUser.LastName}",
+                Email = psw.ApplicationUser.Email ?? "",
+                ProofIdentityType = psw.ProofIdentityType,
+                VerificationStatus = psw.VerificationStatus,
+                RejectionReason = psw.VerificationRejectionReason,
+                ProfileCompletedAt = DateTime.UtcNow,
+                ProofIdentityFileId = psw.ProofIdentityFileId,
+                PswCertificateFileId = psw.PswCertificateFileId,
+                CVFileId = psw.CVFileId,
+                ImmunizationRecordFileId = psw.ImmunizationRecordFileId,
+                CriminalRecordFileId = psw.CriminalRecordFileId,
+                FirstAidOrCPRFileId = psw.FirstAidOrCPRFileId
+            }).ToList();
 
-                if (user == null) continue;
-
-                result.Add(new PswVerificationListDto
-                {
-                    PswUserId = psw.ApplicationUserId,
-                    FullName = $"{user.FirstName} {user.LastName}",
-                    Email = user.Email ?? "",
-                    ProofIdentityType = psw.ProofIdentityType,
-                    VerificationStatus = psw.VerificationStatus,
-                    RejectionReason = psw.VerificationRejectionReason,
-                    ProfileCompletedAt = DateTime.UtcNow,
-                    ProofIdentityFileId = psw.ProofIdentityFileId,
-                    PswCertificateFileId = psw.PswCertificateFileId,
-                    CVFileId = psw.CVFileId,
-                    ImmunizationRecordFileId = psw.ImmunizationRecordFileId,
-                    CriminalRecordFileId = psw.CriminalRecordFileId,
-                    FirstAidOrCPRFileId = psw.FirstAidOrCPRFileId
-                });
-            }
-
-            return result;
+            return new Pagination<PswVerificationListDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
 
         // =====================================================
@@ -82,8 +80,8 @@ namespace Relief.Services.Implementations.Admin
             if (psw == null)
                 throw new NotFoundException("PSW not found.");
 
-            if (!psw.IsProfileCompleted)
-                throw new BadRequestException("PSW has not completed their profile.");
+            //if (!psw.IsProfileCompleted)
+            //    throw new BadRequestException("PSW has not completed their profile.");
 
             if (psw.VerificationStatus == VerificationStatus.Approved)
                 throw new ConflictException("PSW is already verified.");
@@ -106,7 +104,7 @@ namespace Relief.Services.Implementations.Admin
             if (psw == null)
                 throw new NotFoundException("PSW not found.");
 
-            if (!psw.IsProfileCompleted)
+            if (psw.VerificationStatus != VerificationStatus.Approved)
                 throw new BadRequestException("PSW has not completed their profile.");
 
             psw.VerificationStatus = VerificationStatus.Rejected;
@@ -119,47 +117,37 @@ namespace Relief.Services.Implementations.Admin
         // =====================================================
         // APPLICATIONS — GET By status
         // =====================================================
-        public async Task<List<AdminApplicationListDto>> GetApplicationsByStatusAsync(string? status = null)
+        public async Task<Pagination<AdminApplicationListDto>> GetApplicationsByStatusAsync(
+           AdminApplicationQueryParams query)
         {
             RequestStatus? requestStatus = null;
 
-            // 2. Safely parse the string into your RequestStatus enum
-            if (!string.IsNullOrEmpty(status))
+            if (!string.IsNullOrEmpty(query.Status))
             {
-                // 'true' makes the parsing case-insensitive (e.g., "pending" matches "Pending")
-                if (Enum.TryParse<RequestStatus>(status, true, out var parsedStatus))
+                if (Enum.TryParse<RequestStatus>(query.Status, true, out var parsedStatus))
                 {
                     requestStatus = parsedStatus;
                 }
                 else
                 {
-                    // If someone sends an invalid status like "Apples", you can either 
-                    // throw an exception or just return an empty list. 
-                    return new List<AdminApplicationListDto>();
+                    return new Pagination<AdminApplicationListDto>(
+                        query.PageIndex, query.PageSize, 0, new List<AdminApplicationListDto>());
                 }
             }
+
             var requestRepo = _unitOfWork.GetRepository<JopRequest, Guid>();
-            var spec = new PendingJopRequestsWithDetailsSpecification(requestStatus);
 
-            var pending = await requestRepo.GetAllAsync(spec);
+            var spec = new AdminApplicationPaginatedSpecification(query, requestStatus);
+            var countSpec = new AdminApplicationCountSpecification(requestStatus);
 
+            var requests = await requestRepo.GetAllAsync(spec);
+            var totalCount = await requestRepo.CountAsync(countSpec);
 
-
-            var result = new List<AdminApplicationListDto>();
-            var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
-
-
-            foreach (var req in pending)
+            var dtos = requests.Select(req =>
             {
-              
+                var user = req.PswUser.ApplicationUser;
 
-                var psw = await pswRepo.GetByIdAsync(req.PswId);
-
-                var user = psw != null
-                    ? await _userManager.FindByIdAsync(psw.ApplicationUserId.ToString())
-                    : null;
-
-                result.Add(new AdminApplicationListDto
+                return new AdminApplicationListDto
                 {
                     JobRequestId = req.Id,
                     OfferId = req.JobOfferId,
@@ -171,10 +159,10 @@ namespace Relief.Services.Implementations.Admin
                     PswFullName = user != null
                         ? $"{user.FirstName} {user.LastName}"
                         : "",
-                    PswPhone = user != null ? $"{user.PhoneNumber}" : "",
+                    PswPhone = user?.PhoneNumber ?? "",
                     PswEmail = user?.Email ?? "",
-                    VerificationStatus = psw.VerificationStatus.ToString(),
-                    VerificationReason = psw.VerificationRejectionReason,
+                    VerificationStatus = req.PswUser.VerificationStatus.ToString(),
+                    VerificationReason = req.PswUser.VerificationRejectionReason,
                     Shifts = req.Items.Select(i => new ShiftApplicationDto
                     {
                         JobRequestItemId = i.Id,
@@ -183,13 +171,15 @@ namespace Relief.Services.Implementations.Admin
                         StartTime = i.OfferShift.StartTime,
                         EndTime = i.OfferShift.EndTime,
                         Status = i.Status
-
                     }).ToList()
+                };
+            }).ToList();
 
-                });
-            }
-
-            return result;
+            return new Pagination<AdminApplicationListDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
 
         // =====================================================
@@ -237,34 +227,41 @@ namespace Relief.Services.Implementations.Admin
         // =====================================================
         // OFFERS — GET ALL (MONITORING)
         // =====================================================
-        public async Task<List<JobOfferDetailsDto>> GetAllOffersAsync()
+        public async Task<Pagination<JobOfferDetailsDto>> GetAllOffersAsync(AdminOfferQueryParams query)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
-            var offers = await offerRepo.GetAllAsync();
 
-            var result = new List<JobOfferDetailsDto>();
+            var spec = new AdminOfferPaginatedSpecification(query);
+            var countSpec = new AdminOfferCountSpecification();
 
-            foreach (var o in offers)
+            var offers = await offerRepo.GetAllAsync(spec);
+            var totalCount = await offerRepo.CountAsync(countSpec);
+
+            var dtos = offers.Select(o =>
             {
-                var userRepo = _unitOfWork.GetRepository<ApplicationUser, Guid>();
-                var careHomeId = (o.CareHomeId ?? o.IndividualId).Value;
-                var user = await userRepo.GetByIdAsync(careHomeId);
-
-                var spec = new JobOfferWithDetailsSpecification(o.Id);
-
-                var offer = await offerRepo.GetByIdAsync(spec);
-
-                result.Add(new JobOfferDetailsDto
+                // Get owner from whichever navigation is not null
+                var owner = o.CareHomeUser?.ApplicationUser
+                         ?? o.IndividualCareHomeUser?.ApplicationUser;
+                var role = o.CareHomeUser != null ? "Care Home" : o.IndividualCareHomeUser != null ? "Individual" : "Unknown";
+                return new JobOfferDetailsDto
                 {
-                    Id = offer.Id,
-                    Title = offer.Title,
-                    CareHomeId = user?.Id,
-                    CareHomeName = user?.FirstName + " " + user?.LastName,
-                    Address = offer.Address,
-                    HourlyRate = offer.HourlyRate,
-                    Latitude = offer.Latitude,
-                    Longitude = offer.Longitude,
-                    Shifts = offer.Shifts.Select(s => new OfferShiftDetailsDto
+                    Id = o.Id,
+                    Title = o.Title,
+                    Position = o.Position,
+                    Description = o.Description,
+                    PosterId = owner?.Id,
+                    PosterName = GetPosterName(o) ?? "Unknown",
+                    PosterType = role,
+                    Address2 = o.Address2,
+                    City = o.City,
+                    PostalCode = o.PostalCode,
+                    Province = o.Province,
+                    Preferences = new List<string>(o.Preferences ?? Enumerable.Empty<string>()),
+                    Address = o.Address,
+                    HourlyRate = o.HourlyRate,
+                    Latitude = o.Latitude,
+                    Longitude = o.Longitude,
+                    Shifts = o.Shifts.Select(s => new OfferShiftDetailsDto
                     {
                         ShiftId = s.Id,
                         Date = s.Date,
@@ -272,9 +269,14 @@ namespace Relief.Services.Implementations.Admin
                         EndTime = s.EndTime,
                         IsAvailable = s.IsAvailable
                     }).ToList()
-                });
-            }
-            return result;
+                };
+            }).ToList();
+
+            return new Pagination<JobOfferDetailsDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
 
         public async Task<List<UserListDto>> GetUsersByRoleAsync(string? role)
@@ -319,19 +321,17 @@ namespace Relief.Services.Implementations.Admin
             return result;
         }
 
-        public async Task<List<PswListDto>> GetAllPswUsersAsync()
+        public async Task<Pagination<PswListDto>> GetAllPswUsersAsync(AdminPswQueryParams query)
         {
-            // 1. Get the repository for PswUser
             var pswRepo = _unitOfWork.GetRepository<PswUser, Guid>();
 
-            // 2. Instantiate your specification
-            var spec = new PswUserWithDetailsSpecification();
+            var spec = new PswUserPaginatedSpecification(query);
+            var countSpec = new PswUserCountSpecification(query);
 
-            // 3. Fetch data (this will generate an INNER JOIN or LEFT JOIN to AspNetUsers)
             var pswUsers = await pswRepo.GetAllAsync(spec);
+            var totalCount = await pswRepo.CountAsync(countSpec);
 
-            // 4. Map the entities to the DTO
-            var result = pswUsers.Select(psw => new PswListDto
+            var dtos = pswUsers.Select(psw => new PswListDto
             {
                 Id = psw.ApplicationUserId,
                 FirstName = psw.ApplicationUser.FirstName,
@@ -341,12 +341,28 @@ namespace Relief.Services.Implementations.Admin
                 Gender = psw.ApplicationUser.Gender.ToString(),
                 VerificationStatus = psw.VerificationStatus,
                 VerificationRejectionReason = psw.VerificationRejectionReason,
-                IsProfileCompleted = psw.IsProfileCompleted,
+                Role = "PSW"
             }).ToList();
 
-            return result;
+            return new Pagination<PswListDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
 
-       
+        private static string? GetPosterName(JobOffer offer)
+        {
+            if (offer.CareHomeId.HasValue && offer.CareHomeUser != null)
+                return offer.CareHomeUser.LegalName;
+
+            if (offer.IndividualId.HasValue && offer.IndividualCareHomeUser?.ApplicationUser != null)
+            {
+                var user = offer.IndividualCareHomeUser.ApplicationUser;
+                return $"{user.FirstName} {user.LastName}".Trim();
+            }
+
+            return null;
+        }
     }
 }

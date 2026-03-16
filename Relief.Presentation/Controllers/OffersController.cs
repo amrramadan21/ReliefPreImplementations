@@ -5,6 +5,7 @@ using Relief.ServiceAbstraction.Interfaces.Offers;
 using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.UpdateDTO;
 using Shared.QueryDTOs;
+using Shared.QueryDTOs.JobOffer;
 using System.Security.Claims;
 
 namespace Relief.Web.Controllers
@@ -82,9 +83,9 @@ namespace Relief.Web.Controllers
         // =====================================================
         [HttpGet]
         public async Task<IActionResult> GetAllOffers(
-            [FromQuery] Guid? careHomeId = null)
+            [FromQuery] JobOfferQueryParams query)
         {
-            var offers = await _offerService.GetAllOffersAsync(careHomeId);
+            var offers = await _offerService.GetAllOffersAsync(query);
 
             return Ok(offers);
         }
@@ -92,14 +93,14 @@ namespace Relief.Web.Controllers
         // =====================================================
         // BROWSE OFFERS (PAGINATED)
         // =====================================================
-        [HttpGet("browse")]
-        public async Task<IActionResult> BrowseOffers(
-            [FromQuery] BaseQueryParams query)
-        {
-            var result = await _offerService.GetOffersAsync(query);
+        //[HttpGet("browse")]
+        //public async Task<IActionResult> BrowseOffers(
+        //    [FromQuery] BaseQueryParams query)
+        //{
+        //    var result = await _offerService.GetOffersAsync(query);
 
-            return Ok(result);
-        }
+        //    return Ok(result);
+        //}
 
         // =====================================================
         // UPDATE OFFER

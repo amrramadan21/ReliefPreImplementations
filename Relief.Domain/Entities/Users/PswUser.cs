@@ -37,7 +37,7 @@ namespace Relief.Domain.Entities.Users
         public Guid? FirstAidOrCPRFileId { get; set; }
         public FileMetadata? FirstAidOrCPRFile { get; set; }
 
-        public bool IsProfileCompleted { get; set; } = false;
+        //public bool IsProfileCompleted { get; set; } = false;
 
         public VerificationStatus VerificationStatus { get; set; } = VerificationStatus.None;
 

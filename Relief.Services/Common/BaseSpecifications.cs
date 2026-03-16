@@ -23,7 +23,12 @@ namespace Relief.Services.Common
         {
 
         }
+        public bool IsSplitQuery { get; private set; }
 
+        protected void ApplySplitQuery()
+        {
+            IsSplitQuery = true;
+        }
         protected BaseSpecifications(Expression<Func<TEntity, bool>> criteriaExpression)
         {
             Criteria = criteriaExpression;

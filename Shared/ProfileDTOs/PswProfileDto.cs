@@ -13,10 +13,9 @@ namespace Shared.ProfileDTOs
         public string VerificationStatus { get; set; } = default!;
 
         public string? RejectionReason { get; set; }
-        public bool IsProfileCompleted { get; set; }
 
 
-        public string Role { get; set; } = null!;
+
 
         public FileDto? ProofIdentityFile { get; set; }
 

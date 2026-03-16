@@ -37,8 +37,7 @@ namespace Relief.Services.Implementations.Users
                 throw new NotFoundException("PSW not found.");
 
             // Allow re-upload if verification was rejected
-            if (psw.IsProfileCompleted &&
-                psw.VerificationStatus != VerificationStatus.Rejected)
+            if (psw.VerificationStatus != VerificationStatus.Rejected)
                 throw new ConflictException("Profile is already completed.");
 
             if (string.IsNullOrWhiteSpace(dto.ProofIdentityType))
@@ -98,7 +97,7 @@ namespace Relief.Services.Implementations.Users
                 psw.CriminalRecordFileId = criminalFile.Id;
                 psw.FirstAidOrCPRFileId = cprFile?.Id;
 
-                psw.IsProfileCompleted = true;
+                
                 psw.VerificationStatus = VerificationStatus.Pending;
                 psw.VerificationRejectionReason = null;
 

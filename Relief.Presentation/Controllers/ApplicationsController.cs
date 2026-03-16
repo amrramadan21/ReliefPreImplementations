@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Relief.Domain.Exceptions;
+using Relief.ServiceAbstraction.Interfaces.Applications;
 using Shared.ApplicationDTO;
 using Shared.QueryDTOs;
+using Shared.QueryDTOs.CareHome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Claims;
-using Relief.ServiceAbstraction.Interfaces.Applications;
 
 namespace Relief.Presentation.Controllers
 {
@@ -50,10 +51,10 @@ namespace Relief.Presentation.Controllers
         // GET ALL APPLICATIONS FOR ALL OFFERS
         // =====================================================
         [HttpGet]
-        public async Task<IActionResult> GetAllApplications()
+        public async Task<IActionResult> GetAllApplications([FromQuery] CareHomeApplicationQueryParams query)
         {
             var result = await _applicationService
-                .GetApplicationsForCareHomeAsync(CurrentUserId);
+                .GetApplicationsForCareHomeAsync(CurrentUserId, query);
 
             return Ok(result);
         }
@@ -107,17 +108,6 @@ namespace Relief.Presentation.Controllers
             });
         }
 
-        // =====================================================
-        // GET REQUESTS (PAGINATED + FILTERED)
-        // =====================================================
-        [HttpGet("requests")]
-        public async Task<IActionResult> GetRequests(
-            [FromQuery] RequestQueryParams query)
-        {
-            var result = await _applyService
-                .GetRequestsAsync(CurrentUserId, query);
-
-            return Ok(result);
-        }
+        
     }
 }

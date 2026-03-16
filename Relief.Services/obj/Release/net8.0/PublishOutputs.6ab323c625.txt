@@ -1,6 +1,10 @@
 F:\Projects\Relief\Relief\publish\Relief.Services.dll
 F:\Projects\Relief\Relief\publish\Relief.Services.deps.json
 F:\Projects\Relief\Relief\publish\Relief.Services.pdb
+F:\Projects\Relief\Relief\publish\AWSSDK.Core.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.Extensions.NETCore.Setup.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.S3.dll
+F:\Projects\Relief\Relief\publish\AWSSDK.SimpleEmailV2.dll
 F:\Projects\Relief\Relief\publish\Microsoft.EntityFrameworkCore.dll
 F:\Projects\Relief\Relief\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
 F:\Projects\Relief\Relief\publish\Microsoft.Extensions.Caching.Memory.dll

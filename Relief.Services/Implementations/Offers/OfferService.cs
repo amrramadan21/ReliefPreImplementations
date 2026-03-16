@@ -10,6 +10,7 @@ using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
 using Shared.OffersDTOs.UpdateDTO;
 using Shared.QueryDTOs;
+using Shared.QueryDTOs.JobOffer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,13 @@ namespace Relief.Services.Implementations.Offers
                 Id = Guid.NewGuid(),
                 Title = dto.Title,
                 Description = dto.Description,
+                Position = dto.Position,
                 Address = dto.Address,
+                Address2 = dto.Address2,
+                City = dto.City,
+                Preferences = new List<string>(dto.Preferences ?? Enumerable.Empty<string>()),
+                PostalCode = dto.PostalCode,
+                Province = dto.Province,
                 Latitude = dto.Latitude,
                 Longitude = dto.Longitude,
                 HourlyRate = dto.HourlyRate
@@ -142,10 +149,19 @@ namespace Relief.Services.Implementations.Offers
                 Id = offer.Id,
                 Title = offer.Title,
                 Description = offer.Description,
+                Position = offer.Position,
                 HourlyRate = offer.HourlyRate,
                 Address = offer.Address,
+                Address2 = offer.Address2,
+                City = offer.City,
+                PostalCode = offer.PostalCode,
+                Province = offer.Province,
+                Preferences = new List<string>(offer.Preferences ?? Enumerable.Empty<string>()),
                 Latitude = offer.Latitude,
                 Longitude = offer.Longitude,
+                PosterId = offer.CareHomeId ?? offer.IndividualId,
+                PosterType = offer.CareHomeId.HasValue ? "CareHome" : "Individual",
+                PosterName = GetPosterName(offer),
                 Shifts = offer.Shifts.Select(s => new OfferShiftDetailsDto
                 {
                     ShiftId = s.Id,
@@ -176,8 +192,14 @@ namespace Relief.Services.Implementations.Offers
                 Id = offer.Id,
                 Title = offer.Title,
                 Description = offer.Description,
+                Position = offer.Position,
                 HourlyRate = offer.HourlyRate,
                 Address = offer.Address,
+                Address2 = offer.Address2,
+                City = offer.City,
+                PostalCode = offer.PostalCode,
+                Province = offer.Province,
+                Preferences = new List<string>(offer.Preferences ?? Enumerable.Empty<string>()),        
                 Latitude = offer.Latitude,
                 Longitude = offer.Longitude,
                 Shifts = offer.Shifts
@@ -196,32 +218,41 @@ namespace Relief.Services.Implementations.Offers
         // =========================================================
         // GET ALL OFFERS
         // =========================================================
-        public async Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? userId)
+        public async Task<Pagination<JobOfferSummaryDto>> GetAllOffersAsync(JobOfferQueryParams query)
         {
             var offerRepo = _unitOfWork.GetRepository<JobOffer, Guid>();
 
-            IEnumerable<JobOffer> results;
+            var spec = new JobOfferPaginatedSpecification(query);
+            var countSpec = new JobOfferCountSpecification(query);
 
-            if (userId.HasValue)
-            {
-                var spec = new OffersByOwnerSpecification(userId.Value);
+            var data = await offerRepo.GetAllAsync(spec);
+            var totalCount = await offerRepo.CountAsync(countSpec);
 
-                results = await offerRepo.GetAllAsync(spec);
-            }
-            else
-            {
-                results = await offerRepo.GetAllAsync();
-            }
 
-            return results.Select(o => new JobOfferSummaryDto
+            var dtos = data.Select(o => new JobOfferSummaryDto
             {
                 Id = o.Id,
                 Title = o.Title,
+                Position = o.Position,
                 Address = o.Address,
+                Address2 = o.Address2,
+                City = o.City,
+                PostalCode = o.PostalCode,
+                Province = o.Province,
+                Preferences = new List<string>(o.Preferences ?? Enumerable.Empty<string>()),
                 HourlyRate = o.HourlyRate,
                 Latitude = o.Latitude,
-                Longitude = o.Longitude
+                Longitude = o.Longitude,
+                PosterId = o.CareHomeId ?? o.IndividualId,
+                PosterName = GetPosterName(o),
+                PosterType = o.CareHomeId.HasValue ? "CareHome" : "Individual"
             }).ToList();
+
+            return new Pagination<JobOfferSummaryDto>(
+                query.PageIndex,
+                query.PageSize,
+                totalCount,
+                dtos);
         }
 
         //pagi
@@ -268,15 +299,30 @@ namespace Relief.Services.Implementations.Offers
 
             if (!string.IsNullOrWhiteSpace(dto.Title))
                 offer.Title = dto.Title;
+            if (!string.IsNullOrWhiteSpace(dto.Position))
+                offer.Position = dto.Position;
 
             if (!string.IsNullOrWhiteSpace(dto.Description))
                 offer.Description = dto.Description;
 
             if (!string.IsNullOrWhiteSpace(dto.Address))
                 offer.Address = dto.Address;
+            
+            if(!string.IsNullOrWhiteSpace(dto.Address2))
+                offer.Address2 = dto.Address2;
 
-            if (dto.Latitude.HasValue)
+            if (!string.IsNullOrWhiteSpace(dto.City))
+                offer.City = dto.City;
+
+            if (!string.IsNullOrWhiteSpace(dto.PostalCode))
+                if (dto.Latitude.HasValue)
                 offer.Latitude = dto.Latitude.Value;
+
+            if (!string.IsNullOrWhiteSpace(dto.Province))
+                offer.Province = dto.Province;
+
+            if(dto.Preferences != null && dto.Preferences.Count > 0)
+                offer.Preferences = new List<string>(dto.Preferences ?? Enumerable.Empty<string>());
 
             if (dto.Longitude.HasValue)
                 offer.Longitude = dto.Longitude.Value;
@@ -320,6 +366,21 @@ namespace Relief.Services.Implementations.Offers
 
             return true;
         }
+
+        private static string? GetPosterName(JobOffer offer)
+        {
+            if (offer.CareHomeId.HasValue && offer.CareHomeUser != null)
+                return offer.CareHomeUser.LegalName;
+
+            if (offer.IndividualId.HasValue && offer.IndividualCareHomeUser?.ApplicationUser != null)
+            {
+                var user = offer.IndividualCareHomeUser.ApplicationUser;
+                return $"{user.FirstName} {user.LastName}".Trim();
+            }
+
+            return null;
+        }
     }
+
 }
 

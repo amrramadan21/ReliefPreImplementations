@@ -4,6 +4,7 @@ using Shared.OffersDTOs.CreateDTO;
 using Shared.OffersDTOs.OfferInfoDTO;
 using Shared.OffersDTOs.UpdateDTO;
 using Shared.QueryDTOs;
+using Shared.QueryDTOs.JobOffer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Relief.ServiceAbstraction.Interfaces.Offers
     {
         Task<Guid> CreateOfferAsync(Guid careHomeId, CreateJobOfferDto dto);
         Task<JobOfferDetailsDto?> GetOfferByIdAsync(Guid id, Guid careHomeId);
-        Task<List<JobOfferSummaryDto>> GetAllOffersAsync(Guid? careHomeId);
+        Task<Pagination<JobOfferSummaryDto>> GetAllOffersAsync(JobOfferQueryParams query);
         Task<bool> UpdateOfferAsync(Guid offerId, Guid careHomeId, UpdateJobOfferDto dto);
         Task<bool> DeleteOfferAsync(Guid offerId, Guid careHomeId);
 

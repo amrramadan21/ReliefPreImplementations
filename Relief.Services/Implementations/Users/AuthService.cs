@@ -24,21 +24,25 @@ namespace Relief.Services.Implementations.Users
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _config;
         private readonly IUnitOfWork _unitOfWork;
-
+        private readonly IEmailService _emailService;
+        private readonly bool _skipEmailVerification;
         public AuthService(
             UserManager<ApplicationUser> userManager,
             IConfiguration config,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            IEmailService emailService)
         {
             _userManager = userManager;
             _config = config;
             _unitOfWork = unitOfWork;
+            _emailService = emailService;
+            _skipEmailVerification = config.GetValue<bool>("AWS:SkipEmailVerification");
         }
 
         // =========================================================
         // Register
         // =========================================================
-        public async Task<AuthResponseDTO> RegisterUserAsync(RegisterDTO dto, string role)
+        public async Task<RegisterResponseDTO> RegisterUserAsync(RegisterDTO dto, string role)
         {
             if (!Enum.TryParse<Gender>(dto.Gender, true, out var parsedGender))
                 throw new BadRequestException($"'{dto.Gender}' is not a valid gender.");
@@ -57,16 +61,87 @@ namespace Relief.Services.Implementations.Users
                 Gender = parsedGender,
                 Address = new Address
                 {
-                    ApartmentNumber = dto.Address.ApartmentNumber,
-                    Street = dto.Address.Street,
-                    City = dto.Address.City,
-                    State = dto.Address.State,
-                    PostalCode = dto.Address.PostalCode,
-                    Country = dto.Address.Country
+                    ApartmentNumber = dto.Address.ApartmentNumber??-1,
+                    Street = dto.Address.Street?? string.Empty,
+                    City = dto.Address.City ?? string.Empty,
+                    State = dto.Address.State ?? string.Empty,
+                    PostalCode = dto.Address.PostalCode ?? string.Empty,
+                    Country = dto.Address.Country ?? string.Empty
                 }
             };
 
             return await RegisterUserCoreAsync(user, dto, dto.Password, role);
+        }
+
+        // =========================================================
+        // Verification code
+        // =========================================================
+
+        public async Task<AuthResponseDTO> VerifyEmailAsync(VerifyEmailDTO dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (user == null)
+                throw new BadRequestException("User not found.");
+
+            if (user.EmailConfirmed)
+                throw new BadRequestException("Email is already verified.");
+
+            if (user.EmailVerificationCode != dto.Code)
+                throw new BadRequestException("Invalid verification code.");
+
+            if (user.VerificationCodeExpiry < DateTime.UtcNow)
+                throw new BadRequestException("Verification code has expired. Please request a new one.");
+
+            // ✅ Mark email as confirmed
+            user.EmailConfirmed = true;
+            user.EmailVerificationCode = null;
+            user.VerificationCodeExpiry = null;
+
+            var updateResult = await _userManager.UpdateAsync(user);
+
+            if (!updateResult.Succeeded)
+                throw new BadRequestException(
+                    string.Join("; ", updateResult.Errors.Select(e => e.Description)));
+
+            // ✅ Return token after successful verification
+            return await BuildTokenAsync(user);
+        }
+
+        // =========================================================
+        // ✅ NEW: Resend Verification Code
+        // =========================================================
+        public async Task<RegisterResponseDTO> ResendVerificationCodeAsync(ResendCodeDTO dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (user == null)
+                throw new BadRequestException("User not found.");
+
+            if (user.EmailConfirmed)
+                throw new BadRequestException("Email is already verified.");
+
+            // ✅ Rate limit: prevent spamming
+            if (user.VerificationCodeExpiry.HasValue
+                && user.VerificationCodeExpiry.Value > DateTime.UtcNow.AddMinutes(13))
+            {
+                throw new BadRequestException(
+                    "Please wait at least 2 minutes before requesting a new code.");
+            }
+
+            var code = GenerateVerificationCode();
+
+            user.EmailVerificationCode = code;
+            user.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(15);
+
+            await _userManager.UpdateAsync(user);
+            await _emailService.SendVerificationCodeAsync(user.Email!, code);
+
+            return new RegisterResponseDTO
+            {
+                Message = "Verification code resent. Please check your email.",
+                Email = user.Email!
+            };
         }
 
         // =========================================================
@@ -83,6 +158,17 @@ namespace Relief.Services.Implementations.Users
 
             if (!ok)
                 throw new UnauthorizedException("Invalid email or password.");
+
+            // ✅ Auto-verify users created before email verification feature
+            if (!user.EmailConfirmed && user.EmailVerificationCode == null)
+            {
+                // Old user (no verification code was ever sent)
+                user.EmailConfirmed = true;
+                await _userManager.UpdateAsync(user);
+            }
+
+            if (!user.EmailConfirmed)
+                throw new UnauthorizedException("Please verify your email before logging in.");
 
             return await BuildTokenAsync(user);
         }
@@ -151,6 +237,19 @@ namespace Relief.Services.Implementations.Users
                 UserId = user.Id
             };
         }
+
+        // =========================================================
+        // ✅ NEW: Generate 6-Digit Code
+        // =========================================================
+        private string GenerateVerificationCode()
+        {
+            using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
+            var bytes = new byte[4];
+            rng.GetBytes(bytes);
+            var code = (Math.Abs(BitConverter.ToInt32(bytes, 0)) % 900000 + 100000);
+            return code.ToString();
+        }
+
         // =========================================================
         // Logout Logic
         // =========================================================
@@ -164,7 +263,7 @@ namespace Relief.Services.Implementations.Users
         // =========================================================
         // Core Register Logic
         // =========================================================
-        private async Task<AuthResponseDTO> RegisterUserCoreAsync(
+        private async Task<RegisterResponseDTO> RegisterUserCoreAsync(
             ApplicationUser user,
             RegisterDTO dto,
             string password,
@@ -174,6 +273,11 @@ namespace Relief.Services.Implementations.Users
 
             if (existing != null)
                 throw new ConflictException("Email is already registered.");
+
+            var verificationCode = GenerateVerificationCode();
+            user.EmailVerificationCode = verificationCode;
+            user.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(5);
+            user.EmailConfirmed = false;
 
             using (var transaction = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -235,8 +339,28 @@ namespace Relief.Services.Implementations.Users
                 transaction.Complete();
             }
 
+            if (_skipEmailVerification)
+            {
+                // ✅ Auto-verify the user (skip email)
+                user.EmailConfirmed = true;
+                user.EmailVerificationCode = null;
+                user.VerificationCodeExpiry = null;
+                await _userManager.UpdateAsync(user);
 
-            return await BuildTokenAsync(user);
+                return new RegisterResponseDTO
+                {
+                    Message = "Registration successful. Email auto-verified.",
+                    Email = user.Email!
+                };
+            }
+
+            await _emailService.SendVerificationCodeAsync(user.Email!, verificationCode);
+
+            return new RegisterResponseDTO
+            {
+                Message = "Registration successful. Please check your email for verification code.",
+                Email = user.Email!
+            };
         }
 
      

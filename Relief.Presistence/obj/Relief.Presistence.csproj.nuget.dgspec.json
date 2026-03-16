@@ -122,6 +122,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[4.0.19, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.24, )"
@@ -286,6 +290,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.3.25, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[4.0.19, )"
+            },
+            "AWSSDK.SimpleEmailV2": {
+              "target": "Package",
+              "version": "[4.0.12.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.24, )"

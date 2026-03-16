@@ -1,23 +1,25 @@
 using Shared.AdminDTOs;
 using Shared.OffersDTOs.OfferInfoDTO;
+using Shared.QueryDTOs;
+using Shared.QueryDTOs.Admin;
 
 namespace Relief.ServiceAbstraction.Interfaces.Admin
 {
     public interface IAdminService
     {
         // PSW Verification
-        Task<List<PswVerificationListDto>> GetPendingVerificationsAsync();
+        Task<Pagination<PswVerificationListDto>> GetPendingVerificationsAsync(PendingVerificationQueryParams query);
         Task ApproveVerificationAsync(Guid pswId);
         Task RejectVerificationAsync(Guid pswId, string reason);
 
         // Application Review
-        Task<List<AdminApplicationListDto>> GetApplicationsByStatusAsync(string? status = null);
+        Task<Pagination<AdminApplicationListDto>> GetApplicationsByStatusAsync(AdminApplicationQueryParams query);
         Task<List<UserListDto>> GetUsersByRoleAsync(string? role);
-        Task<List<PswListDto>> GetAllPswUsersAsync();
+        Task<Pagination<PswListDto>> GetAllPswUsersAsync(AdminPswQueryParams query);
         Task ApproveApplicationAsync(Guid requestId);
         Task RejectApplicationAsync(Guid requestId, string reason);
 
         // Offers Monitoring
-        Task<List<JobOfferDetailsDto>> GetAllOffersAsync();
+        Task<Pagination<JobOfferDetailsDto>> GetAllOffersAsync(AdminOfferQueryParams query);
     }
 }

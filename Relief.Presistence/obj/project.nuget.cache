@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "juoR7Tf9nFI=",
+  "dgSpecHash": "gOKUDLmfqic=",
   "success": true,
   "projectFilePath": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Relief.Presistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\seife\\.nuget\\packages\\awssdk.core\\4.0.3.17\\awssdk.core.4.0.3.17.nupkg.sha512",
+    "C:\\Users\\seife\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.3.25\\awssdk.extensions.netcore.setup.4.0.3.25.nupkg.sha512",
+    "C:\\Users\\seife\\.nuget\\packages\\awssdk.s3\\4.0.19\\awssdk.s3.4.0.19.nupkg.sha512",
+    "C:\\Users\\seife\\.nuget\\packages\\awssdk.simpleemailv2\\4.0.12.2\\awssdk.simpleemailv2.4.0.12.2.nupkg.sha512",
     "C:\\Users\\seife\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\seife\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\seife\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

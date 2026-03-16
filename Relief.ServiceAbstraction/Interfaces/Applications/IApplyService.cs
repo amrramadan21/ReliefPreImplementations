@@ -12,8 +12,6 @@ namespace Relief.ServiceAbstraction.Interfaces.Applications
     public interface IApplyService
     {
         Task ApplyAsync(Guid pswId, ApplyToOfferDto dto);
-        Task<Pagination<JopRequest>> GetRequestsAsync(
-    Guid careHomeId,
-    RequestQueryParams query);
+       
     }
 }

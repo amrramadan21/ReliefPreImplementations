@@ -42,8 +42,7 @@ namespace Relief.Services.Implementations.Applications
             if (psw == null)
                 throw new NotFoundException("PSW not found.");
 
-            if (!psw.IsProfileCompleted)
-                throw new ForbiddenException("Please complete your profile before applying.");
+            
 
             if (psw.VerificationStatus != VerificationStatus.Approved)
                 throw new ForbiddenException("Your profile is not verified yet.");
@@ -108,52 +107,6 @@ namespace Relief.Services.Implementations.Applications
             await _unitOfWork.SaveChangesAsync();
         }
 
-        // =========================
-        // Request Query with Pagination & Filtering
-        // ========================= 
-        public async Task<Pagination<JopRequest>> GetRequestsAsync(
-                        Guid careHomeId,
-                        RequestQueryParams query)
-        {
-            var repo = _unitOfWork.GetRepository<JopRequest, Guid>();
-
-            Expression<Func<JopRequest, bool>> criteria =
-                r => r.JobOffer.CareHomeId == careHomeId;
-
-            var countSpec = new PaginationSpecification<JopRequest, Guid>(criteria);
-
-            var totalCount = await repo.CountAsync(countSpec);
-
-            PaginationSpecification<JopRequest, Guid> spec;
-
-            // dynamic sorting
-            if (query.Sort == "-createdAt")
-            {
-                spec = new PaginationSpecification<JopRequest, Guid>(
-                    criteria,
-                    r => r.CreatedAt,
-                    desc: true,
-                    query.PageIndex,
-                    query.PageSize
-                );
-            }
-            else
-            {
-                spec = new PaginationSpecification<JopRequest, Guid>(
-                    criteria,
-                    r => r.CreatedAt,
-                    query.PageIndex,
-                    query.PageSize
-                );
-            }
-
-            var data = await repo.GetAllAsync(spec);
-
-            return new Pagination<JopRequest>(
-                query.PageIndex,
-                query.PageSize,
-                totalCount,
-                data.ToList());
-        }
+        
     }
 }

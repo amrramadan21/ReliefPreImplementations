@@ -16,5 +16,6 @@ namespace Relief.ServiceAbstraction.Interfaces.Profiles
 
         Task UpdateProfileAsync(UpdateProfileDto dto);
         Task UploadProfilePhotoAsync(IFormFile file);
+        Task RemoveProfilePhotoAsync();
     }
 }

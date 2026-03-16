@@ -35,6 +35,10 @@ namespace E_CommerceLyaer.Presistence
                         .Aggregate(query, (current, include) => current.Include(include));
                 }
 
+                if (specifications.IsSplitQuery)
+                {
+                    query = query.AsSplitQuery();
+                }
 
                 if (specifications.OrderBy is not null)
                 {
