@@ -104,8 +104,8 @@ namespace Relief.Services.Implementations.Admin
             if (psw == null)
                 throw new NotFoundException("PSW not found.");
 
-            if (psw.VerificationStatus != VerificationStatus.Approved)
-                throw new BadRequestException("PSW has not completed their profile.");
+            if (psw.VerificationStatus == VerificationStatus.Rejected)
+                throw new BadRequestException("PSW has been Rejected All ready.");
 
             psw.VerificationStatus = VerificationStatus.Rejected;
             psw.VerificationRejectionReason = reason;

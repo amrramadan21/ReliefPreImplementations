@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "F:\\Projects\\Relief\\Relief\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\admin\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|solutionrelative:relief.services\\implementations\\admin\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|f:\\projects\\relief\\relief\\relief.presistence\\migrations\\20260418190252_changing offer structure and remove psw complete profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41EBCB89-065D-4032-AAEA-2C21C670ECCE}|Relief.Presistence\\Relief.Presistence.csproj|solutionrelative:relief.presistence\\migrations\\20260418190252_changing offer structure and remove psw complete profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4B9FE44-B57D-42A4-898D-61062F304235}|Relief.Services\\Relief.Services.csproj|f:\\projects\\relief\\relief\\relief.services\\implementations\\offers\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\offerinfodto\\jobofferdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|f:\\projects\\relief\\relief\\shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146CB40-1141-4359-AF04-D9F1A3B17E5E}|Shared\\Shared.csproj|solutionrelative:shared\\offersdtos\\createdto\\createjobofferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8A9CD8B-8491-4CE3-B442-7B0EACBDB596}|Relief.Domain\\Relief.Domain.csproj|f:\\projects\\relief\\relief\\relief.domain\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -660,7 +660,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -720,20 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260418190252_changing offer structure and remove psw complete profile.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
-              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
-              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:02:53.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "JobOfferSummaryDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
@@ -741,8 +728,7 @@
               "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferSummaryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T01:38:00.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T01:38:00.63Z"
             },
             {
               "$type": "Document",
@@ -754,25 +740,24 @@
               "RelativeToolTip": "Relief.Domain\\Enums\\RoleType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:27:03.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T13:27:03.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "CreateJobOfferDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
               "ToolTip": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
               "RelativeToolTip": "Shared\\OffersDTOs\\CreateDTO\\CreateJobOfferDto.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-25T19:31:41.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "JobOfferDetailsDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
@@ -780,12 +765,11 @@
               "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\JobOfferDetailsDto.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAwwAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T18:27:36.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T18:27:36.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UpdateJobOfferDto.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
               "RelativeDocumentMoniker": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
@@ -793,12 +777,36 @@
               "RelativeToolTip": "Shared\\OffersDTOs\\UpdateDTO\\UpdateJobOfferDto.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAwwA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T23:49:30.392Z",
+              "WhenOpened": "2026-02-23T23:49:30.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAHAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T19:57:27.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "20260418190252_changing offer structure and remove psw complete profile.cs",
+              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
+              "RelativeDocumentMoniker": "Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
+              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
+              "RelativeToolTip": "Relief.Presistence\\Migrations\\20260418190252_changing offer structure and remove psw complete profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T19:02:53.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OfferService.cs",
               "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Offers\\OfferService.cs",
               "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Offers\\OfferService.cs",
@@ -806,21 +814,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Offers\\OfferService.cs",
               "ViewState": "AgIAAGkBAAAAAAAAAAAqwIIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T20:25:47.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "RelativeDocumentMoniker": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "ToolTip": "F:\\Projects\\Relief\\Relief\\Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\AdminService.cs",
-              "ViewState": "AgIAACoBAAAAAAAAAAAuwBgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T19:57:27.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:25:47.059Z"
             },
             {
               "$type": "Document",
@@ -832,8 +826,7 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Offers\\JobOffer.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAkwBEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:42:46.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T01:42:46.761Z"
             },
             {
               "$type": "Document",
@@ -845,8 +838,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Profiles\\ProfileService.cs",
               "ViewState": "AgIAACIBAAAAAAAAAAAYwK8BAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:00:10.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T21:00:10.104Z"
             },
             {
               "$type": "Document",
@@ -858,8 +850,7 @@
               "RelativeToolTip": "Shared\\OffersDTOs\\OfferInfoDTO\\OfferShiftDetailsDto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T01:38:04.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T01:38:04.526Z"
             },
             {
               "$type": "Document",
@@ -871,8 +862,7 @@
               "RelativeToolTip": "Shared\\ProfileDTOs\\ProfileDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAcwBQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:57:45.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:57:45.204Z"
             },
             {
               "$type": "Document",
@@ -884,8 +874,7 @@
               "RelativeToolTip": "Relief.Presentation\\Controllers\\ProfileController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwCEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T21:45:44.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T21:45:44.958Z"
             },
             {
               "$type": "Document",
@@ -897,8 +886,7 @@
               "RelativeToolTip": "Shared\\ProfileDTOs\\PswProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T23:29:38.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T23:29:38.228Z"
             },
             {
               "$type": "Document",
@@ -910,8 +898,7 @@
               "RelativeToolTip": "Shared\\ProfileDTOs\\CareHomeProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:57:25.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:57:25.754Z"
             },
             {
               "$type": "Document",
@@ -923,8 +910,7 @@
               "RelativeToolTip": "Shared\\ProfileDTOs\\UpdateProfileDto.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAowBMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T01:19:38.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T01:19:38.394Z"
             },
             {
               "$type": "Document",
@@ -936,8 +922,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Profiles\\Specifications\\UserWithFullProfileSpec.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T21:50:11.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T21:50:11.239Z"
             },
             {
               "$type": "Document",
@@ -949,8 +934,7 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Offers\\OfferShift.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwBAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:23:50.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T02:23:50.575Z"
             },
             {
               "$type": "Document",
@@ -962,8 +946,7 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Offers\\JopRequest.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:29:45.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T01:29:45.691Z"
             },
             {
               "$type": "Document",
@@ -975,8 +958,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Users\\PswService.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAQwGMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:27:03.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T01:27:03.205Z"
             },
             {
               "$type": "Document",
@@ -988,8 +970,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Applications\\ApplyService.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwCwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:27:31.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T01:27:31.598Z"
             },
             {
               "$type": "Document",
@@ -1001,8 +982,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\Specifications\\Pagination\\PendingVerificationPaginatedSpecification.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAQwBAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T03:38:03.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T03:38:03.466Z"
             },
             {
               "$type": "Document",
@@ -1014,8 +994,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Admin\\Specifications\\Pagination\\PendingVerificationCountSpecification .cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T03:38:45.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T03:38:45.237Z"
             },
             {
               "$type": "Document",
@@ -1027,8 +1006,7 @@
               "RelativeToolTip": "Relief.Domain\\Entities\\Users\\PswUser.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T13:26:02.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T13:26:02.957Z"
             },
             {
               "$type": "Document",
@@ -1040,8 +1018,7 @@
               "RelativeToolTip": "Relief.Services\\Implementations\\Users\\AuthService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAwwBcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T01:21:40.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T01:21:40.629Z"
             },
             {
               "$type": "Document",
@@ -1053,8 +1030,7 @@
               "RelativeToolTip": "Shared\\IdentityDTOs\\AuthResponseDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:33:04.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T17:33:04.924Z"
             },
             {
               "$type": "Document",
@@ -1066,8 +1042,7 @@
               "RelativeToolTip": "Shared\\IdentityDTOs\\CompletePswProfileDto.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T21:36:32.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T21:36:32.995Z"
             },
             {
               "$type": "Document",
@@ -1079,8 +1054,7 @@
               "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterResponseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T18:47:44.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-14T18:47:44.214Z"
             },
             {
               "$type": "Document",
@@ -1092,8 +1066,7 @@
               "RelativeToolTip": "Shared\\IdentityDTOs\\RegisterDTO.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAgwBAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T22:54:58.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-26T22:54:58.558Z"
             },
             {
               "$type": "Document",
@@ -1105,8 +1078,7 @@
               "RelativeToolTip": "Shared\\IdentityDTOs\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T17:32:31.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T17:32:31.296Z"
             },
             {
               "$type": "Document",
